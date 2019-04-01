@@ -469,8 +469,14 @@ def main():
     flag_to_right_4=0
     flag_to_right_5=0
     go_back_start_flag=0
+    flag_full_array_for_UR=0
     while not rospy.is_shutdown():
-
+        if flag_full_array_for_UR==0:
+            urc.urscript_pub(pub, qzero, 0.2, ace, t)
+            cn+=1
+            if cn>5:
+                cn=1
+                flag_full_array_for_UR=1
         if len(ur_reader.ave_ur_pose)!=0:
             q_now = ur_reader.ave_ur_pose
             """
@@ -482,7 +488,7 @@ def main():
                 urc.move_ee(pub,q_now,deltax,cn,1,1)
                 cn += 1
                 # time.sleep(0.1)
-                if cn == urc.cont - 10:
+                if cn == urc.cont - 15:
                     flag_to_zero = 1
                     flag_to_right = 1
                     cn = 1
@@ -492,7 +498,7 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,-1,-1)
                 print cn, "move to right -----", qq
                 cn += 1
-                if cn == int((urc.cont - 10)*3/2):
+                if cn == int((urc.cont - 15)*3/2):
                     flag_to_down_1 = 1
                     flag_to_right = 0
                     # time.sleep(1)
@@ -513,7 +519,7 @@ def main():
                 print cn, "first move to left -----", qq
                 cn += 1
 
-                if cn == int((urc.cont - 10)*3/2):
+                if cn == int((urc.cont - 15)*3/2):
                     flag_to_left_1 = 0
                     flag_to_down_2 = 1
                     # go_back_start_flag=1
@@ -536,7 +542,7 @@ def main():
                 print cn, "second move to right -----", qq
                 cn += 1
 
-                if cn == int((urc.cont - 10)*3/2):
+                if cn == int((urc.cont - 15)*3/2):
 
                     flag_to_right_2 = 0
                     flag_to_down_3 = 1
@@ -557,7 +563,7 @@ def main():
                 qq = urc.move_ee(pub, q_now, deltax, cn, 1, 1)
                 print cn, "third move to left -----", qq
                 cn += 1
-                if cn == int((urc.cont - 10)*3/2):
+                if cn == int((urc.cont - 15)*3/2):
 
                     flag_to_left_2 = 0
                     flag_to_down_4 = 1
@@ -583,7 +589,7 @@ def main():
                 print cn, "fourth move to right -----", qq
                 cn += 1
 
-                if cn == (urc.cont - 2):
+                if cn == int((urc.cont - 15)*3/2):
 
                     flag_to_right_3 = 0
                     flag_to_down_5 = 1
@@ -609,7 +615,7 @@ def main():
                 print cn, "fifth move to left -----", qq
                 cn += 1
 
-                if cn == int((urc.cont - 10)*3/2):
+                if cn == int((urc.cont - 15)*3/2):
 
                     flag_to_left_3 = 0
                     flag_to_down_6 = 1
@@ -633,7 +639,7 @@ def main():
                 print cn, "sixth move to right -----", qq
                 cn+=1
 
-                if cn==int((urc.cont - 10)*3/2):
+                if cn==int((urc.cont - 15)*3/2):
 
                     flag_to_right_4=0
                     go_back_start_flag=1
