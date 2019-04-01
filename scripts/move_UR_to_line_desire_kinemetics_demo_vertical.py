@@ -197,7 +197,7 @@ class UrLineCircle:
         self.jacabian_rank_pub.publish(jacabian_rank)
         self.jacabian_det_pub.publish(jacabian_det)
 
-        new_q_t_1=numpy.array(q_joint_t).T+self.Kp*cn*qdot_t.T
+        new_q_t_1=numpy.array(q_joint_t).T+self.Kp*1*qdot_t.T
 
         print "new_q_t1",new_q_t_1
         return new_q_t_1
@@ -408,6 +408,12 @@ class UrLineCircle:
         time.sleep(timecnt)
     def test_three_motor_serial_port_is_ok(self,Port):
         pass
+
+    def change_angle_to_pi(self,qangle):
+        temp = []
+        for i in xrange(len(qangle)):
+            temp.append(qangle[i] / 180.0 * 3.14)
+        return temp
 def main():
     t=0
     vel=0.1
@@ -416,10 +422,9 @@ def main():
     # ace=1.4
     port="/dev/ttyUSB0"
     urdfname = "/data/ros/ur_ws_yue/src/ur5_planning/urdf/ur5.urdf"
-    qstart=[-85, -180, 90, -156, -90, 180]#[-45, -180, 90, -180, -90, 180]
-        # [-46.658908262958036, -174.89198611081196, 80.03454750164096, -168.48910996772918, -90.12196190665009, 182.75583607489475]
+    qstart=[-85, -180, 90, -180, -90, 180]
 
-    ratet = 2#1.5
+    ratet = 30#1.5
     radius=0.1
     weights = [1.] * 6
     T_list=[]
@@ -430,7 +435,9 @@ def main():
     rate = rospy.Rate(ratet)
 
     # first step go to initial pos
-    qzero = display(getpi(qstart))
+    qzero = urc.change_angle_to_pi(qstart)
+    #qzero = display(getpi(qstart))
+
     # urc.urscript_pub(pub,q,vel,ace,t)
     # second get T use urkinematics
     urk = urc.get_urobject_ur5kinetmatics()
@@ -450,7 +457,7 @@ def main():
     cn=1
 
 
-    flag_to_zero=0
+    flag_to_zero=1
     flag_to_right=0
     flag_to_down_1=0
     flag_to_down_2=0
@@ -480,13 +487,19 @@ def main():
     flag_full_array_for_UR=0
     num_cnt=210
     while not rospy.is_shutdown():
-
+        if flag_full_array_for_UR==0:
+            urc.urscript_pub(pub, qzero, vel, ace, t)
+            if cn>10:
+                flag_full_array_for_UR=1
+                flag_to_zero=0
+                cn=1
+            cn+=1
         if len(ur_reader.ave_ur_pose)!=0:
             q_now = ur_reader.ave_ur_pose
             """
                     go to the largest distance 
                     """
-            deltax = urc.get_draw_line_x([0.286, 0, 0], [0.5, 0, 0])
+            deltax = urc.get_draw_line_x([0, 0, 0], [0.5, 0, 0])
             if flag_to_zero == 0:
                 print cn, "go to the largest distance  -----", q_now
                 urc.move_ee(pub,q_now,deltax,cn,1,0)
