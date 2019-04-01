@@ -22,7 +22,8 @@ from modbus_tk import modbus_rtu
 
 
 class UrLineCircle:
-    def __init__(self,weights,radius,urdfname,p,Kp):
+    def __init__(self,weights,radius,urdfname,p,Kp,Port):
+        self.Port=Port
         self.weights = weights
         self.radius=radius#m
         self.vel = 0.1
@@ -172,7 +173,7 @@ class UrLineCircle:
         # print "Jacabian_plus",Jacabian_plus.reshape(6,6)
         # print "tr2delta(numpy.array(Tstar).reshape(4,4),numpy.array(pose).reshape(4,4)).T",tr2delta(numpy.array(Tstar).reshape(4,4),numpy.array(pose).reshape(4,4)).T
         Jacabian_plus = numpy.dot(numpy.dot(Jacabian_t.T, Jacabian_t).I, Jacabian_t.T)
-        new_deta_v=numpy.array([[flagx*deltax,flagy*deltax,0,0,0,0]])
+        new_deta_v=numpy.array([[flagx*deltax,0*flagy*deltax,0,0,0,0]])
 
         jacabian_det=numpy.linalg.det(Jacabian_t)
 
@@ -272,16 +273,150 @@ class UrLineCircle:
         self.urscript_pub(ur5_pub, q_new_from_jacabian, self.vel, self.ace, self.t)
         return q_new_from_jacabian
 
+    """
+    flag=-1,upward
+    flag=1,downward
+    cont#负上,正下 77mm/300,每一个数量级相当于向上77/300mm
+    """
+    def Move_Upward_Motor(self,flag,cont):
+        logger = modbus_tk.utils.create_logger("console")
 
+        try:
+            # Connect to the slave
+            master = modbus_rtu.RtuMaster(
+                serial.Serial(port=self.Port, baudrate=115200, bytesize=8, parity='O', stopbits=1, xonxoff=0)
+            )
+            master.set_timeout(5.0)
+            master.set_verbose(True)
+            logger.info("connected")
+            #
+            logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 8))
+            # #change to SigIn SON enable driver
+            output_value_0=flag*cont
+            output_value_1 = flag * 5000
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 120, output_value=output_value_0))#负上,正下 77mm/300,每一个数量级相当于向上77/300mm
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 121, output_value=output_value_1))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 128, output_value=250))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
+            time.sleep(1)
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
+            logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 4))
+
+        except modbus_tk.modbus.ModbusError as exc:
+            logger.error("%s- Code=%d", exc, exc.get_exception_code())
+    """
+    flag=-1,anticlockwise
+    flag=1,clockwise
+    cont## 负逆时针90度/162,相当于每一个数量级，旋转90/162度
+    """
+    def Move_Rotation_Motor(self,flag,cont):
+        logger = modbus_tk.utils.create_logger("console")
+
+        try:
+            # Connect to the slave
+            master = modbus_rtu.RtuMaster(
+                serial.Serial(port=self.Port, baudrate=115200, bytesize=8, parity='O', stopbits=1, xonxoff=0)
+            )
+            master.set_timeout(5.0)
+            master.set_verbose(True)
+            logger.info("connected")
+            #
+            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
+            # #change to SigIn SON enable driver
+            output_value_0=flag*cont
+            output_value_1 = flag * 5000
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 120,output_value=output_value_0))  # 负逆时针90度/162,相当于每一个数量级，旋转90/162度，x*162/90
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 121, output_value=output_value_1))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 128, output_value=100))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
+            time.sleep(1)
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
+            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 4))
+
+        except modbus_tk.modbus.ModbusError as exc:
+            logger.error("%s- Code=%d", exc, exc.get_exception_code())
+    """
+    back zero,move rotation and upward moto go back zero
+    """
+    def Move_Rotation_Upward_Motor(self,ro_flag,up_flag,rotation_cont,upward_cont):
+        logger = modbus_tk.utils.create_logger("console")
+
+        try:
+            # Connect to the slave
+            master = modbus_rtu.RtuMaster(
+                serial.Serial(port=self.Port, baudrate=115200, bytesize=8, parity='O', stopbits=1, xonxoff=0)
+            )
+            master.set_timeout(5.0)
+            master.set_verbose(True)
+            logger.info("connected")
+            #
+            # logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
+            # #change to SigIn SON enable driver
+            rotation_output_value_0=ro_flag*rotation_cont
+            rotation_output_value_1 = ro_flag * 5000
+
+            upward_output_value_0=up_flag*upward_cont
+            upward_output_value_1 = up_flag * 5000
+
+            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
+            logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 8))
+            #change to SigIn SON enable driver
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 120, output_value=rotation_output_value_0))#负逆时针
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 120, output_value=upward_output_value_0))#正的向下,负的向上
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 121, output_value=rotation_output_value_1))#负逆时针
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 121, output_value=upward_output_value_1))#正的向下,负的向上
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 128, output_value=100))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 128, output_value=250))#下250,上500
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
+            time.sleep(4)
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
+            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 4))
+
+        except modbus_tk.modbus.ModbusError as exc:
+            logger.error("%s- Code=%d", exc, exc.get_exception_code())
+    def control_electric_switch(self,timecnt,serialstring):
+        """
+
+        :param timecnt: sleeping time
+        :param serialstring: "55C8190000F055":open three motor,"55C8190008F055":open air
+        :return:
+        """
+        cmdstring='rostopic pub /io_state std_msgs/String '+serialstring+' --once'
+        os.system(cmdstring)
+        time.sleep(timecnt)
+    def test_three_motor_serial_port_is_ok(self,Port):
+        pass
 def main():
     t=0
     vel=0.1
     ace=50
     # vel=1.05
     # ace=1.4
-
-    urdfname = "/data/ros/ur_ws_yue/src/ur5_planning/urdf/ur5.urdf"
-    qstart=[-45, -180, 90, -156, -90, 180]#[-45, -180, 90, -180, -90, 180]
+    port="/dev/ttyUSB0"
+    urdfname = "/data/ros/ur_ws_yue/src/spraying_painting/urdf/ur5.urdf"
+    qstart=[-85, -180, 90, -156, -90, 180]#[-45, -180, 90, -180, -90, 180]
         # [-46.658908262958036, -174.89198611081196, 80.03454750164096, -168.48910996772918, -90.12196190665009, 182.75583607489475]
 
     ratet = 1.5
@@ -290,7 +425,7 @@ def main():
     T_list=[]
     p=0.001
     Kp=1
-    urc=UrLineCircle(weights,radius,urdfname,p,Kp)
+    urc=UrLineCircle(weights,radius,urdfname,p,Kp,port)
     pub=urc.Init_node()
     rate = rospy.Rate(ratet)
 
