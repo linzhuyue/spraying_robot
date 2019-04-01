@@ -415,7 +415,7 @@ def main():
     # vel=1.05
     # ace=1.4
     port="/dev/ttyUSB0"
-    urdfname = "/data/ros/ur_ws_yue/src/spraying_painting/urdf/ur5.urdf"
+    urdfname = "/data/ros/ur_ws_yue/src/ur5_planning/urdf/ur5.urdf"
     qstart=[-85, -180, 90, -156, -90, 180]#[-45, -180, 90, -180, -90, 180]
         # [-46.658908262958036, -174.89198611081196, 80.03454750164096, -168.48910996772918, -90.12196190665009, 182.75583607489475]
 
