@@ -4,3 +4,4 @@ git add README.md
 git commit -m "first commit"
 git remote add origin https://github.com/Musyue/spraying_robot.git
 git push -u origin master
+Usename:Musyue

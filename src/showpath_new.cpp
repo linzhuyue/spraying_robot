@@ -11,6 +11,7 @@ main (int argc, char **argv)
 {
     ros::init (argc, argv, "showpath");
 
+
     ros::NodeHandle ph;
     ros::Publisher path_pub = ph.advertise<nav_msgs::Path>("trajectory",1, true);
 
