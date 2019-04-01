@@ -1,0 +1,12 @@
+<launch>
+    <!-- start ur5    /-->
+    <include file="$(find ur_modern_driver)/launch/ur5_bringup.launch">
+        <arg name="limited" value="true" />
+        <arg name="robot_ip" value="192.168.1.22" />
+    </include>
+            <!-- start ur5 rviz  roslaunch ur5_moveit_config moveit_rviz.launch config:=trueh /-->
+    <include file="$(find ur5_moveit_config)/launch/moveit_rviz.launch">
+        <arg name="config" value="true" />
+    </include>
+
+</launch>
