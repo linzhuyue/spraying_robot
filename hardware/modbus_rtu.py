@@ -11,7 +11,7 @@ import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
 
-PORT = "/dev/ttyUSB0"
+PORT = "/dev/ttyUSB1"
 #PORT = '/dev/ttyp5'
 def main():
     """main"""
@@ -26,7 +26,7 @@ def main():
         master.set_verbose(True)
         logger.info("connected")
         #
-        # logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 0, 8))
+        logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 0, 8))
         # logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
         # logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 8))
         # #change to SigIn SON enable driver
@@ -75,8 +75,8 @@ def main():
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
-        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 120, output_value=-2000))#负上,正下
-        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 121, output_value=-5000))
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 120, output_value=3200))#负上,正下
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 121, output_value=5000))
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 128, output_value=250))
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
