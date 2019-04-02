@@ -449,10 +449,13 @@ def main():
     go_back_start_flag=0
 
     num_cnt=210
+    #velocity 1/rate*detax*cnt=xt-x0
+    #velocity 1/30*detax*250=0.4---->0.048m/s
 
     flag_up_down=[0,0,0,0,0,0,0]
     flag_left_right=[0,0,0,0,0,0,0]
     temp_joint_q=0
+    count_num=[0,0,0,0,0,0,0,0,0]
     while not rospy.is_shutdown():
         if len(ur_reader.ave_ur_pose)!=0:
             q_now = ur_reader.ave_ur_pose
@@ -460,17 +463,17 @@ def main():
             go to the largest distance 
             """
             deltax = urc.get_draw_line_x([0, 0, 0], [0.5, 0, 0])
-            if flag_to_zero == 0:
+            if flag_to_zero == 1:
                 print cn, "go to the largest distance  -----", q_now
                 urc.move_ee(pub,q_now,deltax,cn,1,0)
                 cn += 1
                 # time.sleep(0.1)
-
-                if cn == urc.cont:
-                    flag_to_zero = 1
+                urc.border_length_pub.publish(urc.caculate_point2point_line(F_T, ur0_kinematics.Forward(q_now)))
+                if cn == urc.cont*5:
+                    flag_to_zero = 0
                     flag_up_down[0] = 1#down
                     temp_joint_q=q_now
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(F_T,ur0_kinematics.Forward(q_now)))
+
                     cn = 1
             if flag_up_down[0] == 1:
                 print "first move to down -----"
@@ -478,11 +481,10 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,0,-1)
                 print cn, "first move to down -----", qq
                 cn += 1
-                if cn == int((urc.cont)/1):
+                urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
+                if cn == int((urc.cont)*15):
                     flag_up_down[0] = 0
-                    flag_left_right[0] = 1#right
-
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    flag_left_right[0] = 0#right
                     temp_joint_q=q_now
                     cn = 1
             if flag_left_right[0] == 1:
@@ -491,11 +493,13 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,-1,0)
                 print cn, "move to right -----", qq
                 cn += 1
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn == int((urc.cont)/10):
                     flag_up_down[1] = 1#up
                     flag_left_right[0] = 0
                     # time.sleep(1)
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+
                     temp_joint_q=q_now
                     cn = 1
 
@@ -504,12 +508,13 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,0,1)
                 print cn, "first move to left -----", qq
                 cn += 1
-
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn ==  int((urc.cont)/1):
                     flag_up_down[1] = 0
                     flag_left_right[1] = 1#right
                     # go_back_start_flag=1
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     cn = 1
             if flag_left_right[1] == 1:
@@ -518,12 +523,13 @@ def main():
                 qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
                 print cn, "second move to right -----", qq
                 cn += 1
-
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn ==int((urc.cont)/10):
 
                     flag_left_right[1] = 0#right
                     flag_up_down[2] = 1#down
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     cn = 1
             if flag_up_down[2] == 1:#down
@@ -532,11 +538,13 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,0,-1)
                 print cn, "second move to  down -----", qq
                 cn += 1
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn == int((urc.cont)/1):
                     flag_up_down[2] = 0#down
                     flag_left_right[2] = 1#right
                     # time.sleep(1.5)
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     cn = 1
             if flag_left_right[2] == 1:#right
@@ -545,13 +553,14 @@ def main():
                 qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
                 print cn, "fourth move to right -----", qq
                 cn += 1
-
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn == int((urc.cont)/10):
 
                     flag_left_right[2] = 0#right
                     flag_up_down[3] = 1#up
                     #time.sleep(1.5)
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     cn = 1
             if flag_up_down[3] == 1:#up
@@ -559,12 +568,13 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,0,1)
                 print cn, "first move to left -----", qq
                 cn += 1
-
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn ==  int((urc.cont)/1):
                     flag_up_down[3] = 0#up
                     flag_left_right[3] = 1
                     # go_back_start_flag=1
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     cn = 1
             if flag_left_right[3] == 1:
@@ -573,12 +583,13 @@ def main():
                 qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
                 print cn, "fourth move to right -----", qq
                 cn += 1
-
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn == int((urc.cont)/10):
 
                     flag_left_right[3] = 0#right
                     flag_up_down[4] = 1#up
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     #time.sleep(1.5)
                     cn = 1
@@ -588,11 +599,13 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,0,-1)
                 print cn, "second move to  down -----", qq
                 cn += 1
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn == int((urc.cont)/1):
                     flag_up_down[4] = 0#up
                     flag_left_right[4] = 1
                     # time.sleep(1.5)
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     cn = 1
             if flag_left_right[4] == 1:
@@ -601,13 +614,14 @@ def main():
                 qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
                 print cn, "fourth move to right -----", qq
                 cn += 1
-
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn == int((urc.cont)/5):
 
                     flag_left_right[4] = 0#right
                     flag_up_down[5] = 1#up
                     #time.sleep(1.5)
-                    urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
+                    #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
                     cn = 1
             if flag_up_down[5] == 1:
@@ -615,7 +629,8 @@ def main():
                 qq = urc.move_ee(pub,q_now,deltax,cn,0,1)
                 print cn, "first move to left -----", qq
                 cn += 1
-
+                urc.border_length_pub.publish(
+                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn ==  int((urc.cont)/1):
                     flag_up_down[5] = 0
                     go_back_start_flag = 1
