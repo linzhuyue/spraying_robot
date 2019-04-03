@@ -49,7 +49,6 @@ class UrLineCircle:
         self.uree_world_v_z_pub = rospy.Publisher("/ur_world_frame_ee_v_z", Float64, queue_size=10)
         self.jacabian_det_pub = rospy.Publisher("/ur_jacabian_det", Float64, queue_size=10)
         self.jacabian_rank_pub = rospy.Publisher("/ur_jacabian_rank", Float64, queue_size=10)
-        #self.io_pub=rospy.Publisher("/io_state", String, queue_size=10)
     def Init_node(self):
         rospy.init_node("move_ur5_circle")
         pub = rospy.Publisher("/ur_driver/URScript", String, queue_size=10)
@@ -386,7 +385,6 @@ class UrLineCircle:
         cmdstring='rostopic pub /io_state std_msgs/String '+serialstring+' --once'
         os.system(cmdstring)
         time.sleep(timecnt)
-
     def test_three_motor_serial_port_is_ok(self,Port):
         pass
     def caculate_point2point_line(self,T0,T1):
@@ -410,7 +408,7 @@ def main():
     ace=50
     # vel=1.05
     # ace=1.4
-    port="/dev/ttyUSB2"
+    port="/dev/ttyUSB1"
     urdfname = "/data/ros/ur_ws_yue/src/ur5_planning/urdf/ur5.urdf"
     qstart=[-85, -180, 90, -180, -90, 180]
 
@@ -464,9 +462,8 @@ def main():
 
     left_right_gap=4
     up_down_gap=0.2
-    plus_num=0.1
-    time_cnt=0.
-    count_for_up_ward=0
+    plus_num=0.5
+    time_cnt=0.7
     while not rospy.is_shutdown():
         if len(ur_reader.ave_ur_pose)!=0:
             q_now = ur_reader.ave_ur_pose
@@ -484,7 +481,7 @@ def main():
                     flag_to_zero = 0
                     flag_left_right[0] = 1#right
                     temp_joint_q=q_now
-                    urc.control_electric_switch(0, "55C81900020055")
+                    #urc.control_electric_switch(2, "55C81900020055")
                     #time.sleep(1.5)
                     cn = 1
             if flag_left_right[0] == 1:
@@ -552,11 +549,15 @@ def main():
                 qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
                 print cn, "second move to right -----", qq
                 cn += 1
-                urc.border_length_pub.publish(
-                    urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
-                if cn==int((urc.cont)*left_right_gap+(urc.cont)*plus_num)/2:
-                    time.sleep(0)
-                    print "sournding the base----"
+
+                if cn<int((urc.cont)*left_right_gap+(urc.cont)*plus_num)/2:
+                    urc.border_length_pub.publish(
+                        urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),
+                                                      ur0_kinematics.Forward(q_now)))
+                else:
+                    urc.border_length_pub.publish(
+                        urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),
+                                                      ur0_kinematics.Forward(q_now)))
                 if cn ==int((urc.cont)*left_right_gap+(urc.cont)*plus_num):
 
                     flag_left_right[2] = 0#right
@@ -590,7 +591,7 @@ def main():
                 urc.border_length_pub.publish(
                     urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn==int((urc.cont)*left_right_gap+(urc.cont)*plus_num)/2:
-                    time.sleep(0)
+                    time.sleep(2)
                     print "sournding the base----"
                 if cn == int((urc.cont)*left_right_gap+(urc.cont)*plus_num):
 
@@ -625,7 +626,7 @@ def main():
                 urc.border_length_pub.publish(
                     urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
                 if cn==int((urc.cont)*left_right_gap+(urc.cont)*plus_num)/2:
-                    time.sleep(0)
+                    time.sleep(2)
                     print "sournding the base----"
                 if cn == int((urc.cont)*left_right_gap+(urc.cont)*plus_num):
 
@@ -650,7 +651,7 @@ def main():
                     # time.sleep(1.5)
                     #urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q),ur0_kinematics.Forward(q_now)))
                     temp_joint_q=q_now
-                    time.sleep(time_cnt)
+                    #time.sleep(0.5)
                     cn = 1
             if flag_left_right[5] == 1:#left
                 print "fourth move to right -----"
@@ -672,9 +673,9 @@ def main():
                     cn = 1
 
             if go_back_start_flag == 1:
-                urc.control_electric_switch(0, "55C8190000F055")  # open electric relay and close eletric switch
+                #urc.control_electric_switch(2, "55C8190000F055")  # open electric relay and close eletric switch
                 urc.urscript_pub(pub, qzero, 0.5, 1.4, t)
-                time.sleep(1)
+                #time.sleep(3)
                 cn = 1
                 go_back_start_flag = 0
 
@@ -684,18 +685,12 @@ def main():
 
             if flag_for_up_left_motor[0]==1:
                 print "Ok-----"
-
-                urc.Move_Upward_Rotaion_Motor(-1, 1500, 3)
+                #urc.Move_Upward_Rotaion_Motor(-1, 1500, 3)
                 time.sleep(5)
                 print "upward over ------->"
-                urc.control_electric_switch(0, "55C81900000055")
-                if count_for_up_ward==4:
-                    flag_to_zero = 0
-                    print "everything is ok-----"
-                else:
-                    flag_to_zero = 1
+                #urc.control_electric_switch(2, "55C81900000055")
+                flag_to_zero = 1
                 flag_for_up_left_motor[0]=0
-                count_for_up_ward+=1
         rate.sleep()
 if __name__ == '__main__':
         main()

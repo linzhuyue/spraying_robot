@@ -54,11 +54,18 @@ def main():
     iob.Init_node()
     iob.Io_Sub("io_state")
     import serial
-    serial = serial.Serial('/dev/ttyUSB0', 115200, timeout=0.5)  #/dev/ttyUSB0
-    if serial.isOpen() :
-        print("open port success")
-    else :
-        print("open port failed")
+    try:
+        serial = serial.Serial('/dev/ttyUSB0', 115200, timeout=0.5)  #/dev/ttyUSB0
+        if serial.isOpen() :
+            print("open port success")
+        else :
+            print("open port failed")
+    except:
+        serial = serial.Serial('/dev/ttyUSB1', 115200, timeout=0.5)  #/dev/ttyUSB0
+        if serial.isOpen() :
+            print("open port success")
+        else :
+            print("open port failed")
     rate = rospy.Rate(4)
     #rostopic pub /io_state std_msgs/String "55C8070155"
     while not rospy.is_shutdown():

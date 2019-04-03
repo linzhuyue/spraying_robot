@@ -201,10 +201,7 @@ class UrLineCircle:
 
         print "new_q_t1",new_q_t_1
         return new_q_t_1
-    def get_draw_circle_xy(self,t,xy_center_pos):
-        x = xy_center_pos[0] + self.radius * math.cos( 2 * math.pi * t / self.cont )
-        y = xy_center_pos[1] + self.radius * math.sin( 2 * math.pi * t / self.cont)
-        return  [x,y]
+
     def get_draw_line_x(self,transxyz0,transxyz_d):#transxyz[x,y,z]
         xn_1=1*(transxyz_d[0]-transxyz0[0])/self.cont
         return xn_1
@@ -273,129 +270,7 @@ class UrLineCircle:
         self.urscript_pub(ur5_pub, q_new_from_jacabian, self.vel, self.ace, self.t)
         return q_new_from_jacabian
 
-    """
-    flag=-1,upward
-    flag=1,downward
-    cont#负上,正下 77mm/300,每一个数量级相当于向上77/300mm
-    """
-    def Move_Upward_Motor(self,flag,cont):
-        logger = modbus_tk.utils.create_logger("console")
 
-        try:
-            # Connect to the slave
-            master = modbus_rtu.RtuMaster(
-                serial.Serial(port=self.Port, baudrate=115200, bytesize=8, parity='O', stopbits=1, xonxoff=0)
-            )
-            master.set_timeout(5.0)
-            master.set_verbose(True)
-            logger.info("connected")
-            #
-            logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 8))
-            # #change to SigIn SON enable driver
-            output_value_0=flag*cont
-            output_value_1 = flag * 5000
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 120, output_value=output_value_0))#负上,正下 77mm/300,每一个数量级相当于向上77/300mm
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 121, output_value=output_value_1))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 128, output_value=250))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
-            time.sleep(1)
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
-            logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 4))
-
-        except modbus_tk.modbus.ModbusError as exc:
-            logger.error("%s- Code=%d", exc, exc.get_exception_code())
-    """
-    flag=-1,anticlockwise
-    flag=1,clockwise
-    cont## 负逆时针90度/162,相当于每一个数量级，旋转90/162度
-    """
-    def Move_Rotation_Motor(self,flag,cont):
-        logger = modbus_tk.utils.create_logger("console")
-
-        try:
-            # Connect to the slave
-            master = modbus_rtu.RtuMaster(
-                serial.Serial(port=self.Port, baudrate=115200, bytesize=8, parity='O', stopbits=1, xonxoff=0)
-            )
-            master.set_timeout(5.0)
-            master.set_verbose(True)
-            logger.info("connected")
-            #
-            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
-            # #change to SigIn SON enable driver
-            output_value_0=flag*cont
-            output_value_1 = flag * 5000
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 120,output_value=output_value_0))  # 负逆时针90度/162,相当于每一个数量级，旋转90/162度，x*162/90
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 121, output_value=output_value_1))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 128, output_value=100))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
-            time.sleep(1)
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
-            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 4))
-
-        except modbus_tk.modbus.ModbusError as exc:
-            logger.error("%s- Code=%d", exc, exc.get_exception_code())
-    """
-    back zero,move rotation and upward moto go back zero
-    """
-    def Move_Rotation_Upward_Motor(self,ro_flag,up_flag,rotation_cont,upward_cont):
-        logger = modbus_tk.utils.create_logger("console")
-
-        try:
-            # Connect to the slave
-            master = modbus_rtu.RtuMaster(
-                serial.Serial(port=self.Port, baudrate=115200, bytesize=8, parity='O', stopbits=1, xonxoff=0)
-            )
-            master.set_timeout(5.0)
-            master.set_verbose(True)
-            logger.info("connected")
-            #
-            # logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
-            # #change to SigIn SON enable driver
-            rotation_output_value_0=ro_flag*rotation_cont
-            rotation_output_value_1 = ro_flag * 5000
-
-            upward_output_value_0=up_flag*upward_cont
-            upward_output_value_1 = up_flag * 5000
-
-            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
-            logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 8))
-            #change to SigIn SON enable driver
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 3, output_value=1))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 109, output_value=2))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 112, output_value=50))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 117, output_value=1))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 120, output_value=rotation_output_value_0))#负逆时针
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 120, output_value=upward_output_value_0))#正的向下,负的向上
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 121, output_value=rotation_output_value_1))#负逆时针
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 121, output_value=upward_output_value_1))#正的向下,负的向上
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 128, output_value=100))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 128, output_value=250))#下250,上500
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 69, output_value=1024))
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=32767))
-            time.sleep(4)
-            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
-            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 71, output_value=31743))
-            logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 4))
-
-        except modbus_tk.modbus.ModbusError as exc:
-            logger.error("%s- Code=%d", exc, exc.get_exception_code())
     def control_electric_switch(self,timecnt,serialstring):
         """
 
@@ -451,39 +326,15 @@ def main():
 
 
     flag_to_zero=0
-    flag_to_right=0
-    flag_to_down_1=0
-    flag_to_down_2=0
-    flag_to_down_3=0
-    flag_to_down_4=0
-    flag_to_down_5=0
-    flag_to_down_6 = 0
-    flag_to_left_1=0
-    flag_to_left_2=0
-    flag_to_left_3=0
-    flag_to_left_4=0
-    flag_to_left_5=0
-    flag_to_right_1=0
-    flag_to_right_2 = 0
-    flag_to_right_3=0
-    flag_to_right_4=0
-    flag_to_right_5=0
-    go_back_start_flag=0
-    flag_full_array_for_UR=0
-    num_cnt=210
+
     while not rospy.is_shutdown():
-        if flag_full_array_for_UR==0:
-            urc.urscript_pub(pub, qzero, 0.2, ace, t)
-            cn+=1
-            if cn>5:
-                cn=1
-                flag_full_array_for_UR=1
+
         if len(ur_reader.ave_ur_pose)!=0:
             q_now = ur_reader.ave_ur_pose
             """
                     go to the largest distance 
                     """
-            deltax = urc.get_draw_line_x([0.286, 0, 0], [0.5, 0, 0])
+            deltax = urc.get_draw_line_x([0.0, 0, 0], [0.5, 0, 0])
             if flag_to_zero == 0:
                 print cn, "go to the largest distance  -----", q_now
                 urc.move_ee(pub,q_now,deltax,cn,1,0)
@@ -493,181 +344,7 @@ def main():
                     flag_to_zero = 1
                     flag_to_right = 1
                     cn = 1
-            if flag_to_right == 1:
-                print "first move to right -----"
-                # deltax = urc.get_draw_line_x([0.286, 0, 0], [0.5, 0, 0])
-                qq = urc.move_ee(pub,q_now,deltax,cn,-1,0)
-                print cn, "move to right -----", qq
-                cn += 1
-                if cn == int((urc.cont - num_cnt)*3/2):
-                    flag_to_down_1 = 1
-                    flag_to_right = 0
-                    # time.sleep(1)
-                    cn = 1
-            if flag_to_down_1 == 1:
-                print "first move to down -----"
-                # detay = urc.get_draw_line_x(cn, [-0.45, 0, 0], [0.45, 0, 0])
-                qq = urc.move_ee(pub,q_now,deltax,cn,0,-1)
-                print cn, "first move to down -----", qq
-                cn += 1
-                if cn == int((urc.cont)/10):
-                    flag_to_down_1 = 0
-                    flag_to_left_1 = 1
-                    cn = 1
-            if flag_to_left_1 == 1:
-                print "first move to left -----"
-                qq = urc.move_ee(pub,q_now,deltax,cn,1,0)
-                print cn, "first move to left -----", qq
-                cn += 1
 
-                if cn == int((urc.cont - num_cnt)*3/2):
-                    flag_to_left_1 = 0
-                    flag_to_down_2 = 1
-                    # go_back_start_flag=1
-                    cn = 1
-            if flag_to_down_2 == 1:
-                print "second move to down -----"
-
-                qq = urc.move_ee(pub,q_now,deltax,cn,0,-1)
-                print cn, "second move to  down -----", qq
-                cn += 1
-                if cn == int((urc.cont)/10):
-                    flag_to_down_2 = 0
-                    flag_to_right_2 = 1
-                    # time.sleep(1.5)
-                    cn = 1
-            if flag_to_right_2 == 1:
-                print "second move to right -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
-                print cn, "second move to right -----", qq
-                cn += 1
-
-                if cn == int((urc.cont - num_cnt)*3/2):
-
-                    flag_to_right_2 = 0
-                    flag_to_down_3 = 1
-
-                    cn = 1
-            if flag_to_down_3 == 1:
-                print "third move to down -----"
-                qq = urc.move_ee(pub, q_now, deltax, cn, 0, -1)
-                print cn, "third move to down -----", qq
-                cn += 1
-                if cn == int((urc.cont)/10):
-                    flag_to_down_3 = 0
-                    flag_to_left_2 = 1
-                    cn = 1
-            if flag_to_left_2 == 1:
-                print "third move to left -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, 1, 0)
-                print cn, "third move to left -----", qq
-                cn += 1
-                if cn == int((urc.cont - num_cnt)*3/2):
-
-                    flag_to_left_2 = 0
-                    flag_to_down_4 = 1
-                    cn = 1
-            if flag_to_down_4 == 1:
-                print "fourth move to down -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, 0, -1)
-
-                print cn, "fourth move to down -----", qq
-                cn += 1
-
-                if cn == int((urc.cont)/10):
-
-                    flag_to_down_4 = 0
-                    flag_to_right_3 = 1
-
-                    cn = 1
-            if flag_to_right_3 == 1:
-                print "fourth move to right -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
-                print cn, "fourth move to right -----", qq
-                cn += 1
-
-                if cn == int((urc.cont - num_cnt)*3/2):
-
-                    flag_to_right_3 = 0
-                    flag_to_down_5 = 1
-                    time.sleep(1.5)
-                    cn = 1
-            if flag_to_down_5 == 1:
-                print "fifth move to down -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, 0, -1)
-                print cn, "fifth move to down -----", qq
-                cn += 1
-
-                if cn == int((urc.cont)/10):
-
-                    flag_to_down_5 = 0
-                    flag_to_left_3 = 1
-
-                    cn = 1
-            if flag_to_left_3 == 1:
-                print "fifth move to left -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, 1, 0)
-                print cn, "fifth move to left -----", qq
-                cn += 1
-
-                if cn == int((urc.cont - num_cnt)*3/2):
-
-                    flag_to_left_3 = 0
-                    flag_to_down_6 = 1
-                    cn = 1
-            if flag_to_down_6==1:
-                print "sixth move to down -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, 0, -1)
-                print cn, "sixth move to down -----", qq
-                cn+=1
-
-                if cn==int((urc.cont)/10):
-                    flag_to_down_6=0
-                    flag_to_right_4=1
-
-                    cn=1
-            if flag_to_right_4==1:
-                print "sixth move to right -----"
-
-                qq = urc.move_ee(pub, q_now, deltax, cn, -1, 0)
-                print cn, "sixth move to right -----", qq
-                cn+=1
-
-                if cn==int((urc.cont - num_cnt)*3/2):
-
-                    flag_to_right_4=0
-                    go_back_start_flag=1
-
-                    cn=1
-            if go_back_start_flag == 1:
-                urc.urscript_pub(pub, qzero, 0.2, ace, t)
-                time.sleep(3)
-                cn = 1
-                go_back_start_flag = 0
-                print "path planning over ------"
-            # rate.sleep()
-            # if flag_to_right==1:
-            #     print "first move to right -----"
-            #     detax=urc.get_draw_line_x(cn,[0.286,0,0],[0.5,0,0])
-            #     qq=urc.move_ee(pub,q_now,detax,cn,-1,-1)
-            #     print cn, "move to right -----", qq
-            #     cn+=1
-            #     # time.sleep(0.1)
-            #     q_now = ur_reader.ave_ur_pose
-            #
-            #     if cn==(urc.cont-10):
-            #
-            #         flag_to_zero=1
-            #         flag_to_right=0
-            #         time.sleep(4)
-            #         cn=1
 
         rate.sleep()
 if __name__ == '__main__':

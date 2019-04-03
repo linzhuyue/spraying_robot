@@ -38,6 +38,6 @@
 
   <!-- If database loading was enabled, start mongodb as well -->
   <include file="$(find ur5_moveit_config)/launch/default_warehouse_db.launch" if="$(arg db)"/>
-  <!-- start the ioboard -->
-  <node name="io_board_node" pkg="uwb_uart" type="io_board_node.py" output="screen"/>
+  <!-- start the ioboard
+  <node name="io_board_node" pkg="uwb_uart" type="io_board_node.py" output="screen"/>-->
 </launch>
