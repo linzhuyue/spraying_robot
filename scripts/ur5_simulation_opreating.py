@@ -36,7 +36,8 @@ def main():
     ur_info.Init_node()
     qq=[-85, -180, 90, -180, -90, 180]
     qq1=[-15, -180, 90, -180, -90, 180]
-    angular_to_pi=ur_info.change_angle_to_pi(qq1)
+    angular_to_pi=ur_info.change_angle_to_pi(qq)
+    print "angular_to_pi",angular_to_pi
     cn=0
     rate = rospy.Rate(0.5)
     while not rospy.is_shutdown():

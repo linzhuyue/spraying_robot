@@ -205,5 +205,8 @@ include_directories(
 add_executable(showpath_rvzi src/show_path_cpp.cpp)
 target_link_libraries(showpath_rvzi ${catkin_LIBRARIES})
 
+add_executable(showpath_sim src/show_path_sim.cpp)
+target_link_libraries(showpath_sim ${catkin_LIBRARIES})
+
 add_executable(showpath_rviz_new src/showpath_new.cpp)
 target_link_libraries(showpath_rviz_new ${catkin_LIBRARIES})
