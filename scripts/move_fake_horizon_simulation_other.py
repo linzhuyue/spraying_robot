@@ -32,14 +32,12 @@ class UrLineCircle:
         self.ace = 50
         self.cont=50
         self.t=0
-        self.L=0.65
-        self.r=0.07
         self.theta=-math.pi / 4
         self.tempq=[]
         self.p=p
         self.Kp=Kp
         self.urdfname=urdfname
-        # self.arm= moveit_commander.MoveGroupCommander('manipulator')
+        self.arm= moveit_commander.MoveGroupCommander('manipulator')
         # rotating 45 degree with Z aisx
         self.wRb = [math.cos(self.theta), -1*math.sin(self.theta), 0, math.sin(self.theta), math.cos(self.theta), 0, 0, 0,1]
         self.border_length_pub=rospy.Publisher("/uree_border_length_in_cartisian", Float64, queue_size=10)
@@ -63,11 +61,11 @@ class UrLineCircle:
                                    'wrist_1_joint',
                                    'wrist_2_joint',
                                    'wrist_3_joint']
-        # self.arm_client = actionlib.SimpleActionClient('arm_controller/follow_joint_trajectory', FollowJointTrajectoryAction)
+        self.arm_client = actionlib.SimpleActionClient('arm_controller/follow_joint_trajectory', FollowJointTrajectoryAction)
     def Init_node(self):
         rospy.init_node("move_ur5_path")
-        # self.arm_client.wait_for_server()
-        # rospy.loginfo('...connected.')
+        self.arm_client.wait_for_server()
+        rospy.loginfo('...connected.')
         pub = rospy.Publisher("/ur_driver/URScript", String, queue_size=10)
         return pub
     def get_urobject_ur5kinetmatics(self):
@@ -210,48 +208,10 @@ class UrLineCircle:
         self.jacabian_det_pub.publish(jacabian_det)
 
         new_q_t_1=numpy.array(q_joint_t).T+self.Kp*1*qdot_t.T
-        #print "before add detax homegeneios ",pose
-        #print "new_q_t1",new_q_t_1.tolist()[0]
+        print "before add detax homegeneios ",pose
+        print "new_q_t1",new_q_t_1.tolist()[0]
         JJ,pose_after=self.get_jacabian_from_joint(new_q_t_1.tolist()[0])
-        #print "forward T",pose_after
-        return new_q_t_1
-    def caculate_vlocity_by_jocabian_circlepath(self,cn,q_joint_t,deltax):
-
-        Jacabian_t,pose=self.get_jacabian_from_joint(q_joint_t)
-
-        Jacabian_plus = numpy.dot(numpy.dot(Jacabian_t.T, Jacabian_t).I, Jacabian_t.T)
-
-        velocity_x_y=self.caculate_path_x_y_velocity(self.L,self.r,deltax,cn)
-
-        new_deta_v=numpy.array([[-velocity_x_y[0],-velocity_x_y[1],0,0,0,0]])
-
-        jacabian_det=numpy.linalg.det(Jacabian_t)
-
-        #print "jacabian_det",type(jacabian_det),jacabian_det
-        qdot_t=numpy.dot(Jacabian_t.I,new_deta_v.T)
-        qdot_dot=qdot_t.tolist()
-        #print "qdot_dot",qdot_dot
-        self.uree_velocity_q1_pub.publish(qdot_dot[0][0])
-        self.uree_velocity_q2_pub.publish(qdot_dot[1][0])
-        self.uree_velocity_q3_pub.publish(qdot_dot[2][0])
-        self.uree_velocity_q4_pub.publish(qdot_dot[3][0])
-        self.uree_velocity_q5_pub.publish(qdot_dot[4][0])
-        self.uree_velocity_q6_pub.publish(qdot_dot[5][0])
-        if jacabian_det==0:
-            print "jacabian_det-------is zero-------"
-        # self.jacabian_rank_pub.publish()
-        # print "qdot_t",self.Kp*1*qdot_t.T
-        # print "numpy.array(q_joint_t).T",numpy.array(q_joint_t).T
-        jacabian_rank=numpy.linalg.matrix_rank(Jacabian_t)
-
-        self.jacabian_rank_pub.publish(jacabian_rank)
-        self.jacabian_det_pub.publish(jacabian_det)
-
-        new_q_t_1=numpy.array(q_joint_t).T+self.Kp*1*qdot_t.T
-        #print "before add detax homegeneios ",pose
-        #print "new_q_t1",new_q_t_1.tolist()[0]
-        JJ,pose_after=self.get_jacabian_from_joint(new_q_t_1.tolist()[0])
-        #print "forward T",pose_after
+        print "forward T",pose_after
         return new_q_t_1
     def get_draw_circle_xy(self,t,xy_center_pos):
         x = xy_center_pos[0] + self.radius * math.cos( 2 * math.pi * t / self.cont )
@@ -334,63 +294,11 @@ class UrLineCircle:
 
     def move_ee_new(self,ur5_pub,q_now_t,deltax,cn,flagx,flagy):
         q_new_from_jacabian=self.caculate_vlocity_by_jocabian(cn,q_now_t,deltax,flagx,flagy).tolist()[0]
-        # self.use_arbotix(q_new_from_jacabian)
+        self.use_arbotix(q_new_from_jacabian)
         # self.use_moveit_fk_control_fake_UR(q_new_from_jacabian)
-        self.set_position(q_new_from_jacabian,cn)
+        #self.set_position(q_new_from_jacabian,cn)
         #self.urscript_pub(ur5_pub, q_new_from_jacabian, self.vel, self.ace, self.t)
         return q_new_from_jacabian
-    def move_ee_path(self,ur5_pub,q_now_t,deltax,cn):
-        q_new_from_jacabian=self.caculate_vlocity_by_jocabian_circlepath(cn,q_now_t,deltax).tolist()[0]
-        # self.use_arbotix(q_new_from_jacabian)
-        # self.use_moveit_fk_control_fake_UR(q_new_from_jacabian)
-        self.set_position(q_new_from_jacabian,cn)
-        #self.urscript_pub(ur5_pub, q_new_from_jacabian, self.vel, self.ace, self.t)
-        return q_new_from_jacabian
-    def caculate_path_x_y_velocity(self,L,r,detaxy,cn):
-        """
-        x aix:
-            0<=s<=L s+x0
-            L<s<=L+pi*r L+rsin(s-L/r)+x0
-            L+pi*r<s<=2L+pi*r L-(s-L-pi*r)+x0
-            2L+pi*r<s<=2(L+pi*r) -rsin((s-2L-pi*r)/r)+x0
-        x dot:
-            0<=s<=L dot(s)
-            L<s<=L+pi*r dot(s)cos((s-L)/r)
-            L+pi*r<s<=2L+pi*r -dot(s)
-            2L+pi*r<s<=2(L+pi*r) -dot(s)cos((s-2L-pi*r)/r)
-        y aix:
-            0<=s<=L y0
-            L<s<=L+pi*r r(-cos((s-L)/r)+1)+y0
-            L+pi*r<s<=2L+pi*r 2r+y0
-            2L+pi*r<s<=2(L+pi*r) 2r+r(cos((s-2L-pi*r)/r)-1)+y0
-        y dot:
-            0<=s<=L 0
-            L<s<=L+pi*r dot(s)sin((s-L)/r)
-            L+pi*r<s<=2L+pi*r 0
-            2L+pi*r<s<=2(L+pi*r) -dot(s)sin((s-2L-pi*r)/r)
-
-        :param L:
-        :param r:
-        :param detaxy:
-        :param xy_zero:
-        :return:
-        """
-        s=detaxy*cn
-        print "s-----",s
-        if detaxy*cn <=L:
-            print "go --line---"
-            return [detaxy,0]
-        elif L<detaxy*cn<=L+math.pi*r:
-            print "go first helf-cirlce------"
-            return [detaxy*math.cos((detaxy*cn-L)/r),detaxy*math.sin((detaxy*cn-L)/r)]
-        elif L+math.pi*r<s<=2*L+math.pi*r:
-            print "go the next line----"
-            return [-detaxy,0]
-        elif (2*L+math.pi*r)<s<=2*(L+math.pi*r):
-            print "go to the second helf-circle------"
-            return [-detaxy*math.cos((detaxy*cn-2*L-math.pi*r)/r),detaxy*math.sin((detaxy*cn-2*L-math.pi*r)/r)]
-        else:
-            print "caculate path error ------- please check----"
     def test_three_motor_serial_port_is_ok(self,Port):
         pass
     def caculate_point2point_line(self,T0,T1):
@@ -439,8 +347,8 @@ class UrLineCircle:
         arm_trajectory.joint_names = self.arm_joints
         arm_trajectory.points.append(JointTrajectoryPoint())
         arm_trajectory.points[0].positions = arm_goal
-        arm_trajectory.points[0].velocities = [0.1 for i in self.arm_joints]
-        arm_trajectory.points[0].accelerations = [0.1 for i in self.arm_joints]
+        arm_trajectory.points[0].velocities = [0.0 for i in self.arm_joints]
+        arm_trajectory.points[0].accelerations = [0.0 for i in self.arm_joints]
         arm_trajectory.points[0].time_from_start = rospy.Duration(3.0)
 
         rospy.loginfo('Moving the arm to goal position...')
@@ -469,7 +377,7 @@ def main():
     urdfname = "/data/ros/yue_ws_2019/src/spraying_robot/urdf/ur5.urdf"
     qstart=[-85, -180, 90, -180, -90, 180]
 
-    ratet = 5#1.5
+    ratet = 30#1.5
     radius=0.1
     weights = [1.] * 6
     T_list=[]
@@ -520,112 +428,36 @@ def main():
     count_num=[0,0,0,0,0,0,0,0,0]
     flag_for_up_left_motor=[0,0,0,0,0,0,0]
 
-    left_right_gap=1
+    left_right_gap=4
     up_down_gap=0.2
     plus_num=0.1
     time_cnt=0.
     count_for_up_ward=0
-    close_all_flag=1
     while not rospy.is_shutdown():
-        if len(qzero)!=0:
+        q_now = ur_reader.ave_ur_pose
+        if len(q_now)!=0:#len(ur_reader.ave_ur_pose)==0:
+            print "q_now",q_now
+            """
+            go to the largest distance 
+            """
             deltax = urc.get_draw_line_x([0, 0, 0], [1.5, 0, 0])
-            if close_all_flag==1:
-                if flag_to_zero == 1:
-                    temp_joint_q=qzero
-                    qzero=urc.move_ee_new(pub,qzero,deltax,cn,1,0)
-                    cn += 1
-                    print "right now q joint",cn,qzero
-                    urc.border_length_pub.publish(
-                        urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(qzero)))
-                    if cn == int(urc.cont/3*left_right_gap):
-                        flag_to_zero = 0
-                        flag_left_right[0] = 1#right
-                        temp_joint_q=qzero
-                        cn = 1
-                if flag_left_right[0] == 1:
-                    print "right now q joint",cn,qzero
-                    # deltax = urc.get_draw_line_x([0.286, 0, 0], [0.5, 0, 0])
-                    temp_joint_q=qzero
-                    qzero=urc.move_ee_path(pub,qzero,deltax,cn*1)#detat=cn*1/5
-                    # print cn, "move to right -----", qq
-                    cn += 1
-                    # urc.border_length_pub.publish(
-                    #     urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
-                    if cn == int((urc.cont+7)):
-                        flag_up_down[0] = 1#up
-                        flag_left_right[0] = 1
-                        time.sleep(time_cnt)
+            if flag_to_zero == 1:
+                print cn, "go to the largest distance  -----", q_now
+                urc.move_ee_new(pub,q_now,deltax,cn,1,0)
+                # 关闭并退出moveit
+                # moveit_commander.roscpp_shutdown()
+                # moveit_commander.os._exit(0)
+                cn += 1
+                # time.sleep(0.1)
+                #urc.border_length_pub.publish(urc.caculate_point2point_line(F_T, ur0_kinematics.Forward(q_now)))
+                if cn == int(urc.cont*2):
+                    flag_to_zero = 0
+                    flag_left_right[0] = 1#right
+                    temp_joint_q=q_now
+                    #urc.control_electric_switch(0, "55C81900020055")
+                    #time.sleep(1.5)
+                    cn = 1
 
-                        temp_joint_q=qzero
-                        cn = 1
-                # if flag_up_down[0] == 1:
-                #     print "first move to down -----"
-                #     # detay = urc.get_draw_line_x(cn, [-0.45, 0, 0], [0.45, 0, 0])
-                #     qq = urc.move_ee(pub,q_now,deltax,cn,0,-1)
-                #     print cn, "first move to down -----", qq
-                #     cn += 1
-                #     urc.border_length_pub.publish(urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
-                #     if cn == int((urc.cont)*up_down_gap):
-                #         flag_up_down[0] = 0
-                #         flag_left_right[1] = 1#left
-                #         temp_joint_q=q_now
-                #         time.sleep(time_cnt)
-                #         cn = 1
-                # if flag_left_right[1] == 1:
-                #     print "first move to right -----"
-                #     # deltax = urc.get_draw_line_x([0.286, 0, 0], [0.5, 0, 0])
-                #     qq = urc.move_ee(pub,q_now,deltax,cn,1,0)#left
-                #     print cn, "move to right -----", qq
-                #     cn += 1
-                #     urc.border_length_pub.publish(
-                #         urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
-                #     if cn == int((urc.cont)*left_right_gap+2.5*(urc.cont)*plus_num):
-                #         flag_up_down[1] = 1#down
-                #         flag_left_right[1] = 0
-                #         time.sleep(time_cnt)
-                #         go_back_start_flag=1
-                #         temp_joint_q=q_now
-                #         cn = 1
-                #
-                # if go_back_start_flag == 1:
-                #     urc.urscript_pub(pub, qzero, 0.5, 1.4, t)
-                #     time.sleep(1)
-                #     cn = 1
-                #     go_back_start_flag = 0
-                #
-                #     #time.sleep(3)
-                #     flag_for_up_left_motor[0]=1
-                #     print "path planning over ------"
-
-            else:
-                print "everything is ok-----------Bye-Bye--------------"
         rate.sleep()
-                # q_now = ur_reader.ave_ur_pose
-                # if len(qzero)!=0:#len(ur_reader.ave_ur_pose)==0:
-                #     print "q_now",q_now
-                #     """
-                #     go to the largest distance
-                #     """
-                #     deltax = urc.get_draw_line_x([0, 0, 0], [1.5, 0, 0])
-                #     if flag_to_zero == 1:
-                #         print cn, "go to the largest distance  -----", q_now
-                #         qq=urc.move_ee_new(pub,qzero,deltax,cn,1,0)
-                #         qzero=qq
-                #         print "qq",qq
-                #         # 关闭并退出moveit
-                #         # moveit_commander.roscpp_shutdown()
-                #         # moveit_commander.os._exit(0)
-                #         cn += 1
-                #         # time.sleep(0.1)
-                #         #urc.border_length_pub.publish(urc.caculate_point2point_line(F_T, ur0_kinematics.Forward(q_now)))
-                #         if cn == int(urc.cont):
-                #             flag_to_zero = 0
-                #             flag_left_right[0] = 1#right
-                #             temp_joint_q=q_now
-                #             #urc.control_electric_switch(0, "55C81900020055")
-                #             #time.sleep(1.5)
-                #             cn = 1
-                #
-        # rate.sleep()
 if __name__ == '__main__':
         main()

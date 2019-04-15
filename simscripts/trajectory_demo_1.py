@@ -15,12 +15,14 @@ class TrajectoryDemo():
         reset = rospy.get_param('~reset', False)
         
         # 机械臂中joint的命名
-        arm_joints = ['shoulder_pan_joint',
+        arm_joints_1 = ['shoulder_pan_joint',
                       'shoulder_lift_joint',
                       'elbow_joint',
                       'wrist_1_joint',
                       'wrist_2_joint',
                       'wrist_3_joint']
+        arm_joints = ['elbow_joint', 'shoulder_pan_joint', 'wrist_3_joint', 'wrist_1_joint', 'shoulder_lift_joint',
+                      'wrist_2_joint']
         
         if reset:
             # 如果需要回到初始化位置，需要将目标位置设置为初始化位置的六轴角度
@@ -28,7 +30,7 @@ class TrajectoryDemo():
 
         else:
             # 如果不需要回初始化位置，则设置目标位置的六轴角度
-            arm_goal  = [-1.48277777778,-3.14,1.57,-3.14,-1.57,3.14]
+            arm_goal  =[1.57,-1.48277777778,3.14,-3.14,-3.14,-1.57]# [-1.48277777778,-3.14,1.57,-3.14,-1.57,3.14]
     
         # 连接机械臂轨迹规划的trajectory action server
         rospy.loginfo('Waiting for arm trajectory controller...')       
@@ -58,6 +60,29 @@ class TrajectoryDemo():
     
         # 将轨迹目标发送到action server进行处理，实现机械臂的运动控制
         arm_client.send_goal(arm_goal)
+        # arm_goal=[-1.48277777778,-3.14,0.57,-3.14,-1.57,3.14]
+        # # 使用设置的目标位置创建一条轨迹数据
+        # arm_trajectory = JointTrajectory()
+        # arm_trajectory.joint_names = arm_joints
+        # arm_trajectory.points.append(JointTrajectoryPoint())
+        # arm_trajectory.points[0].positions = arm_goal
+        # arm_trajectory.points[0].velocities = [0.0 for i in arm_joints]
+        # arm_trajectory.points[0].accelerations = [0.0 for i in arm_joints]
+        # arm_trajectory.points[0].time_from_start = rospy.Duration(3.0)
+        #
+        # rospy.loginfo('Moving the arm to goal position...')
+        #
+        # # 创建一个轨迹目标的空对象
+        # arm_goal = FollowJointTrajectoryGoal()
+        #
+        # # 将之前创建好的轨迹数据加入轨迹目标对象中
+        # arm_goal.trajectory = arm_trajectory
+        #
+        # # 设置执行时间的允许误差值
+        # arm_goal.goal_time_tolerance = rospy.Duration(0.0)
+        #
+        # # 将轨迹目标发送到action server进行处理，实现机械臂的运动控制
+        # arm_client.send_goal(arm_goal)
 
         # 等待机械臂运动结束
         arm_client.wait_for_result(rospy.Duration(5.0))

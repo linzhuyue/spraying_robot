@@ -71,7 +71,8 @@ class MoveItIkDemo:
         rospy.sleep(1)
   
         # 控制机械臂终端反向旋转90度
-        arm.shift_pose_target(3, -1.57, end_effector_link)
+        arm.shift_pose_target(1, -0.05, end_effector_link)
+        #arm.shift_pose_target(3, -1.57, end_effector_link)
         arm.go()
         rospy.sleep(1)
            

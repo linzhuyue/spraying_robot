@@ -29,7 +29,7 @@ void ShowPathUR::tf_pose_callback(const tf2_msgs::TFMessage::ConstPtr& msg)
 //    ROS_INFO("Orientation-> x: [%f], y: [%f], z: [%f], w: [%f]",msg->transforms[0].transform.rotation.x,msg->transforms[0].transform.rotation.y,msg->transforms[0].transform.rotation.z,msg->transforms[0].transform.rotation.w);
 //    ROS_INFO("child_frame_id-> tool0_controller: [%s]",msg->transforms[0].child_frame_id.c_str());
     string A (msg->transforms[0].child_frame_id.c_str());
-    string B="ee_link";
+    string B="wrist_3_link";
     int m=A.compare (B);
 //    if(msg->transforms[0].child_frame_id.c_str()=="tool0_controller")
     if(m==0)
