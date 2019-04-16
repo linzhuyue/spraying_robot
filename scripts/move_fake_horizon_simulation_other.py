@@ -37,7 +37,7 @@ class UrLineCircle:
         self.p=p
         self.Kp=Kp
         self.urdfname=urdfname
-        self.arm= moveit_commander.MoveGroupCommander('manipulator')
+        # self.arm= moveit_commander.MoveGroupCommander('manipulator')
         # rotating 45 degree with Z aisx
         self.wRb = [math.cos(self.theta), -1*math.sin(self.theta), 0, math.sin(self.theta), math.cos(self.theta), 0, 0, 0,1]
         self.border_length_pub=rospy.Publisher("/uree_border_length_in_cartisian", Float64, queue_size=10)
@@ -61,10 +61,10 @@ class UrLineCircle:
                                    'wrist_1_joint',
                                    'wrist_2_joint',
                                    'wrist_3_joint']
-        self.arm_client = actionlib.SimpleActionClient('arm_controller/follow_joint_trajectory', FollowJointTrajectoryAction)
+        # self.arm_client = actionlib.SimpleActionClient('arm_controller/follow_joint_trajectory', FollowJointTrajectoryAction)
     def Init_node(self):
         rospy.init_node("move_ur5_path")
-        self.arm_client.wait_for_server()
+        # self.arm_client.wait_for_server()
         rospy.loginfo('...connected.')
         pub = rospy.Publisher("/ur_driver/URScript", String, queue_size=10)
         return pub
@@ -375,7 +375,7 @@ def main():
     # ace=1.4
 
     urdfname = "/data/ros/yue_ws_2019/src/spraying_robot/urdf/ur5.urdf"
-    qstart=[-85, -180, 90, -180, -90, 180]
+    qstart=[-45, -180, 90, -180, -90, 180]
 
     ratet = 30#1.5
     radius=0.1
@@ -434,29 +434,33 @@ def main():
     time_cnt=0.
     count_for_up_ward=0
     while not rospy.is_shutdown():
-        q_now = ur_reader.ave_ur_pose
-        if len(q_now)!=0:#len(ur_reader.ave_ur_pose)==0:
-            print "q_now",q_now
-            """
-            go to the largest distance 
-            """
-            deltax = urc.get_draw_line_x([0, 0, 0], [1.5, 0, 0])
-            if flag_to_zero == 1:
-                print cn, "go to the largest distance  -----", q_now
-                urc.move_ee_new(pub,q_now,deltax,cn,1,0)
-                # 关闭并退出moveit
-                # moveit_commander.roscpp_shutdown()
-                # moveit_commander.os._exit(0)
-                cn += 1
-                # time.sleep(0.1)
-                #urc.border_length_pub.publish(urc.caculate_point2point_line(F_T, ur0_kinematics.Forward(q_now)))
-                if cn == int(urc.cont*2):
-                    flag_to_zero = 0
-                    flag_left_right[0] = 1#right
-                    temp_joint_q=q_now
-                    #urc.control_electric_switch(0, "55C81900020055")
-                    #time.sleep(1.5)
-                    cn = 1
+        print qzero
+        j,p=urc.get_jacabian_from_joint(qzero)
+        print j.reshape(6,6)
+        time.sleep(10)
+        # q_now = ur_reader.ave_ur_pose
+        # if len(q_now)!=0:#len(ur_reader.ave_ur_pose)==0:
+        #     print "q_now",q_now
+        #     """
+        #     go to the largest distance
+        #     """
+        #     deltax = urc.get_draw_line_x([0, 0, 0], [1.5, 0, 0])
+        #     if flag_to_zero == 1:
+        #         print cn, "go to the largest distance  -----", q_now
+        #         urc.move_ee_new(pub,q_now,deltax,cn,1,0)
+        #         # 关闭并退出moveit
+        #         # moveit_commander.roscpp_shutdown()
+        #         # moveit_commander.os._exit(0)
+        #         cn += 1
+        #         # time.sleep(0.1)
+        #         #urc.border_length_pub.publish(urc.caculate_point2point_line(F_T, ur0_kinematics.Forward(q_now)))
+        #         if cn == int(urc.cont*2):
+        #             flag_to_zero = 0
+        #             flag_left_right[0] = 1#right
+        #             temp_joint_q=q_now
+        #             #urc.control_electric_switch(0, "55C81900020055")
+        #             #time.sleep(1.5)
+        #             cn = 1
 
         rate.sleep()
 if __name__ == '__main__':

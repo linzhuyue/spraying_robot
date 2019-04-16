@@ -57,12 +57,23 @@ class UrLineCircle:
         self.jacabian_rank_pub = rospy.Publisher("/ur_jacabian_rank", Float64, queue_size=10)
         #self.io_pub=rospy.Publisher("/io_state", String, queue_size=10)
         self.joint_states_pub=rospy.Publisher("/joint_states", JointState, queue_size=10)
-        self.arm_joints = ['shoulder_pan_joint',
-                                   'shoulder_lift_joint',
-                                   'elbow_joint',
-                                   'wrist_1_joint',
-                                   'wrist_2_joint',
-                                   'wrist_3_joint']
+        self.arm_joints = ['mr_steeringjoint01',
+                           'mr_drivingjoint01',
+                           'mr_steeringjoint02',
+                           'mr_drivingjoint02',
+                           'mr_steeringjoint03',
+                           'mr_drivingjoint03',
+                           'mr_steeringjoint04',
+                           'mr_drivingjoint04',
+                           'cr_joint00',
+                           'cr_joint01',
+                           'cr_joint02',
+                           'ur_joint01',
+                           'ur_joint02',
+                           'ur_joint03',
+                           'ur_joint04',
+                           'ur_joint05',
+                           'ur_joint06']
         # self.arm_client = actionlib.SimpleActionClient('arm_controller/follow_joint_trajectory', FollowJointTrajectoryAction)
     def Init_node(self):
         rospy.init_node("move_ur5_path")
@@ -305,8 +316,7 @@ class UrLineCircle:
         joint_info.header.stamp = rospy.Time.now()
         joint_info.header.frame_id = "base"
         joint_info.header.seq=cn
-        joint_info.name=["shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint", "wrist_1_joint", "wrist_2_joint",
-                         "wrist_3_joint"]
+        joint_info.name=self.arm_joints
         joint_info.position=pose
         joint_info.velocity=[]
         joint_info.effort=[]
@@ -343,7 +353,8 @@ class UrLineCircle:
         q_new_from_jacabian=self.caculate_vlocity_by_jocabian_circlepath(cn,q_now_t,deltax).tolist()[0]
         # self.use_arbotix(q_new_from_jacabian)
         # self.use_moveit_fk_control_fake_UR(q_new_from_jacabian)
-        self.set_position(q_new_from_jacabian,cn)
+        qq=self.just_ur5(q_new_from_jacabian)
+        self.set_position(qq,cn)
         #self.urscript_pub(ur5_pub, q_new_from_jacabian, self.vel, self.ace, self.t)
         return q_new_from_jacabian
     def caculate_path_x_y_velocity(self,L,r,detaxy,cn):
@@ -459,6 +470,10 @@ class UrLineCircle:
 
         # 等待机械臂运动结束
         self.arm_client.wait_for_result(rospy.Duration(5.0))
+    def just_ur5(self,pose):
+        kk=[0.0 for i in self.arm_joints]
+        kk[11:]=pose
+        return kk
 def main():
     t=0
     vel=0.1
@@ -526,38 +541,41 @@ def main():
     time_cnt=0.
     count_for_up_ward=0
     close_all_flag=1
+    qzero=urc.just_ur5(qzero)
     while not rospy.is_shutdown():
-        if len(qzero)!=0:
-            deltax = urc.get_draw_line_x([0, 0, 0], [1.5, 0, 0])
-            if close_all_flag==1:
-                if flag_to_zero == 1:
-                    temp_joint_q=qzero
-                    qzero=urc.move_ee_new(pub,qzero,deltax,cn,1,0)
-                    cn += 1
-                    print "right now q joint",cn,qzero
-                    urc.border_length_pub.publish(
-                        urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(qzero)))
-                    if cn == int(urc.cont/3*left_right_gap):
-                        flag_to_zero = 0
-                        flag_left_right[0] = 1#right
-                        temp_joint_q=qzero
-                        cn = 1
-                if flag_left_right[0] == 1:
-                    print "right now q joint",cn,qzero
-                    # deltax = urc.get_draw_line_x([0.286, 0, 0], [0.5, 0, 0])
-                    temp_joint_q=qzero
-                    qzero=urc.move_ee_path(pub,qzero,deltax,cn*1)#detat=cn*1/5
-                    # print cn, "move to right -----", qq
-                    cn += 1
-                    # urc.border_length_pub.publish(
-                    #     urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
-                    if cn == int((urc.cont+7)):
-                        flag_up_down[0] = 1#up
-                        flag_left_right[0] = 1
-                        time.sleep(time_cnt)
-
-                        temp_joint_q=qzero
-                        cn = 1
+        j,p=urc.get_jacabian_from_joint(qzero)
+        print j
+        # if len(qzero)!=0:
+        #     deltax = urc.get_draw_line_x([0, 0, 0], [1.5, 0, 0])
+        #     if close_all_flag==1:
+        #         if flag_to_zero == 1:
+        #             temp_joint_q=qzero
+        #             qzero=urc.move_ee_new(pub,qzero[11:],deltax,cn,1,0)
+        #             cn += 1
+        #             print "right now q joint",cn,qzero
+        #             # urc.border_length_pub.publish(
+        #             #     urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(qzero)))
+        #             if cn == int(urc.cont/3*left_right_gap):
+        #                 flag_to_zero = 0
+        #                 flag_left_right[0] = 1#right
+        #                 temp_joint_q=qzero
+        #                 cn = 1
+        #         if flag_left_right[0] == 1:
+        #             print "right now q joint",cn,qzero
+        #             # deltax = urc.get_draw_line_x([0.286, 0, 0], [0.5, 0, 0])
+        #             temp_joint_q=qzero
+        #             qzero=urc.move_ee_path(pub,qzero,deltax,cn*1)#detat=cn*1/5
+        #             # print cn, "move to right -----", qq
+        #             cn += 1
+        #             # urc.border_length_pub.publish(
+        #             #     urc.caculate_point2point_line(ur0_kinematics.Forward(temp_joint_q), ur0_kinematics.Forward(q_now)))
+        #             if cn == int((urc.cont+7)):
+        #                 flag_up_down[0] = 1#up
+        #                 flag_left_right[0] = 1
+        #                 time.sleep(time_cnt)
+        #
+        #                 temp_joint_q=qzero
+        #                 cn = 1
                 # if flag_up_down[0] == 1:
                 #     print "first move to down -----"
                 #     # detay = urc.get_draw_line_x(cn, [-0.45, 0, 0], [0.45, 0, 0])
@@ -597,8 +615,8 @@ def main():
                 #     flag_for_up_left_motor[0]=1
                 #     print "path planning over ------"
 
-            else:
-                print "everything is ok-----------Bye-Bye--------------"
+            # else:
+            #     print "everything is ok-----------Bye-Bye--------------"
         rate.sleep()
                 # q_now = ur_reader.ave_ur_pose
                 # if len(qzero)!=0:#len(ur_reader.ave_ur_pose)==0:

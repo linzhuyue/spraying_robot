@@ -1,5 +1,5 @@
 from numpy import *
-
+import math
 #####ur5 robot class #####
 class ur5_robot:
     # basic parameters
@@ -43,8 +43,12 @@ class ur5_robot:
             T[k+1] = dot(T[k], self.MDH(self.A[k], self.ALPHA[k], self.D[k], theta[k]))
         J = zeros((6, 6))
         for k in range(0, self.JOINT_SIZE):
-            J[0:3, k] = cross(T[k+1][0:3, 2], T[self.JOINT_SIZE][0:3, 3] - T[k+1][0:3, 3]).transpose()
+            J[0:3, k] = cross(T[k+1][0:3, 2], T[self.JOINT_SIZE][0:3, 3] -T[k+1][0:3, 3]).transpose()
+            # print J[0:3,k]
             J[3:6, k] = T[k+1][0:3, 2]
+        # print "j",J[:2,...]
+        J[:2,...]=-1*J[:2,...]
+        J[3:5,...]=-1*J[3:5,...]
         return J
 
     def sk(self, w):
@@ -81,12 +85,18 @@ class ur5_robot:
         return q
 
 def main():
-    a=[0,-0.42500,-0.39225,0,0,0]
-    alpha=[pi/2,0,0,pi/2,-pi/2,0]
+    a=[0,0,-0.42500,-0.39225,0,0]
+    alpha=[0,math.pi/2,0,0,math.pi/2,-math.pi/2]
     d=[0.089159,0,0,0.10915,0.09465,0.0823]
-    q=[
-        -85, -180, 90, -180, -90, 180
-    ]
+    # a=[0,-0.42500,-0.39225,0,0,0]
+    # alpha=[math.pi/2,0,0,math.pi/2,-math.pi/2,0]
+    # d=[0.089159,0,0,0.10915,0.09465,0.0823]
+    # q=[-1.4827777777777778, -3.14, 1.57, -3.14, -1.57, 3.14]
+    qq=[-0.785, -3.14, 1.57, -3.14, -1.57, 3.14]
+    # q=[
+    #     -85, -180, 90, -180, -90, 180
+    # ]
+    q=qq
     ur=ur5_robot("ur5",6,a,alpha,d,q)
     print ur.dk(q)
     # print ur.J('EE',q)

@@ -10,7 +10,7 @@ class UrSimposition():
     def __init__(self, name = "ur_info_subscriber" ):
 
         self.name = name
-        self.joint_states_pub=rospy.Publisher("/joint_states", JointState, queue_size=10)
+        self.joint_states_pub=rospy.Publisher("/joint_states", JointState, queue_size=100)
         self.arm_joints = ['mr_steeringjoint01',
                            'mr_drivingjoint01',
                            'mr_steeringjoint02',
@@ -38,24 +38,28 @@ class UrSimposition():
     def set_position(self,pose,cn):
         joint_info=JointState()
         joint_info.header.stamp = rospy.Time.now()
-        joint_info.header.frame_id = "mr_body"
+        joint_info.header.frame_id = "world"
         joint_info.header.seq=cn
         joint_info.name=self.arm_joints
+        print "name",len(self.arm_joints)
         joint_info.position=pose
+        print "psoe",len(pose)
         joint_info.velocity=[0.1 for i in self.arm_joints]
         joint_info.effort=[]
         self.joint_states_pub.publish(joint_info)
     def just_ur5(self,pose):
         kk=[0.0 for i in self.arm_joints]
-        kk[10:]=pose
+        kk[11:]=pose
         return kk
 
 def main():
     ur_info = UrSimposition()
     ur_info.Init_node()
     qq=[-85, -180, 90, -180, -90, 180]
-    qq1=[-15, -180, 90, -180, -90, 180]
-    angular_to_pi=ur_info.change_angle_to_pi(qq)
+    qq1=[-15, -80, 90, -180, -30, 180]
+    qq2=[0,0,0,0,0,0]
+    qq3=[-46.6821800834981, -174.97864208684973, 80.07423636487007, -186.04617133491166, -90.16842631753586, 182.8492880891567]
+    angular_to_pi=ur_info.change_angle_to_pi(qq2)
     print "angular_to_pi",angular_to_pi
     cn=0
     rate = rospy.Rate(0.5)
@@ -63,7 +67,7 @@ def main():
         joint_all=ur_info.just_ur5(angular_to_pi)
         print joint_all
         ur_info.set_position(joint_all,cn)
-        cn+=1
+        # cn+=1
         rate.sleep()
 
 if __name__ == "__main__":
