@@ -98,7 +98,7 @@ def main():
     # ]
     q=qq
     ur=ur5_robot("ur5",6,a,alpha,d,q)
-    print ur.dk(q)
+    print(ur.dk(q))
     # print ur.J('EE',q)
 if __name__== '__main__':
     main()
