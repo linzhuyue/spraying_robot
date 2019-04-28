@@ -24,7 +24,8 @@ class ClimbRobot:
     def get_serial_port(self):
         a,b=commands.getstatusoutput('python -m serial.tools.list_ports')
         print b,type(b)
-    def 01
+    def Opreating_Info_CRC(self):
+        pass
     def Position_abs_control(self):
         pass
     def Position_incremental_control(self):
