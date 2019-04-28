@@ -2,8 +2,8 @@
 # -*- coding: utf_8 -*-
 """
 id：1---->stand bar
-id:2----->roation
-id:3------>Upper and lower climbing pole
+id:3----->roation
+id:2------>Upper and lower climbing pole
 """
 
 import sys
@@ -24,33 +24,28 @@ class ClimbRobot:
     def get_serial_port(self):
         a,b=commands.getstatusoutput('python -m serial.tools.list_ports')
         print b,type(b)
+    def 01
+    def Position_abs_control(self):
+        pass
+    def Position_incremental_control(self):
+        pass
+    def Velocity_control(self):
+        pass
+    def Pulse_hex_change(self,pusle_value):
+        if pusle_value<0:
+            return hex(pusle_value&0xffffffff)
+        else:
+            return hex(pusle_value)
     def Open_serial(self):
         if self.ser.open():
             print "Open Ok"
             hex_string='01 06 00 00 00 01 48 0A'
             print '',binascii.hexlify(hex_string)
             self.ser.write(b'hello')
+            time.sleep(0.1)
         else:
             print "Please check your USB port -----"
-    def send_command(self,cmd_name, cmd_string):
-        print ("\ncmd_name:", cmd_name)
-        print ("cmd_string:", cmd_string)
-        cmd_bytes = bytearray.fromhex(cmd_string)
-        # print cmd_bytes
-        for cmd_byte in cmd_bytes:
-            hex_byte = ("{0:02x}".format(cmd_byte))
 
-            print (hex_byte)
-            self.ser.write(bytearray.fromhex(hex_byte))
-            # time.sleep(.100)
-
-        # wait an extra 3 seconds for DISP_ON_CMD
-        if cmd_name == "DISP_ON_CMD":
-            time.sleep(5.0)
-        response = self.ser.read(32)
-        print ("response:", binascii.hexlify(bytearray(response)))
-        self.ser.close()
-        return
 
 
 #PORT = '/dev/ttyp5'
@@ -61,20 +56,8 @@ def main():
     climb_robot.get_serial_port()
     hex_string='01 06 00 00 00 01 48 0A'
     hh='01 06 00 02 03 E8 28 B4'
-    climb_robot.send_command('HEART_BEAT_CMD',hex_string.replace(' ',''))
-    climb_robot.send_command('HEART_BEAT_CMD',hh)
 
-    # kk=hex_string.replace(' ','')
-    # print kk,kk.decode('hex')
-    # Code to put processor into factory mode.
-    # comm_init='c4c4'
-    # Here's the list of command strings, captured as tuples.
-    # The 16-bit Data and Msg CRCs are calculated via gen_crc.exe.
-    # heart_beat_cmd=      ("HEART_BEAT_CMD",      'a5a50a00010000003e1b')
-    # print (hex_string.replace(' ','')).decode('hex')
-    # # print '',unhexlify(hex_string.strip(' '))
-    # print climb_robot.ser.write((hex_string.replace(' ','')).decode('hex'))
-    # # print climb_robot.ser,type(climb_robot.ser)
-    # # climb_robot.Open_serial()
+
+
 if __name__ == "__main__":
     main()
