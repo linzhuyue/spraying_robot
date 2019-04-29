@@ -69,12 +69,38 @@ class ClimbRobotCRC:
             crchi = crclo ^ self.auchCRCHi[crcIndex]
             crclo = self.auchCRCLo[crcIndex]
         return (crchi << 8 | crclo)
+    def Hex_list_to_string(self,array):
+        """
 
+        :param array: [0x01, 0x78, 0x00, 0x00, 0x27, 0x10]--->017800002710
+        :return:
+        """
+        array3 = [str(hex(x))[2:].zfill(2) for x in array]
+        # print "".join(array3)
+        return "".join(array3)
+    def Combining_CRC_and_info(self,array):
+        str1=self.Hex_list_to_string(array)
+        str2=str(hex(self.CRC16_PY(array)))[2:]
+        # print str1
+        # print str2
+        print str1+str2
+        return str1+str2
 def main():
     climb=ClimbRobotCRC()
     array1 = [0x01, 0x78, 0x00, 0x00, 0x27, 0x10]
-    print hex(climb.CRC16_PY(array1))
-
+    array2=[0x03,0x06,0x00,0x00,0x00,0x00]
+    array3=[0x03,0x06,0x00,0x02,0x03,0xE8]
+    array4=[0x03,0x06,0x00,0x02,0xFF,0x9C]
+    array5=[0x03,0x06,0x00,0x02,0x00,0x64]
+    array6=[0x03,0x03,0x00,0x00,0x00,0x02]
+    print climb.Combining_CRC_and_info(array6)
+    # array3 = [str(hex(x))[2:].zfill(2) for x in array1]
+    # print array3,"".join(array3)
+    # array2 = ["{:x}".format(x) for x in array1]
+    # print "".join(array2),array2
+    # print hex(climb.CRC16_PY(array1))
+    # array1.append(hex(climb.CRC16_PY(array1)))
+    # print array1
 
 if __name__ == "__main__":
     main()
