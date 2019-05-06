@@ -93,7 +93,9 @@ def main():
     array4=[0x03,0x06,0x00,0x02,0xFF,0x9C]
     array5=[0x03,0x06,0x00,0x02,0x00,0x64]
     array6=[0x03,0x03,0x00,0x00,0x00,0x02]
-    print climb.Combining_CRC_and_info(array6)
+    array7=[0x03,0x20,0x10,0x01,0x05]
+    k=[3, 6, 0, 0, 0, 1]
+    print climb.Combining_CRC_and_info(k),type(climb.Combining_CRC_and_info(k))
     # array3 = [str(hex(x))[2:].zfill(2) for x in array1]
     # print array3,"".join(array3)
     # array2 = ["{:x}".format(x) for x in array1]

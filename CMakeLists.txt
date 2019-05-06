@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   sensor_msgs
   nav_msgs
+  serial
   tf
 )
 
@@ -210,3 +211,6 @@ target_link_libraries(showpath_sim ${catkin_LIBRARIES})
 
 add_executable(showpath_rviz_new src/showpath_new.cpp)
 target_link_libraries(showpath_rviz_new ${catkin_LIBRARIES})
+
+add_executable(read_write_driver src/read_write_driver.cpp)
+target_link_libraries(read_write_driver ${catkin_LIBRARIES})

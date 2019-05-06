@@ -2,11 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import serial
+import serial.rs485
 import time
+from textwrap import wrap
 import binascii
 import struct
-s=serial.Serial('/dev/ttyUSB0',19200,bytesize=8, parity='O', stopbits=1,timeout=0.3, xonxoff=0)#
-
+s=serial.Serial('/dev/ttyUSB0',19200,bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE, stopbits=1,timeout=0.3, xonxoff=0,rtscts=False,dsrdtr=False)#
+# s.rs485_mode = serial.rs485.RS485Settings(rts_level_for_tx=True, rts_level_for_rx=False, loopback=False, delay_before_tx=None, delay_before_rx=None)
+print serial.__version__
 message_bytes = "03060000000149e8".decode('hex')#"0306000000008828".decode('hex')#8828#03060000000149e8
 # print str(message_bytes)
 s.write(message_bytes)
@@ -55,5 +58,9 @@ time.sleep(0.01)
 strt=s.read(25).encode('hex')
 # print (s.read(25)[2:].zfill(2)).encode('hex')
 # print bytes(s.read(25)).encode('hex')
-print str(strt),hex(str(strt))
+print str(strt)
+
+
+print wrap(strt,2)
+
 s.close()
