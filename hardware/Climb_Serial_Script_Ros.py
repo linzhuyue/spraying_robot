@@ -1,10 +1,6 @@
+
 #!/usr/bin/env python
 # -*- coding: utf_8 -*-
-"""
-id：1---->stand bar
-id:3----->roation
-id:2------>Upper and lower climbing pole
-"""
 import rospy
 import sys
 import binascii
@@ -37,34 +33,34 @@ class ClimbRobot:
     def Write_pulse_callback(self,msg):
         if len(self.writepulsebuffer)>10:
             self.writepulsebuffer=self.writepulsebuffer[1:]
-            print msg.data
+            print(msg.data)
             self.writepulsebuffer.append(msg.data)
         else:
-            print msg.data
+            print(msg.data)
             self.writepulsebuffer.append(msg.data)
     def Write_pulse_special_callback(self,msg):
         if len(self.writepulsespecialbuffer)>10:
             self.writepulsespecialbuffer=self.writepulsespecialbuffer[1:]
-            print msg.data
+            print(msg.data)
             self.writepulsespecialbuffer.append(msg.data)
         else:
-            print msg.data
+            print(msg.data)
             self.writepulsespecialbuffer.append(msg.data)
     def Read_info_callback(self,msg):
         if len(self.readinfobuffer)>10:
             self.readinfobuffer=self.readinfobuffer[1:]
-            print msg.data
+            print(msg.data)
             self.readinfobuffer.append(msg.data)
         else:
-            print msg.data
+            print(msg.data)
             self.readinfobuffer.append(msg.data)
     def Write_data_callback(self,msg):
         if len(self.writedatabuff)>10:
             self.writedatabuff=self.writedatabuff[1:]
-            print msg.data
+            print(msg.data)
             self.writedatabuff.append(msg.data)
         else:
-            print msg.data
+            print(msg.data)
             self.writedatabuff.append(msg.data)
     def Write_Read_topic_Sub(self,write_data_topicname,write_pulse_special_topicname,write_pulse_topicname,read_info_topicname):
         write_data_sub = rospy.Subscriber(write_data_topicname, String, self.Write_data_callback)
@@ -88,7 +84,7 @@ class ClimbRobot:
         """
         sendstring=self.Climbcrc.Combining_CRC_and_info([deviceaddr,function_code,PU24_3_1bit,PU16_2_3bit,PU8_15,PU0_7])
         readbuffer,strt=self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         return readbuffer
     def Send_Pulse_to_driver(self,deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,PU8_15,PU0_7,PU24_31,PU16_23,datalen=4,registornum_high16=0,registornum_low16=2):
         """
@@ -107,7 +103,7 @@ class ClimbRobot:
         """
         sendstring=self.Climbcrc.Combining_CRC_and_info([deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,registornum_high16,registornum_low16,datalen,PU8_15,PU0_7,PU24_31,PU16_23])
         readbuffer,strt=self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         return readbuffer
     def Send_Data_to_driver(self,deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,data_high16,data_low16):
         """
@@ -122,7 +118,7 @@ class ClimbRobot:
         """
         sendstring=self.Climbcrc.Combining_CRC_and_info([deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,data_high16,data_low16])
         readbuffer,strt=self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         return readbuffer
     def Read_info_from_driver(self,function_code,deviceaddr,registoraddr_high16,registoraddr_low16,firstregistoraddr_high16=0,firstregistoraddr_low16=0):
         """
@@ -136,20 +132,20 @@ class ClimbRobot:
         sendstring=self.Climbcrc.Combining_CRC_and_info([deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,registoraddr_high16,registoraddr_low16])
         # Modbus_Enable_info=[0x01,0x03,0x00,0x00,0x00,0x01]
         readbuffer,strt=self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
 
         return readbuffer
     def Read_info_from_driver_string(self,cmd_string_withoutCRC):
         sendstring = self.Climbcrc.Combining_CRC_and_info(self.string_to_int_list(cmd_string_withoutCRC))
         readbuffer,strt = self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         self.ReadInfopublish.publish(strt[:len(strt)-2])
-        print "Opreating return data,and cut the CRC data"
+        print("Opreating return data,and cut the CRC data")
         return readbuffer
     def Write_info_driver_string(self,cmd_string_withoutCRC):
         sendstring = self.Climbcrc.Combining_CRC_and_info(self.string_to_int_list(cmd_string_withoutCRC))
         readbuffer,strt = self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         # self.ReadInfopublish.publish(strt[:len(strt)-2])
         # print "Opreating return data,and cut the CRC data"
         return readbuffer
@@ -187,16 +183,18 @@ class ClimbRobot:
         strt = self.ser.read(self.readstringlength).encode('hex')
         readbuffer=[int(int(i, 16)) for i in wrap(strt, 2)]
         return readbuffer,strt
-    def Enable_Modbus_serial(self):
+    def Enable_Modbus_serial(self,deviceaddr):
 
-        Modbus_Enable='01 06 00 00 00 01 48 0A'
-        self.Send_message_to_port(Modbus_Enable)
+        Modbus_Enable=[deviceaddr,6,0,0,0,1]#'01 06 00 00 00 01 48 0A'
+        Modbus_Disable=self.Climbcrc.Combining_CRC_and_info(Modbus_Enable)
+        readbuffer,strt=self.Send_message_to_port(Modbus_Disable)
+        print("---port read buffer info---",readbuffer)
 
-    def Disable_Modbus_serial(self):
-        Modbus_Disable=[0x01,0x06,0x00,0x00,0x00]#'01 06 00 00 00 00 48 0A'
+    def Disable_Modbus_serial(self,deviceaddr):
+        Modbus_Disable=[deviceaddr,0x06,0x00,0x00,0x00]#'01 06 00 00 00 00 48 0A'
         Modbus_Disable=self.Climbcrc.Combining_CRC_and_info(Modbus_Disable)
         readbuffer,strt=self.Send_message_to_port(Modbus_Disable)
-        print "---port read buffer info---",readbuffer
+        print("---port read buffer info---",readbuffer)
 
 def main():
     PORT = "/dev/ttyUSB0"
@@ -217,7 +215,7 @@ def main():
     count=0
     while not rospy.is_shutdown():
         if count==0:
-            print "---Remember that you need to publish cmd string with out CRC check-----"
+            print("---Remember that you need to publish cmd string with out CRC check-----")
         elif count>10000:
             count=0
         if len(climb_robot.writedatabuff)!=0:

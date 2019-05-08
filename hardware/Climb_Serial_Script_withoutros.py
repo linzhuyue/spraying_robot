@@ -10,7 +10,8 @@ import sys
 import binascii
 import inspect
 import serial
-import commands
+# import commands
+import subprocess
 import time
 from Climb_RCR_Check import *
 from textwrap import wrap
@@ -25,7 +26,7 @@ class ClimbRobot:
         except:
             print("Please check Usb port----")
     def get_serial_port(self):
-        a,b=commands.getstatusoutput('python -m serial.tools.list_ports')
+        a,b=subprocess.getstatusoutput('python -m serial.tools.list_ports')
         print(b)
         return b
     def Send_PulsePulse_to_driver(self,deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,PU8_15,PU0_7,PU24_31,PU16_23,datalen=4,registornum_high16=0,registornum_low16=2):
@@ -45,7 +46,7 @@ class ClimbRobot:
         """
         sendstring=self.Climbcrc.Combining_CRC_and_info([deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,registornum_high16,registornum_low16,datalen,PU8_15,PU0_7,PU24_31,PU16_23])
         readbuffer=self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         return readbuffer
     def Send_Code_to_driver(self,deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,data_high16,data_low16):
         """
@@ -60,7 +61,7 @@ class ClimbRobot:
         """
         sendstring=self.Climbcrc.Combining_CRC_and_info([deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,data_high16,data_low16])
         readbuffer=self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         return readbuffer
     def Read_info_from_driver(self,function_code,deviceaddr,registoraddr_high16,registoraddr_low16,firstregistoraddr_high16=0,firstregistoraddr_low16=0):
         """
@@ -74,7 +75,7 @@ class ClimbRobot:
         sendstring=self.Climbcrc.Combining_CRC_and_info([deviceaddr,function_code,firstregistoraddr_high16,firstregistoraddr_low16,registoraddr_high16,registoraddr_low16])
         # Modbus_Enable_info=[0x01,0x03,0x00,0x00,0x00,0x01]
         readbuffer=self.Send_message_to_port(sendstring)
-        print "---port read buffer info---", readbuffer
+        print("---port read buffer info---", readbuffer)
         return readbuffer
     def Opreating_Info_CRC(self):
         pass
@@ -109,16 +110,18 @@ class ClimbRobot:
         strt = self.ser.read(self.readstringlength).encode('hex')
         readbuffer=[int(int(i, 16)) for i in wrap(strt, 2)]
         return readbuffer
-    def Enable_Modbus_serial(self):
+    def Enable_Modbus_serial(self,deviceaddr):
 
-        Modbus_Enable='01 06 00 00 00 01 48 0A'
-        self.Send_message_to_port(Modbus_Enable)
+        Modbus_Enable=[deviceaddr,6,0,0,0,1]#'01 06 00 00 00 01 48 0A'
+        Modbus_Disable=self.Climbcrc.Combining_CRC_and_info(Modbus_Enable)
+        readbuffer,strt=self.Send_message_to_port(Modbus_Disable)
+        print("---port read buffer info---",readbuffer)
 
-    def Disable_Modbus_serial(self):
-        Modbus_Disable=[0x01,0x06,0x00,0x00,0x00]#'01 06 00 00 00 00 48 0A'
+    def Disable_Modbus_serial(self,deviceaddr):
+        Modbus_Disable=[deviceaddr,0x06,0x00,0x00,0x00]#'01 06 00 00 00 00 48 0A'
         Modbus_Disable=self.Climbcrc.Combining_CRC_and_info(Modbus_Disable)
-        readbuffer=self.Send_message_to_port(Modbus_Disable)
-        print "---port read buffer info---",readbuffer
+        readbuffer,strt=self.Send_message_to_port(Modbus_Disable)
+        print("---port read buffer info---",readbuffer)
 
 def main():
     PORT = "/dev/ttyUSB0"
@@ -127,7 +130,7 @@ def main():
     climb_robot.get_serial_port()
     # climb_robot.Disable_Modbus_serial()
     #
-    print climb_robot.Pulse_16bits_change(-100)
+    print(climb_robot.Pulse_16bits_change(-100))
 
 if __name__ == "__main__":
     main()
