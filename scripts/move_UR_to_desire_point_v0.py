@@ -32,8 +32,8 @@ def main():
     while not rospy.is_shutdown():
         print "start while-----"
         t=0
-        #vel=0.1
-        #ace=50
+        # vel=0.1
+        # ace=50
         vel=1.05
         ace=1.4
         qq=[[-85, -180, 90, -180, -90, 180]

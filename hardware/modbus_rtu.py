@@ -11,7 +11,7 @@ import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
 
-PORT = "/dev/ttyUSB1"
+PORT = "/dev/ttyUSB0"
 #PORT = '/dev/ttyp5'
 def main():
     """main"""
