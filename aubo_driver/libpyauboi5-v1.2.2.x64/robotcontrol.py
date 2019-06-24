@@ -2147,7 +2147,7 @@ def test(test_count):
     try:
 
         # 链接服务器
-        ip = 'localhost'
+        ip = '192.168.1.11'
         port = 8899
         result = robot.connect(ip, port)
 
@@ -2202,10 +2202,15 @@ def test(test_count):
                 robot.init_profile()
 
                 # 设置关节最大加速度
-                robot.set_joint_maxacc((1.5, 1.5, 1.5, 1.5, 1.5, 1.5))
+                robot.set_joint_maxacc((5.5, 5.5, 5.5, 5.5, 5.5, 5.5))
 
                 # 设置关节最大加速度
-                robot.set_joint_maxvelc((1.5, 1.5, 1.5, 1.5, 1.5, 1.5))
+                robot.set_joint_maxvelc((2.5, 2.5, 2.5, 2.5, 2.5, 2.5))
+                # # 设置关节最大加速度
+                # robot.set_joint_maxacc((1.5, 1.5, 1.5, 1.5, 1.5, 1.5))
+                #
+                # # 设置关节最大加速度
+                # robot.set_joint_maxvelc((1.5, 1.5, 1.5, 1.5, 1.5, 1.5))
 
                 joint_radian = (0.541678, 0.225068, -0.948709, 0.397018, -1.570800, 0.541673)
                 logger.info("move joint to {0}".format(joint_radian))
@@ -2242,6 +2247,7 @@ def test(test_count):
                 robot.set_end_max_line_acc(0.5)
 
                 # 获取机械臂末端最大线加速度(m/s)
+                # robot.set_end_max_line_velc(0.2)
                 robot.set_end_max_line_velc(0.2)
 
                 # 清除所有已经设置的全局路点
@@ -2464,7 +2470,7 @@ def move_rotate_test():
     try:
 
         # 链接服务器
-        ip = 'localhost'
+        ip = '192.168.1.11'
         port = 8899
         result = robot.connect(ip, port)
 
@@ -2566,7 +2572,7 @@ def test_rsm():
     try:
 
         # 链接服务器
-        ip = 'localhost'
+        ip = '192.168.1.11'
         port = 8899
         result = robot.connect(ip, port)
 
@@ -2639,6 +2645,7 @@ def test_rsm():
         Auboi5Robot.uninitialize()
 
 if __name__ == '__main__':
-    # test(1)
-    test_rsm()
+    test(1)
+    # test_rsm()
+    # move_rotate_test()
     logger.info("test completed")

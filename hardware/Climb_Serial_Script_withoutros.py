@@ -125,12 +125,13 @@ class ClimbRobot:
 
 def main():
     PORT = "/dev/ttyUSB0"
-    baudrate=19200
+    baudrate=9600
     climb_robot=ClimbRobot(PORT,baudrate)
-    climb_robot.get_serial_port()
+    print climb_robot.Send_message_to_port('FE0200000006EC07')
+    # climb_robot.get_serial_port()
     # climb_robot.Disable_Modbus_serial()
     #
-    print(climb_robot.Pulse_16bits_change(-100))
+    # print(climb_robot.Pulse_16bits_change(-100))
 
 if __name__ == "__main__":
     main()
