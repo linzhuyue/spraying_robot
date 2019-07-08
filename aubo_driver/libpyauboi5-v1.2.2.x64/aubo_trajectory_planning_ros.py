@@ -4,16 +4,12 @@ import rospy
 import math
 from std_msgs.msg import String,Float64,Bool
 from robotcontrol import *
-"""
-id：1---->stand bar
-id:2----->roation
-id:3------>Upper and lower climbing pole
-"""
 import serial
 import time
 import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
+
 class AuboTrajectory():
     def __init__(self,Aubo_IP,AuboWorkSpaceLen,AuboWorkSpaceWidth,Port):
         self.AuboWorkSpaceLen=AuboWorkSpaceLen
@@ -21,7 +17,7 @@ class AuboTrajectory():
         self.Aubo_IP=Aubo_IP
         self.OpenState = rospy.Subscriber("/open_aubo_state_flag", Bool, self.Open_Aubo_callback)
         self.Port=Port
-        self.Openstate=False
+        self.OpenstateBool=[False]
     def Init_node(self):
         rospy.init_node("move_aubo_trajectory_planning")
 
@@ -131,7 +127,7 @@ class AuboTrajectory():
 
         logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 212, 12))
     def Read_3DOF_Controller_Buffe(self,master,control_id):
-        logger.info(master.execute(, cst.READ_HOLDING_REGISTERS, 212, 2))
+        logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 212, 2))
     def DisConnect_Aubo(self,auboRobot):
         # 断开服务器链接
         if auboRobot.connected:
@@ -143,7 +139,12 @@ class AuboTrajectory():
         Auboi5Robot.uninitialize()
         logger.info("{0} test completed.".format(Auboi5Robot.get_local_time()))
     def Open_Aubo_callback(self,msg):
-        print msg
+        if len(self.OpenstateBool)>10:
+            self.OpenstateBool=self.OpenstateBool[1:]
+            self.OpenstateBool.append(msg.data)
+        else:
+            self.OpenstateBool.append(msg.data)
+        # print msg
         self.Openstate=msg.data
     def Aubo_trajectory_init(self,robot,maxacctuple,maxvelctuple):
         joint_status = robot.get_joint_status()
@@ -237,15 +238,17 @@ class AuboTrajectory():
                 Temp_joint_angular=joint_radian
             logger.info("Path planning OK,Go back to start point----")
             self.Aubo_Move_to_Point(robot, StartPoint)
+
 def main():
-    ratet=30
+    ratet=1
     IP='192.168.1.11'
     Port='/dev/ttyUSB0'
     Aub=AuboTrajectory(IP,1.1,0.7,Port)
     Aub.Init_node()
     rate = rospy.Rate(ratet)
-    while not rospy.is_shutdown():
 
+    while not rospy.is_shutdown():
+        print Aub.OpenstateBool[-1]
         rate.sleep()
 if __name__ == '__main__':
     main()
