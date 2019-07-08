@@ -392,7 +392,7 @@ class Auboi5Robot:
 
     def __str__(self):
         return "RSHD={0}, connected={1}".format(self.rshd, self.connected)
-
+ # Linux
     @staticmethod
     def get_local_time():
         """"
