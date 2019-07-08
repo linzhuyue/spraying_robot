@@ -3671,3 +3671,87 @@
 07/08/2019 18:43:12,255 [140240041875264] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
 07/08/2019 18:43:12,255 [140240041875264] [INFO ] - sdk log: User call motion interface finish.
 07/08/2019 18:43:12,757 [140240041875264] [INFO ] - remove client, rshd=0
+07/08/2019 19:03:45,803 [139728056293184] [INFO ] - log4cplus started.
+07/08/2019 19:03:45,803 [139728056293184] [INFO ] - rshd:0---addr:192.168.1.11---port:8899
+07/08/2019 19:03:45,803 [139728056293184] [INFO ] - sdk log: Connect robot server success.
+07/08/2019 19:03:45,807 [139728056293184] [INFO ] - sdk log: set dhparam success. type:0, DhParam:0.408000,0.376000,0.098500,0.121500,0.102500,0.094000
+07/08/2019 19:03:45,807 [139728056293184] [INFO ] - sdk log: login  success.
+07/08/2019 19:03:45,809 [139728056293184] [INFO ] - sdk log: login completed, set joint6 retate 360 falg success. joint6Rot360Enable=0
+07/08/2019 19:03:46,322 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:03:46,322 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:03:46,325 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:03:46,325 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:03:48,267 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:03:48,267 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:03:48,267 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:03:48,270 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:03:48,270 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:03:48,272 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:03:48,272 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:03:49,956 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:03:49,956 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:03:49,956 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:03:49,958 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:03:49,958 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:03:49,961 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:03:49,961 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:03:53,222 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:03:53,222 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:03:53,222 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:03:53,224 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:03:53,224 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:03:53,227 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:03:53,227 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:03:54,736 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:03:54,736 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:03:54,736 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:03:54,738 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:03:54,738 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:03:54,740 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:03:54,740 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:03:58,067 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:03:58,067 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:03:58,067 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:03:58,069 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:03:58,070 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:03:58,072 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:03:58,072 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:03:59,599 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:03:59,599 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:03:59,600 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:03:59,601 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:03:59,602 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:03:59,604 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:03:59,604 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:04:02,917 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:04:02,918 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:04:02,918 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:04:02,920 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:04:02,920 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:04:02,922 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:04:02,923 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:04:04,662 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:04:04,662 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:04:04,662 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:04:04,664 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:04:04,664 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:04:04,666 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:04:04,666 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:04:07,987 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:04:07,987 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:04:07,988 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:04:07,989 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:04:07,989 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:04:07,992 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:04:07,992 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:04:10,592 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:04:10,592 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:04:10,592 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:04:10,592 [139728056293184] [INFO ] - sdk log: User blocking call motion interface.
+07/08/2019 19:04:10,593 [139728056293184] [INFO ] - sdk log: Sending robotMove request was successful, waiting for server response.
+07/08/2019 19:04:10,595 [139727987783424] [INFO ] - sdk log: Processing the robotMove response from the server..
+07/08/2019 19:04:10,595 [139728056293184] [INFO ] - sdk log: Successfully waited for a robotMove response from the server.
+07/08/2019 19:04:12,999 [139727987783424] [INFO ] - sdk log: RobotEvent_atTrackTargetPos processing.
+07/08/2019 19:04:12,999 [139728056293184] [INFO ] - sdk log:Success wait for the signal to arrive target positon.
+07/08/2019 19:04:12,999 [139728056293184] [INFO ] - sdk log: User call motion interface finish.
+07/08/2019 19:04:13,500 [139728056293184] [INFO ] - remove client, rshd=0
