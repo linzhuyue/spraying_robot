@@ -26,27 +26,42 @@ def main():
         master.set_verbose(True)
         logger.info("connected")
         #
-        logger.info(master.execute(4, cst.READ_HOLDING_REGISTERS, 0, 8))
-        # print type(master.execute(4, cst.READ_HOLDING_REGISTERS, 0, 8))
-        logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))#enable Climb Driver
-        logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
-        logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 290, output_value=13)) # 10000 pulse 1 rpm,negtive up,positive up
-
-        logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 97, output_value=3000))  # internal velocity
-        logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity
-        logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 114, output_value=1000))  # internal velocity
-        logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 324, output_value=1000))  # set fixed velocity
+        logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 0, 8))
+        # # print type(master.execute(4, cst.READ_HOLDING_REGISTERS, 0, 8))
+        # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))#enable Climb Driver
+        # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
+        # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 290, output_value=0)) #136/24 cm -24,10000 pulse 1 rpm,negtive up,positive up
         #
-        logger.info(master.execute(4, cst.READ_HOLDING_REGISTERS, 212, 1))
-        logger.info(master.execute(4, cst.READ_HOLDING_REGISTERS, 214, 1))
-        logger.info(master.execute(4, cst.READ_HOLDING_REGISTERS, 218, 1))
-        logger.info(master.execute(4, cst.READ_HOLDING_REGISTERS, 220, 1))
+        # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 97, output_value=1000))  # internal velocity
+        # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity
+        # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 114, output_value=1000))  # internal velocity
+        # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 324, output_value=1000))  # set fixed velocity
+        # #
+        # logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 212, 1))
+        # logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 214, 1))
+        # logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 218, 1))
+        # logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 220, 1))
+        #
+        #
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))#enable Climb Driver
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))  # enable Climb Driver
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 290, output_value=-6.5)) #1===6,5degree -22.5#5.5 -7.5+clockwise 10000 pulse 1 rpm,negtive up,positive up
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 291, output_value=10000))#50000
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 97, output_value=2000))  # internal velocity
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 114, output_value=1000))  # internal velocity
+        logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 324, output_value=1000))  # set fixed velocity
+        #
+        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 212, 1))
+        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 214, 1))
+        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 218, 1))
+        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 220, 1))
 
-        logger.info(master.execute(4, cst.READ_HOLDING_REGISTERS, 212, 12))
+        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 212, 12))
         while 1:
         #     pass
             time.sleep(0.1)
-            print master.execute(4, cst.READ_HOLDING_REGISTERS, 212, 2)
+            print master.execute(3, cst.READ_HOLDING_REGISTERS, 212, 2)
 
 
     except modbus_tk.modbus.ModbusError as exc:
