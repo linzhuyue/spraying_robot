@@ -11,9 +11,10 @@ import modbus_tk
 import modbus_tk.defines as cst
 from modbus_tk import modbus_rtu
 import readchar
-import logging
+from robotcontrol import *
+#import logging
 # 创建一个logger
-logger = logging.getLogger()
+#logger = logging.getLogger()
 class KeyControl3DOFROBOT():
     def __init__(self,PORT):
         self.PORT=PORT
@@ -47,8 +48,8 @@ class KeyControl3DOFROBOT():
         logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))  # enable Climb Driver
         logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
         logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 290,
-                                   output_value=outputPulse))  # High 16 10000 pulse 1 rpm,negtive up,positive up
-        logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 291, output_value=outputPulse))  # Low 16bit
+                                   output_value=-5))  # High 16 10000 pulse 1 rpm,negtive up,positive up
+        #logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 291, output_value=outputPulse))  # Low 16bit
         logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 97, output_value=velocity))  # internal velocity
         # logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity
         # logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 114, output_value=1000))  # internal velocity
@@ -98,6 +99,7 @@ class KeyControl3DOFROBOT():
         :param control_id:
         :return:
         """
+
         logger.info("outputDegree: 0-360 Degree,Positive down,Negtive up")
         outputPulse = outputDistance * 24.0 / 136.0
         self.Control_3DOF_Robot(master, control_id, velocity, outputPulse)
@@ -194,14 +196,15 @@ def main():
                     if W_count>-40:
                         W_count-=1
                         # print W_count
-                        KeyCheck.Holding_Robot(Master,1000,W_count)
+                        KeyCheck.Holding_Robot(Master,1000,W_count,1)
                     else:
                         pass
-                elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
+                elif Temp_control_id_flag == 0 and Temp_open_stop_flag == 0:
                     print "Control climb"
                     if W_count>-40:
                         W_count-=1
-                        KeyCheck.Climbing_Robot(Master,1000,W_count)
+                        KeyCheck.Climbing_Robot(Master,1000,-5,3)
+                        time.sleep(0.5)
                     else:
                         pass
                 else:
