@@ -230,6 +230,7 @@ def main():
         while True:
 
             # Read a key
+
             key = readchar.readkey()
             if(key == 'H'):
                 print "-------Enable Hold-------"
