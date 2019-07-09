@@ -76,7 +76,7 @@ class KeyControl3DOFROBOT():
             # logger.info(
             #     master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
             logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 290,
-                                       output_value=outputPulse))  # High 16 10000 pulse 1 rpm,negtive up,positive up
+                                       output_value=outputPulse * 24.0 / 136.0))  # High 16 10000 pulse 1 rpm,negtive up,positive up
             # logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 291, output_value=outputPulse))  # Low 16bit
             logger.info(
                 master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 97, output_value=velocity))  # internal velocity
@@ -264,7 +264,7 @@ def main():
                     print "Control climb"
                     if W_count>-40:
                         W_count-=1
-                        KeyCheck.Climbing_Robot(1000,W_count,3)
+                        KeyCheck.Control_3DOF_Robot(1000,W_count,3)
                         time.sleep(0.5)
 
                     else:
@@ -287,7 +287,7 @@ def main():
                     print "Control climb"
                     if W_count < 40:
                         W_count += 1
-                        KeyCheck.Climbing_Robot( 1000, W_count)
+                        KeyCheck.Control_3DOF_Robot(1000,W_count,3)
                     else:
                         pass
                 else:
