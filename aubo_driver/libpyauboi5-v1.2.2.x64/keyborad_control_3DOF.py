@@ -61,7 +61,7 @@ class KeyControl3DOFROBOT():
     #     logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 220, 1))
     #
     #     logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 212, 12))
-    def Control_3DOF_Robot(self,  velocity, outputPulse,control_id):
+    def Control_3DOF_Robot(self, velocity, outputPulse,control_id):
         logger = modbus_tk.utils.create_logger("console")
 
         try:
@@ -73,10 +73,10 @@ class KeyControl3DOFROBOT():
             master.set_verbose(True)
             logger.info("connected")
             logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))  # enable Climb Driver
-            # logger.info(
-            #     master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
+            logger.info(
+                 master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
             logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 290,
-                                       output_value=outputPulse * 24.0 / 136.0))  # High 16 10000 pulse 1 rpm,negtive up,positive up
+                                       output_value=outputPulse )) #* 24.0 / 136.0 # High 16 10000 pulse 1 rpm,negtive up,positive up
             # logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 291, output_value=outputPulse))  # Low 16bit
             logger.info(
                 master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 97, output_value=velocity))  # internal velocity
