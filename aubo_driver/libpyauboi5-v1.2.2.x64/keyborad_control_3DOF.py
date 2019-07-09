@@ -265,6 +265,7 @@ def main():
                         W_count-=1
                         KeyCheck.Climbing_Robot(1000,-5,3)
                         time.sleep(0.5)
+
                     else:
                         pass
                 else:
