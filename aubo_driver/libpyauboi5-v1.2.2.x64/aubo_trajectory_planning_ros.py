@@ -16,6 +16,7 @@ class AuboTrajectory():
         self.AuboWorkSpaceWidth=AuboWorkSpaceWidth
         self.Aubo_IP=Aubo_IP
         self.OpenState = rospy.Subscriber("/open_aubo_state_flag", Bool, self.Open_Aubo_callback)
+        self.PubState = rospy.Publisher("/open_aubo_state_flag", Bool, queue_size=10)
         self.Port=Port
         self.OpenstateBool=[False]
     def Init_node(self):
@@ -113,8 +114,8 @@ class AuboTrajectory():
         # print type(master.execute(4, cst.READ_HOLDING_REGISTERS, 0, 8))
         logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))#enable Climb Driver
         logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
-        logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 290, output_value=outputPulse)) # 10000 pulse 1 rpm,negtive up,positive up
-
+        logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 290, output_value=outputPulse)) # High 16 10000 pulse 1 rpm,negtive up,positive up
+        logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 291, output_value=outputPulse))#Low 16bit
         logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 97, output_value=velocity))  # internal velocity
         # logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity
         # logger.info(master.execute(4, cst.WRITE_SINGLE_REGISTER, 114, output_value=1000))  # internal velocity
@@ -126,8 +127,78 @@ class AuboTrajectory():
         logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 220, 1))
 
         logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 212, 12))
-    def Read_3DOF_Controller_Buffe(self,master,control_id):
-        logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 212, 2))
+    def Holding_Robot(self,master,velocity,outputDistance,control_id=1):#position control
+        """
+
+        :param master:
+        :param velocity:
+        :param outputPulse:5.5cm -20 Negtive up,Positive Down
+        :param control_id:
+        :return:
+        """
+        outputPulse=outputDistance*20/5.5
+        self.Control_3DOF_Robot(master,control_id,velocity,outputPulse)
+    def Rotation_Robot(self,master,velocity,outputDegree,control_id=2):#position control
+        """
+
+        :param master:
+        :param velocity: 0-2500
+        :param outputDegree: 0-360Degree,Positive clockwise,Negtive disclockwise
+        :param control_id:
+        :return:
+        """
+        logger.info("outputDegree: 0-360 Degree,Positive clockwise,Negtive disclockwise")
+        outputPulse=outputDegree/6.5
+        self.Control_3DOF_Robot(master, control_id, velocity, outputPulse)
+
+    def Climbing_Robot(self,master,velocity,outputDistance,control_id=3):#position control
+        """
+
+        :param master:
+        :param velocity: 0-2500
+        :param outputDistance: 0-300cm
+        :param control_id:
+        :return:
+        """
+        logger.info("outputDegree: 0-360 Degree,Positive down,Negtive up")
+        outputPulse=outputDistance*24.0/136.0
+        self.Control_3DOF_Robot(master, control_id, velocity, outputPulse)
+    def Read_3DOF_Controller_Buffe(self,master):
+        """
+
+        :param master:
+        :return:
+        """
+        logger.info("Driver Warnning nums Meaning Table:")
+        logger.info("0: No Warnning")
+        logger.info("3: Over Flow")
+        logger.info("4: Over heat")
+        logger.info("6: Encoder Warnning")
+        logger.info("13: EEPROM WRITING&READING Unusal")
+        logger.info("8: Over Load")
+        logger.info("11: Over speed")
+        logger.info("2: Over Voltage")
+        logger.info("1: Lack Voltage")
+        logger.info("9: Position Error Large")
+        logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 212, 2))
+        logger.info("Holding Robot driver warnning nums")
+        logger.info(master.execute(1, cst.READ_HOLDING_REGISTERS, 202, 2))
+        logger.info("Rotation Robot command position counts")
+        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 212, 2))
+        logger.info("Rotation Robot driver warnning nums")
+        logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 202, 2))
+        logger.info("Climbing Robot command position counts")
+        logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 212, 2))
+        logger.info("Climbing Robot driver warnning nums")
+        logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 202, 2))
+    def Emergency_Stop_All(self,master,control_id,All_Stop_flag):
+        if All_Stop_flag==1:
+            logger.info(master.execute(1, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))
+            logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))
+            logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))
+        else:
+            logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))  # enable Climb Driver
+
     def DisConnect_Aubo(self,auboRobot):
         # 断开服务器链接
         if auboRobot.connected:
@@ -212,6 +283,16 @@ class AuboTrajectory():
         logger.info("move joint to {0}".format(joint_radian))
         robot.move_joint(joint_radian)
     def Spray_Painting_Cartesian_Sector_Planning(self,robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag):
+        """
+
+        :param robot:
+        :param StartPoint: joint angular tuple
+        :param Sector_Length: sector length
+        :param Sector_Width: sector width
+        :param Sector_Nums: sector Nums
+        :param Left_Right_Flag:
+        :return:
+        """
         logger.warning("Right now,Our Robot ARM can just run in a 1.1X0.7 square meter")
         logger.warning("So you can't set up Sector_Length and Sector_Width more than 1.1 and 0.7,respectively")
         logger.warning("This controller set arm in planning central by default")
@@ -225,8 +306,8 @@ class AuboTrajectory():
 
             logger.info("Go to the left first")
             forward_kinemtics=self.Aubo_forward_kinematics(robot,StartPoint)
-            pose=forward_kinemtics['pose']
-            orient=forward_kinemtics['orientation']
+            pose=forward_kinemtics['pos']
+            orient=forward_kinemtics['ori']
             Res_Left, Res_Right,Last_Queue=self.Caculate_Path_point(Sector_Nums,Sector_Width,Sector_Length,pose,Left_Right_Flag)
             for i in range(len(Last_Queue)):
                 logger.info("go to the {0} point".format(i))
@@ -238,17 +319,47 @@ class AuboTrajectory():
                 Temp_joint_angular=joint_radian
             logger.info("Path planning OK,Go back to start point----")
             self.Aubo_Move_to_Point(robot, StartPoint)
+            self.DisConnect_Aubo(robot)
 
 def main():
     ratet=1
     IP='192.168.1.11'
     Port='/dev/ttyUSB0'
+    StartPoint=()
+    Sector_Length=1.0 #m
+    Sector_Width=0.2 #m
+    Sector_Nums=3
+    Left_Right_Flag =1
     Aub=AuboTrajectory(IP,1.1,0.7,Port)
     Aub.Init_node()
     rate = rospy.Rate(ratet)
+    try:
 
-    while not rospy.is_shutdown():
-        print Aub.OpenstateBool[-1]
-        rate.sleep()
+        #Robot=Aub.Init_aubo_driver()
+        #Master = Aub.Connect_3DOF_MODbus_RTU()
+        while not rospy.is_shutdown():
+            if len(Aub.OpenstateBool)!=0:
+                if Aub.OpenstateBool[-1]:
+                    time.sleep(2)
+                    # logger.info("Sleep time is over,then aubo starts opreating task")
+                    # Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
+                    # time.sleep(8)
+                    # logger.info("Sleep time is over,then climb robot starts climbing task")
+                    # Aub.Climbing_Robot(Master,2000,-136)#136cm,-136up
+                    # time.sleep(5)
+                    # logger.info("Sleep time is over,then aubo starts opreating task")
+                    # Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
+                    # time.sleep(8)
+                    # logger.info("Sleep time is over,then climb robot goes to initial point")
+                    # Aub.Climbing_Robot(Master,2000,0)#136cm,-136up
+                    # time.sleep(5)
+                    # logger.info("Sleep time is over,then Ros publishs close flag topic")
+                    #Aub.Read_3DOF_Controller_Buffe(Master)
+                    Aub.PubState.publish(False)
+                else:
+                    logger.warning("Please wait Mobile platform waypoint over")
+            rate.sleep()
+    except:
+        logger.error("Aubo or Climb robot disconnect,Please check those devices.!")
 if __name__ == '__main__':
     main()
