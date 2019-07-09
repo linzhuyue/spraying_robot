@@ -61,7 +61,7 @@ class KeyControl3DOFROBOT():
     #     logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 220, 1))
     #
     #     logger.info(master.execute(control_id, cst.READ_HOLDING_REGISTERS, 212, 12))
-    def Control_3DOF_Robot(self, control_id, velocity, outputPulse):
+    def Control_3DOF_Robot(self,  velocity, outputPulse,control_id):
         logger = modbus_tk.utils.create_logger("console")
 
         try:
@@ -94,7 +94,7 @@ class KeyControl3DOFROBOT():
         :return:
         """
         outputPulse = outputDistance * 20 / 5.5
-        self.Control_3DOF_Robot(control_id, velocity, outputPulse)
+        self.Control_3DOF_Robot( velocity, outputPulse,control_id)
 
 
     def Rotation_Robot(self,velocity, outputDegree, control_id=2):  # position control
@@ -108,10 +108,10 @@ class KeyControl3DOFROBOT():
         """
         logger.info("outputDegree: 0-360 Degree,Positive clockwise,Negtive disclockwise")
         outputPulse = outputDegree / 6.5
-        self.Control_3DOF_Robot(control_id, velocity, outputPulse)
+        self.Control_3DOF_Robot( velocity, outputPulse,control_id)
 
 
-    def Climbing_Robot(self, velocity, outputDistance, control_id=3):  # position control
+    def Climbing_Robot(self, velocity, outputDistance, control_id):  # position control
         """
 
         :param master:
@@ -123,7 +123,7 @@ class KeyControl3DOFROBOT():
 
         logger.info("outputDegree: 0-360 Degree,Positive down,Negtive up")
         outputPulse = outputDistance * 24.0 / 136.0
-        self.Control_3DOF_Robot(control_id, velocity, outputPulse)
+        self.Control_3DOF_Robot( velocity, outputPulse,control_id)
 
 
     def Read_3DOF_Controller_Buffe(self):
