@@ -345,48 +345,48 @@ def main():
     rate = rospy.Rate(ratet)
     flag_roation=0
     count=0
-    try:
+    #try:
 
-        Robot=Aub.Init_aubo_driver()
-        Aub.Aubo_trajectory_init(Robot,maxacctuple,maxvelctuple)
-        Master = Aub.Connect_3DOF_MODbus_RTU()
-        while not rospy.is_shutdown():
-            if len(Aub.OpenstateBool)!=0:
-                if Aub.OpenstateBool[-1]:
-                    # Aub.Aubo_Move_to_Point(Robot,StartPoint)
-                    time.sleep(2)
-                    logger.info("Sleep time is over,then Climb starts opreating task")
-                    Aub.Climbing_Robot(Master,1000,-136)#136cm,-136up
-                    time.sleep(10)
-                    logger.info("Sleep time is over,then aubo starts opreating task")
-                    Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
-                    #Aub.DisConnect_Aubo(Robot)
-                    time.sleep(5)
-                    logger.info("Sleep time is over,then climb robot goes to initial point")
-                    Aub.Climbing_Robot(Master,1000,0)#136cm,-136up
-                    time.sleep(10)
-                    Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
-                    #Aub.DisConnect_Aubo(Robot)
-                    time.sleep(5)
-                    #
-                    if flag_roation==0:
-                        logger.info("Sleep time is over,then Rotation robot goes to -90 degree in disclockwise")
-                        Aub.Rotation_Robot(Master,1000,-110)
-                        os.system("rostopic pub open_aubo_state_flag std_msgs/Bool 0 -1")
-                        time.sleep(3)
-                        flag_roation=1
-                    logger.info("Sleep time is over,then Ros publishs close flag topic")
-                    Aub.Read_3DOF_Controller_Buffe(Master)
-                    Aub.PubState.publish(False)
+    Robot=Aub.Init_aubo_driver()
+    Aub.Aubo_trajectory_init(Robot,maxacctuple,maxvelctuple)
+    Master = Aub.Connect_3DOF_MODbus_RTU()
+    while not rospy.is_shutdown():
+        if len(Aub.OpenstateBool)!=0:
+            if Aub.OpenstateBool[-1]:
+                # Aub.Aubo_Move_to_Point(Robot,StartPoint)
+                time.sleep(2)
+                logger.info("Sleep time is over,then Climb starts opreating task")
+                Aub.Climbing_Robot(Master,1000,-146)#136cm,-136up
+                time.sleep(10)
+                logger.info("Sleep time is over,then aubo starts opreating task")
+                Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
+                #Aub.DisConnect_Aubo(Robot)
+                time.sleep(4)
+                logger.info("Sleep time is over,then climb robot goes to initial point")
+                Aub.Climbing_Robot(Master,1000,-40)#136cm,-136up
+                time.sleep(10)
+                Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
+                #Aub.DisConnect_Aubo(Robot)
+                time.sleep(4)
+                #
+                if flag_roation==0:
+                    logger.info("Sleep time is over,then Rotation robot goes to -90 degree in disclockwise")
+                    Aub.Rotation_Robot(Master,1000,-110)
+                    os.system("rostopic pub open_aubo_state_flag std_msgs/Bool 0 -1")
+                    time.sleep(3)
+                    flag_roation=1
+                logger.info("Sleep time is over,then Ros publishs close flag topic")
+                Aub.Read_3DOF_Controller_Buffe(Master)
+                Aub.PubState.publish(False)
 
-                    # count+=1
-                    # if count>=1:
-                    #     Aub.DisConnect_Aubo_No_ShutDown(Robot)
-                else:
-                    logger.warning("Please wait Mobile platform waypoint over")
-            rate.sleep()
-    except:
-       logger.error("Aubo or Climb robot disconnect,Please check those devices.!")
+                # count+=1
+                # if count>=1:
+                #     Aub.DisConnect_Aubo_No_ShutDown(Robot)
+            else:
+                logger.warning("Please wait Mobile platform waypoint over")
+        rate.sleep()
+    #except:
+      # logger.error("Aubo or Climb robot disconnect,Please check those devices.!")
     # finally:
     #     Aub.DisConnect_Aubo(Robot)
 if __name__ == '__main__':
