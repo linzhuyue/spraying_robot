@@ -165,6 +165,7 @@ def main():
         print "      'A' to Rotation clockwise"
         print "      'D' to Rotation disclockwise"
         print "      'R' to Read the information About the driver"
+        print "      'O' to 3DOF Go back zero"
         print "      '?' to Help Infor"
         print "      'Enter' to quit the program..."
         while True:
@@ -189,6 +190,14 @@ def main():
             elif(key == 'E'):
                 print "Close Climbing"
                 Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 3, 0)
+            elif(key == 'O'):
+                print "3DOF Go to initial point"
+                KeyCheck.Holding_Robot(Master, 1000, 0, 1)
+                time.sleep(0.1)
+                KeyCheck.Climbing_Robot(Master, 1000, 0, 3)
+                time.sleep(0.1)
+                KeyCheck.Rotation_Robot(Master, 1000, 0, 2)
+                time.sleep(0.1)
             elif(key == 'W'):
                 print "-------climb or Hold UP-----"
                 if Temp_control_id_flag==1 and Temp_open_stop_flag==1:
@@ -197,6 +206,7 @@ def main():
                         W_count-=3.6
                         # print W_count
                         KeyCheck.Holding_Robot(Master,1000,W_count,1)
+                        time.sleep(0.1)
                     else:
                         pass
                 elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
@@ -204,7 +214,7 @@ def main():
                     if W_count>-40:
                         W_count-=5.6
                         KeyCheck.Climbing_Robot(Master,1000,W_count,3)
-                        time.sleep(0.5)
+                        time.sleep(0.1)
                     else:
                         pass
                 else:
@@ -219,6 +229,7 @@ def main():
                         W_count += 3.6
                         # print W_count
                         KeyCheck.Holding_Robot(Master, 1000, W_count,1)
+                        time.sleep(0.1)
                     else:
                         pass
                 elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
@@ -226,6 +237,7 @@ def main():
                     if W_count < 40:
                         W_count += 5.6
                         KeyCheck.Climbing_Robot(Master, 1000, W_count,3)
+                        time.sleep(0.1)
                     else:
                         pass
                 else:
@@ -235,11 +247,12 @@ def main():
             elif(key == 'A'):
                 print "-----Rotation clockwise------"
                 if Temp_control_id_flag == 2 and Temp_open_stop_flag == 1:
-                    print "Control Hold"
+                    print "Control Rotation"
                     if W_count < 360:
                         W_count += 6.5
                         # print W_count
                         KeyCheck.Rotation_Robot(Master, 1000, W_count)
+                        time.sleep(0.1)
                     else:
                         pass
                 else:
@@ -254,6 +267,7 @@ def main():
                         W_count -= 6.5
                         # print W_count
                         KeyCheck.Rotation_Robot(Master, 1000, W_count)
+                        time.sleep(0.1)
                     else:
                         pass
                 else:
