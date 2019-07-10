@@ -136,7 +136,7 @@ class AuboTrajectory():
         :param control_id:
         :return:
         """
-        outputPulse=outputDistance*20/5.5
+        outputPulse=outputDistance/3.6
         self.Control_3DOF_Robot(master,control_id,velocity,outputPulse)
     def Rotation_Robot(self,master,velocity,outputDegree,control_id=2):#position control
         """
@@ -161,7 +161,7 @@ class AuboTrajectory():
         :return:
         """
         logger.info("outputDegree: 0-360 Degree,Positive down,Negtive up")
-        outputPulse=outputDistance*24.0/136.0
+        outputPulse=outputDistance /5.6
         self.Control_3DOF_Robot(master, control_id, velocity, outputPulse)
     def Read_3DOF_Controller_Buffe(self,master):
         """
