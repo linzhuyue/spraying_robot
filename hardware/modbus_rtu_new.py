@@ -30,7 +30,7 @@ def main():
         # # print type(master.execute(4, cst.READ_HOLDING_REGISTERS, 0, 8))
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))#enable Climb Driver
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))  # enable Climb Driver
-        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 290, output_value=-1)) #136/24 cm -24,10000 pulse 1 rpm,negtive up,positive up
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 290, output_value=0)) #136/24 cm -24,10000 pulse 1 rpm,negtive up,positive up
 
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 97, output_value=1000))  # internal velocity
         # logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity

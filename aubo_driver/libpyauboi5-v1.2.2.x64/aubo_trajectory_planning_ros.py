@@ -356,22 +356,22 @@ def main():
                 # Aub.Aubo_Move_to_Point(Robot,StartPoint)
                 time.sleep(2)
                 logger.info("Sleep time is over,then Climb starts opreating task")
-                Aub.Climbing_Robot(Master,2000,-136)#136cm,-136up
-                time.sleep(5)
+                Aub.Climbing_Robot(Master,1000,-136)#136cm,-136up
+                time.sleep(8)
                 logger.info("Sleep time is over,then aubo starts opreating task")
                 Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
                 #Aub.DisConnect_Aubo(Robot)
-                time.sleep(8)
+                time.sleep(6)
                 logger.info("Sleep time is over,then climb robot goes to initial point")
-                Aub.Climbing_Robot(Master,2000,0)#136cm,-136up
-                time.sleep(5)
+                Aub.Climbing_Robot(Master,1000,0)#136cm,-136up
+                time.sleep(8)
                 Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
                 #Aub.DisConnect_Aubo(Robot)
-                time.sleep(8)
+                time.sleep(6)
                 #
                 if flag_roation==0:
                     logger.info("Sleep time is over,then Rotation robot goes to -90 degree in disclockwise")
-                    Aub.Rotation_Robot(Master,1000,-90)
+                    Aub.Rotation_Robot(Master,1000,-110)
                     time.sleep(5)
                     flag_roation=1
                 logger.info("Sleep time is over,then Ros publishs close flag topic")
