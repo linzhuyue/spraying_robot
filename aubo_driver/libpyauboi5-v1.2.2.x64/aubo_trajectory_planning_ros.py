@@ -241,7 +241,7 @@ class AuboTrajectory():
     def Aubo_inverse_kinematics(self,robot,jointangular,newpose,neworientaion_Quaternion):
         # 获取关节最大加速度
         logger.info(robot.get_joint_maxacc())
-        joint_radian = self.deg_to_rad(jointangular)
+        joint_radian = jointangular#self.deg_to_rad(jointangular)
         pos_test = newpose#(-0.5672477590258516, 0.51507448660946279, 0.57271770314023)  # the right
         ori_test = neworientaion_Quaternion#(0.49380082661500474, 0.5110471735827042, -0.5086787259664434, -0.48604267688817565)
         logger.info("----ik----after--------")
@@ -302,7 +302,7 @@ class AuboTrajectory():
         else:
             logger.info("Go to the start point")
             self.Aubo_Move_to_Point(robot,StartPoint)
-            Temp_joint_angular =StartPoint
+            Temp_joint_angular =self.deg_to_rad(StartPoint)
 
             logger.info("Go to the left first")
             forward_kinemtics=self.Aubo_forward_kinematics(robot,StartPoint)
@@ -325,7 +325,7 @@ def main():
     ratet=1
     IP='192.168.1.11'
     Port='/dev/ttyUSB0'
-    StartPoint=()
+    StartPoint=(10.3,3.6,-89.9,-91.2,-86.04,0.15)
     Sector_Length=1.0 #m
     Sector_Width=0.2 #m
     Sector_Nums=3
