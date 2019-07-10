@@ -199,7 +199,7 @@ def main():
                         KeyCheck.Holding_Robot(Master,1000,W_count,1)
                     else:
                         pass
-                elif Temp_control_id_flag == 0 and Temp_open_stop_flag == 0:
+                elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
                     print "Control climb"
                     if W_count>-40:
                         W_count-=5.6
