@@ -198,7 +198,9 @@ class AuboTrajectory():
             logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))
         else:
             logger.info(master.execute(control_id, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))  # enable Climb Driver
-
+    def DisConnect_Aubo_No_ShutDown(self,auboRobot):
+        # 断开服务器链接
+        auboRobot.disconnect()
     def DisConnect_Aubo(self,auboRobot):
         # 断开服务器链接
         if auboRobot.connected:
@@ -242,6 +244,9 @@ class AuboTrajectory():
         # 获取关节最大加速度
         logger.info(robot.get_joint_maxacc())
         joint_radian = jointangular#self.deg_to_rad(jointangular)
+        logger.info("pose and ori")
+        logger.info(newpose)
+        logger.info(neworientaion_Quaternion)
         pos_test = newpose#(-0.5672477590258516, 0.51507448660946279, 0.57271770314023)  # the right
         ori_test = neworientaion_Quaternion#(0.49380082661500474, 0.5110471735827042, -0.5086787259664434, -0.48604267688817565)
         logger.info("----ik----after--------")
@@ -306,12 +311,15 @@ class AuboTrajectory():
 
             logger.info("Go to the left first")
             forward_kinemtics=self.Aubo_forward_kinematics(robot,StartPoint)
-            pose=forward_kinemtics['pos']
-            orient=forward_kinemtics['ori']
+            pose=tuple(forward_kinemtics['pos'])
+            orient=tuple(forward_kinemtics['ori'])
             Res_Left, Res_Right,Last_Queue=self.Caculate_Path_point(Sector_Nums,Sector_Width,Sector_Length,pose,Left_Right_Flag)
+            logger.info(Last_Queue)
             for i in range(len(Last_Queue)):
                 logger.info("go to the {0} point".format(i))
+                logger.info(Temp_joint_angular)
                 ik_result=self.Aubo_inverse_kinematics(robot,Temp_joint_angular,Last_Queue[i],orient)
+                logger.info(orient)
                 joint_radian = tuple(ik_result['joint'])
 
                 logger.info("move joint to {0}".format(joint_radian))
@@ -319,17 +327,19 @@ class AuboTrajectory():
                 Temp_joint_angular=joint_radian
             logger.info("Path planning OK,Go back to start point----")
             self.Aubo_Move_to_Point(robot, StartPoint)
-            self.DisConnect_Aubo(robot)
+            #self.DisConnect_Aubo_No_ShutDown(robot)
 
 def main():
     ratet=1
     IP='192.168.1.11'
     Port='/dev/ttyUSB0'
-    StartPoint=(10.3,3.6,-89.9,-91.2,-86.04,0.15)
-    Sector_Length=1.0 #m
+    StartPoint=(-3.3364,12.406,-81.09,-91.207,-86.08,0.164)
+    Sector_Length=0.8 #m
     Sector_Width=0.2 #m
-    Sector_Nums=3
+    Sector_Nums=4
     Left_Right_Flag =1
+    maxacctuple=(2.5, 2.5, 2.5, 2.5, 2.5, 2.5)
+    maxvelctuple=(1.5, 1.5, 1.5, 1.5, 1.5, 1.5)
     Aub=AuboTrajectory(IP,1.1,0.7,Port)
     Aub.Init_node()
     rate = rospy.Rate(ratet)
@@ -338,36 +348,38 @@ def main():
     #try:
 
     Robot=Aub.Init_aubo_driver()
+    Aub.Aubo_trajectory_init(Robot,maxacctuple,maxvelctuple)
     Master = Aub.Connect_3DOF_MODbus_RTU()
     while not rospy.is_shutdown():
         if len(Aub.OpenstateBool)!=0:
             if Aub.OpenstateBool[-1]:
-                # time.sleep(2)
-                # logger.info("Sleep time is over,then Climb starts opreating task")
-                # Aub.Climbing_Robot(Master,2000,-136)#136cm,-136up
-                # time.sleep(5)
+                # Aub.Aubo_Move_to_Point(Robot,StartPoint)
+                time.sleep(2)
+                logger.info("Sleep time is over,then Climb starts opreating task")
+                Aub.Climbing_Robot(Master,2000,-136)#136cm,-136up
+                time.sleep(5)
                 logger.info("Sleep time is over,then aubo starts opreating task")
                 Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
                 #Aub.DisConnect_Aubo(Robot)
                 time.sleep(8)
-                # logger.info("Sleep time is over,then climb robot goes to initial point")
-                # Aub.Climbing_Robot(Master,2000,0)#136cm,-136up
-                # time.sleep(5)
-                # Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
-                # #Aub.DisConnect_Aubo(Robot)
-                # time.sleep(8)
+                logger.info("Sleep time is over,then climb robot goes to initial point")
+                Aub.Climbing_Robot(Master,2000,0)#136cm,-136up
+                time.sleep(5)
+                Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
+                #Aub.DisConnect_Aubo(Robot)
+                time.sleep(8)
                 #
-                # if flag_roation==0:
-                #     logger.info("Sleep time is over,then Rotation robot goes to -90 degree in disclockwise")
-                #     Aub.Rotation_Robot(Master,1000,-90)
-                #     time.sleep(5)
-                #     flag_roation=1
+                if flag_roation==0:
+                    logger.info("Sleep time is over,then Rotation robot goes to -90 degree in disclockwise")
+                    Aub.Rotation_Robot(Master,1000,-90)
+                    time.sleep(5)
+                    flag_roation=1
                 logger.info("Sleep time is over,then Ros publishs close flag topic")
                 Aub.Read_3DOF_Controller_Buffe(Master)
                 Aub.PubState.publish(False)
-                count+=1
-                if count>=1:
-                    Aub.DisConnect_Aubo(Robot)
+                # count+=1
+                # if count>=1:
+                #     Aub.DisConnect_Aubo_No_ShutDown(Robot)
             else:
                 logger.warning("Please wait Mobile platform waypoint over")
         rate.sleep()
