@@ -94,7 +94,7 @@ def main(test_count):
                 # 设置关节最大加速度
                 robot.set_joint_maxvelc((2.5, 2.5, 2.5, 2.5, 2.5, 2.5))
                 # 设置机械臂末端最大线加速度(m/s)
-                robo t.set_end_max_line_acc(0.5)
+                robot.set_end_max_line_acc(0.5)
                 logger.info("-------go-----to-----start-------step--01")
                 # 获取机械臂末端最大线加速度(m/s)
                 # robot.set_end_max_line_velc(0.2)

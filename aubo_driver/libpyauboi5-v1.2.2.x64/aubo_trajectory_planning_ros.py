@@ -349,18 +349,19 @@ def main():
     flag_roation=0
     count=0
     #try:
-    try:
+    # try:
         # Robot=Aub.Init_aubo_driver()
         # Aub.Aubo_trajectory_init(Robot,maxacctuple,maxvelctuple)
-        Master = Aub.Connect_3DOF_MODbus_RTU()
-    except:
-        print "init 3DOF OK"
+    Robot = Aub.Init_aubo_driver()
+    Aub.Aubo_trajectory_init(Robot, maxacctuple, maxvelctuple)
+    Master = Aub.Connect_3DOF_MODbus_RTU()
+    # except:
+    #     print "init 3DOF OK"
     try:
         while not rospy.is_shutdown():
             if len(Aub.OpenstateBool)!=0:
                 if Aub.OpenstateBool[-1]:
-                    Robot = Aub.Init_aubo_driver()
-                    Aub.Aubo_trajectory_init(Robot, maxacctuple, maxvelctuple)
+
                     # Aub.Aubo_Move_to_Point(Robot,StartPoint)
                     # try:
                     #     Robot = Aub.Init_aubo_driver()
@@ -369,16 +370,16 @@ def main():
                     #     print "init aubo driver ok"
                     time.sleep(2)
                     logger.info("Sleep time is over,then Climb starts opreating task")
-                    Aub.Climbing_Robot(Master,1000,-146)#136cm,-136up
+                    #Aub.Climbing_Robot(Master,1000,-146)#136cm,-136up
                     time.sleep(10)
                     logger.info("Sleep time is over,then aubo starts opreating task")
-                    Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
+                    #Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
                     #Aub.DisConnect_Aubo(Robot)
                     time.sleep(4)
                     logger.info("Sleep time is over,then climb robot goes to initial point")
-                    Aub.Climbing_Robot(Master,1000,-40)#136cm,-136up
+                    #Aub.Climbing_Robot(Master,1000,-30)#136cm,-136up
                     time.sleep(10)
-                    Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
+                    #Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
                     #Aub.DisConnect_Aubo(Robot)
                     time.sleep(4)
 
