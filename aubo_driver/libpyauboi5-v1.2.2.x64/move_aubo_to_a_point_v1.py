@@ -17,7 +17,11 @@ class Test():
             self.OpenstateBool.append(msg.data)
         # print msg
         self.Openstate=msg.data
-
+def deg_to_rad(tuplelist):
+    dd = []
+    for i in tuplelist:
+        dd.append(i * math.pi / 180)
+    return tuple(dd)
 def main_1(test_count):
     # 初始化logger
     logger_init()
@@ -132,8 +136,12 @@ def main_1(test_count):
         logger.info("{0} test completed.".format(Auboi5Robot.get_local_time()))
 def main():
     ak=Test()
-    if ak.OpenstateBool[-1]:
-        main_1(1)
+    rate = rospy.Rate(1)
+    while not rospy.is_shutdown():
+        if ak.OpenstateBool[-1]:
+            main_1(1)
+            print "fuck"
+        rate.sleep()
 
 if __name__=="__main__":
     main()
