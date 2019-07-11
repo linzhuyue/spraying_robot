@@ -4122,3 +4122,15 @@
 07/11/2019 10:47:29,532 [140140942083840] [INFO ] - call event_callback, type:39 code:0 str:{"addr":1,"status":1.0}
 07/11/2019 10:47:29,532 [140140942083840] [INFO ] - call event_callback, type:39 code:0 str:{"addr":9,"status":1.0}
 07/11/2019 10:47:30,033 [140141000087360] [INFO ] - remove client, rshd=0
+07/11/2019 15:54:02,183 [140240736307008] [INFO ] - log4cplus started.
+07/11/2019 15:54:02,183 [140240736307008] [INFO ] - rshd:0---addr:192.168.1.11---port:8899
+07/11/2019 15:54:05,246 [140240736307008] [ERROR] - sdk log: Login service connect server failed.
+07/11/2019 15:54:05,247 [140240736307008] [INFO ] - remove client, rshd=0
+07/11/2019 15:54:40,052 [140192974149440] [INFO ] - log4cplus started.
+07/11/2019 15:54:40,052 [140192974149440] [INFO ] - rshd:0---addr:192.168.1.11---port:8899
+07/11/2019 15:54:43,102 [140192974149440] [ERROR] - sdk log: Login service connect server failed.
+07/11/2019 15:54:43,103 [140192974149440] [INFO ] - remove client, rshd=0
+07/11/2019 15:55:13,790 [139845603080000] [INFO ] - log4cplus started.
+07/11/2019 15:55:13,790 [139845603080000] [INFO ] - rshd:0---addr:192.168.1.11---port:8899
+07/11/2019 15:55:16,862 [139845603080000] [ERROR] - sdk log: Login service connect server failed.
+07/11/2019 15:55:16,863 [139845603080000] [INFO ] - remove client, rshd=0
