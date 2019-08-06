@@ -349,14 +349,14 @@ def main():
     flag_roation=0
     count=0
     #try:
-    # try:
+    try:
         # Robot=Aub.Init_aubo_driver()
         # Aub.Aubo_trajectory_init(Robot,maxacctuple,maxvelctuple)
-    Robot = Aub.Init_aubo_driver()
-    Aub.Aubo_trajectory_init(Robot, maxacctuple, maxvelctuple)
-    Master = Aub.Connect_3DOF_MODbus_RTU()
-    # except:
-    #     print "init 3DOF OK"
+        Robot = Aub.Init_aubo_driver()
+        Aub.Aubo_trajectory_init(Robot, maxacctuple, maxvelctuple)
+        Master = Aub.Connect_3DOF_MODbus_RTU()
+    except:
+        print "init 3DOF not OK"
     try:
         while not rospy.is_shutdown():
             if len(Aub.OpenstateBool)!=0:
@@ -368,31 +368,41 @@ def main():
                     #     Aub.Aubo_trajectory_init(Robot, maxacctuple, maxvelctuple)
                     # except:
                     #     print "init aubo driver ok"
-                    #time.sleep(2)
+                    time.sleep(2)
                     print("Sleep time is over,then Climb starts opreating task")
-                    Aub.Climbing_Robot(Master,1000,-146)#136cm,-136up
+                    try:
+                        Aub.Climbing_Robot(Master, 1000, -146)  # 136cm,-136up
+                    except:
+                        print "modbus_rtu error try again----"
+                        Aub.Climbing_Robot(Master,1000,-146)#136cm,-136up
                     time.sleep(10)
                     print("Sleep time is over,then aubo starts opreating task")
                     Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
                     #Aub.DisConnect_Aubo(Robot)
                     time.sleep(4)
                     print("Sleep time is over,then climb robot goes to initial point")
-                    Aub.Climbing_Robot(Master,1000,-30)#136cm,-136up
+                    try:
+                        Aub.Climbing_Robot(Master,1000,-20)#136cm,-136up
+                    except:
+                        print "error try again----"
+                        Aub.Climbing_Robot(Master, 1000, -20)  # 136cm,-136up
                     time.sleep(10)
                     Aub.Spray_Painting_Cartesian_Sector_Planning(Robot,StartPoint,Sector_Length,Sector_Width,Sector_Nums,Left_Right_Flag)
                     #Aub.DisConnect_Aubo(Robot)
                     time.sleep(4)
 
-                    #
                     if flag_roation==0:
                         print("Sleep time is over,then Rotation robot goes to -90 degree in disclockwise")
-                        Aub.Rotation_Robot(Master,1000,-110)
+                        try:
+                            Aub.Rotation_Robot(Master,1000,-110)
+                        except:
+                            print "rotation ok try again----"
+                            Aub.Rotation_Robot(Master, 1000, -110)
                         os.system("rostopic pub open_aubo_state_flag std_msgs/Bool 0 -1")
-
                         time.sleep(3)
                         flag_roation=1
                     print("Sleep time is over,then Ros publishs close flag topic")
-                    #Aub.Read_3DOF_Controller_Buffe(Master)
+                    Aub.Read_3DOF_Controller_Buffe(Master)
                     os.system("rostopic pub open_aubo_state_flag std_msgs/Bool 0 -1")
                     Aub.Pubsignal.publish(False)
                     Aub.PubState.publish(False)

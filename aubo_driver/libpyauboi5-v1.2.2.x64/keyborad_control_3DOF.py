@@ -152,149 +152,149 @@ def main():
     KeyCheck=KeyControl3DOFROBOT(PORT)
     Temp_control_id_flag=0
     Temp_open_stop_flag=0
-    try:
-        Master=KeyCheck.Connect_3DOF_MODbus_RTU()
-        print "Press 'H' to Enable Hold"
-        print "      'R' to Enable Rotation"
-        print "      'C' to Enable Climbing"
-        print "      'Y' to Close Hold"
-        print "      'U' to Close Rotation"
-        print "      'E' to Close Climbing"
-        print "      'W' to climb or Hold UP"
-        print "      'X' to climb or Hold Down"
-        print "      'A' to Rotation clockwise"
-        print "      'D' to Rotation disclockwise"
-        print "      'R' to Read the information About the driver"
-        print "      'O' to 3DOF Go back zero"
-        print "      '?' to Help Infor"
-        print "      'Enter' to quit the program..."
-        while True:
+    #try:
+    Master=KeyCheck.Connect_3DOF_MODbus_RTU()
+    print "Press 'H' to Enable Hold"
+    print "      'R' to Enable Rotation"
+    print "      'C' to Enable Climbing"
+    print "      'Y' to Close Hold"
+    print "      'U' to Close Rotation"
+    print "      'E' to Close Climbing"
+    print "      'W' to climb or Hold UP"
+    print "      'X' to climb or Hold Down"
+    print "      'A' to Rotation clockwise"
+    print "      'D' to Rotation disclockwise"
+    print "      'R' to Read the information About the driver"
+    print "      'O' to 3DOF Go back zero"
+    print "      '?' to Help Infor"
+    print "      'Enter' to quit the program..."
+    while True:
 
-            # Read a key
-            key = readchar.readkey()
-            if(key == 'H'):
-                print "-------Enable Hold-------"
-                Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master,1,1)
-            elif(key == 'R'):
-                print "-----Enable Rotation----"
-                Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 2,1)
-            elif(key == 'C'):
-                print "------Enable Climbing------"
-                Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 3,1)
-            elif(key == 'Y'):
-                print "------Close Hold------"
-                Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 1, 0)
-            elif(key == 'U'):
-                print "------Close Rotation-----"
-                Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 2, 0)
-            elif(key == 'E'):
-                print "Close Climbing"
-                Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 3, 0)
-            elif(key == 'O'):
-                print "3DOF Go to initial point"
-                KeyCheck.Holding_Robot(Master, 1000, 0, 1)
-                time.sleep(0.1)
-                KeyCheck.Climbing_Robot(Master, 1000, 0, 3)
-                time.sleep(0.1)
-                KeyCheck.Rotation_Robot(Master, 1000, 0, 2)
-                time.sleep(0.1)
-            elif(key == 'W'):
-                print "-------climb or Hold UP-----"
-                if Temp_control_id_flag==1 and Temp_open_stop_flag==1:
-                    print "Control Hold"
-                    if W_count>-40:
-                        W_count-=3.6
-                        # print W_count
-                        KeyCheck.Holding_Robot(Master,1000,W_count,1)
-                        time.sleep(0.1)
-                    else:
-                        pass
-                elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
-                    print "Control climb"
-                    if W_count>-40:
-                        W_count-=5.6
-                        KeyCheck.Climbing_Robot(Master,1000,W_count,3)
-                        time.sleep(0.1)
-                    else:
-                        pass
+        # Read a key
+        key = readchar.readkey()
+        if(key == 'H'):
+            print "-------Enable Hold-------"
+            Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master,1,1)
+        elif(key == 'R'):
+            print "-----Enable Rotation----"
+            Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 2,1)
+        elif(key == 'C'):
+            print "------Enable Climbing------"
+            Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 3,1)
+        elif(key == 'Y'):
+            print "------Close Hold------"
+            Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 1, 0)
+        elif(key == 'U'):
+            print "------Close Rotation-----"
+            Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 2, 0)
+        elif(key == 'E'):
+            print "Close Climbing"
+            Temp_control_id_flag,Temp_open_stop_flag=KeyCheck.Open_Stop_Enable(Master, 3, 0)
+        elif(key == 'O'):
+            print "3DOF Go to initial point"
+            KeyCheck.Holding_Robot(Master, 1000, 0, 1)
+            time.sleep(0.1)
+            KeyCheck.Climbing_Robot(Master, 1000, 0, 3)
+            time.sleep(0.1)
+            KeyCheck.Rotation_Robot(Master, 1000, 0, 2)
+            time.sleep(0.1)
+        elif(key == 'W'):
+            print "-------climb or Hold UP-----"
+            if Temp_control_id_flag==1 and Temp_open_stop_flag==1:
+                print "Control Hold"
+                if W_count>-40:
+                    W_count-=3.6
+                    # print W_count
+                    KeyCheck.Holding_Robot(Master,100,W_count,1)
+                    time.sleep(0.1)
                 else:
                     pass
-
-                print "W_count",W_count
-            elif(key == 'X'):
-                print "------climb or Hold Down-----"
-                if Temp_control_id_flag == 1 and Temp_open_stop_flag == 1:
-                    print "Control Hold"
-                    if W_count < 40:
-                        W_count += 3.6
-                        # print W_count
-                        KeyCheck.Holding_Robot(Master, 1000, W_count,1)
-                        time.sleep(0.1)
-                    else:
-                        pass
-                elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
-                    print "Control climb"
-                    if W_count < 40:
-                        W_count += 5.6
-                        KeyCheck.Climbing_Robot(Master, 1000, W_count,3)
-                        time.sleep(0.1)
-                    else:
-                        pass
+            elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
+                print "Control climb"
+                if W_count>-40:
+                    W_count-=5.6
+                    KeyCheck.Climbing_Robot(Master,100,W_count,3)
+                    time.sleep(0.1)
                 else:
                     pass
-
-                print "W_count", W_count
-            elif(key == 'A'):
-                print "-----Rotation clockwise------"
-                if Temp_control_id_flag == 2 and Temp_open_stop_flag == 1:
-                    print "Control Rotation"
-                    if W_count < 360:
-                        W_count += 6.5
-                        # print W_count
-                        KeyCheck.Rotation_Robot(Master, 1000, W_count)
-                        time.sleep(0.1)
-                    else:
-                        pass
-                else:
-                    pass
-
-                print "W_count", W_count
-            elif(key == 'D'):
-                print "-------Rotation disclockwise------"
-                if Temp_control_id_flag == 2 and Temp_open_stop_flag == 1:
-                    print "Control Hold"
-                    if W_count >- 360:
-                        W_count -= 6.5
-                        # print W_count
-                        KeyCheck.Rotation_Robot(Master, 1000, W_count)
-                        time.sleep(0.1)
-                    else:
-                        pass
-                else:
-                    pass
-            elif(key == 'R'):
-                print "-------Read Information------"
-                KeyCheck.Read_3DOF_Controller_Buffe(Master)
-            elif(key == '?'):
-                print "Press 'H' to Enable Hold"
-                print "      'R' to Enable Rotation"
-                print "      'C' to Enable Climbing"
-                print "      'Y' to Close Hold"
-                print "      'U' to Close Rotation"
-                print "      'E' to Close Climbing"
-                print "      'W' to climb or Hold UP"
-                print "      'X' to climb or Hold Down"
-                print "      'A' to Rotation clockwise"
-                print "      'D' to Rotation disclockwise"
-                print "      'R' to Read the information About the driver"
-                print "      '?' to Help Infor"
-                print "      'Enter' to quit the program..."
-            elif(key == '\r'):
-                print "Exiting..."
-                break
             else:
-                print "Please Use only allowed keys:  Enter!"
-    except:
-        print "Please check the serial port------"
+                pass
+
+            print "W_count",W_count
+        elif(key == 'X'):
+            print "------climb or Hold Down-----"
+            if Temp_control_id_flag == 1 and Temp_open_stop_flag == 1:
+                print "Control Hold"
+                if W_count < 40:
+                    W_count += 3.6
+                    # print W_count
+                    KeyCheck.Holding_Robot(Master, 100, W_count,1)
+                    time.sleep(0.1)
+                else:
+                    pass
+            elif Temp_control_id_flag == 3 and Temp_open_stop_flag == 1:
+                print "Control climb"
+                if W_count < 40:
+                    W_count += 5.6
+                    KeyCheck.Climbing_Robot(Master, 100, W_count,3)
+                    time.sleep(0.1)
+                else:
+                    pass
+            else:
+                pass
+
+            print "W_count", W_count
+        elif(key == 'A'):
+            print "-----Rotation clockwise------"
+            if Temp_control_id_flag == 2 and Temp_open_stop_flag == 1:
+                print "Control Rotation"
+                if W_count < 360:
+                    W_count += 6.5
+                    # print W_count
+                    KeyCheck.Rotation_Robot(Master, 1000, W_count)
+                    time.sleep(0.1)
+                else:
+                    pass
+            else:
+                pass
+
+            print "W_count", W_count
+        elif(key == 'D'):
+            print "-------Rotation disclockwise------"
+            if Temp_control_id_flag == 2 and Temp_open_stop_flag == 1:
+                print "Control Hold"
+                if W_count >- 360:
+                    W_count -= 6.5
+                    # print W_count
+                    KeyCheck.Rotation_Robot(Master, 1000, W_count)
+                    time.sleep(0.1)
+                else:
+                    pass
+            else:
+                pass
+        elif(key == 'R'):
+            print "-------Read Information------"
+            KeyCheck.Read_3DOF_Controller_Buffe(Master)
+        elif(key == '?'):
+            print "Press 'H' to Enable Hold"
+            print "      'R' to Enable Rotation"
+            print "      'C' to Enable Climbing"
+            print "      'Y' to Close Hold"
+            print "      'U' to Close Rotation"
+            print "      'E' to Close Climbing"
+            print "      'W' to climb or Hold UP"
+            print "      'X' to climb or Hold Down"
+            print "      'A' to Rotation clockwise"
+            print "      'D' to Rotation disclockwise"
+            print "      'R' to Read the information About the driver"
+            print "      '?' to Help Infor"
+            print "      'Enter' to quit the program..."
+        elif(key == '\r'):
+            print "Exiting..."
+            break
+        else:
+            print "Please Use only allowed keys:  Enter!"
+  #  except:
+  #      print "Please check the serial port------"
 if __name__=="__main__":
     main()

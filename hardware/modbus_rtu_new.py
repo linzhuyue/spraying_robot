@@ -27,16 +27,16 @@ def main():
         logger.info("connected")
         #(
         #logger.info(master.execute(2, cst.READ_HOLDING_REGISTERS, 0, 8))
-        # # print type(master.execute(4, cst.READ_HOLDING_REGISTERS, 0, 8))
+        # print type(master.execute(4, cst.READ_HOLDING_REGISTERS, 0, 8))
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))#enable Climb Driver
-        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
-        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 290, output_value=19)) #136/24 cm -24,10000 pulse 1 rpm,negtive up,positive up
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))  # enable Climb Driver
+        logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 290, output_value=5)) #136/24 cm -24,10000 pulse 1 rpm,negtive up,positive up
 
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 97, output_value=1000))  # internal velocity
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 114, output_value=1000))  # internal velocity
         logger.info(master.execute(3, cst.WRITE_SINGLE_REGISTER, 324, output_value=1000))  # set fixed velocity
-        #
+
         logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 212, 1))
         logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 214, 1))
         logger.info(master.execute(3, cst.READ_HOLDING_REGISTERS, 218, 1))
@@ -59,9 +59,9 @@ def main():
         #
         #
         # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 1, output_value=6))#enable Climb Driver
-        # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 282, output_value=0))  # enable Climb Driver
-        # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 290, output_value=-0)) #1===6,5degree -22.5#5.5 -7.5+clockwise 10000 pulse 1 rpm,negtive up,positive up
-        # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 291, output_value=10000))#50000
+        # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 282, output_value=1))  # enable Climb Driver
+        # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 290, output_value=-1)) #1===6,5degree -22.5#5.5 -7.5+clockwise 10000 pulse 1 rpm,negtive up,positive up
+        # #logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 291, output_value=10000))#50000
         # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 97, output_value=2000))  # internal velocity
         # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 113, output_value=1000))  # internal velocity
         # logger.info(master.execute(2, cst.WRITE_SINGLE_REGISTER, 114, output_value=1000))  # internal velocity
