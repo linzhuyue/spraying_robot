@@ -1,0 +1,13 @@
+nDeviceType: 4 #设备类型USBCAN-2A or USBCAN-2C or CANalyst-II
+nDeviceInd: 0 #设备索引
+walking_channel:
+  chn1: 1  # front walking wheels
+  chn2: 2  # rear walking wheels
+
+steering_channel:
+  chn1: 3  # front steering wheels
+  chn2: 4  # rear steering wheels
+# mode of motors (steering && walking)
+# 0 -> position; 1 -> velocity; 2 -> current
+steering_mode: 0 
+walking_mode: 1

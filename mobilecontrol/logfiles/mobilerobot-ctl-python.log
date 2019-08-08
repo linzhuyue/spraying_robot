@@ -1,0 +1,11 @@
+2019-08-06 16:41:54,217 [140323150698304] ERROR: Can analysis offline
+2019-08-06 16:42:50,004 [140066004387648] ERROR: Can analysis offline
+2019-08-06 16:48:04,185 [139809610565440] ERROR: Can analysis offline
+2019-08-06 16:56:44,689 [140139584681792] ERROR: Can analysis offline
+2019-08-06 16:56:52,465 [139850995046208] ERROR: Can analysis offline
+2019-08-06 16:58:17,601 [140191179323200] ERROR: [31mERROR - Can analysis offline[0m
+2019-08-06 17:02:04,861 [139738264319808] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-06 17:36:16,353 [140692970936128] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-06 17:39:21,334 [139958659372864] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-06 17:39:46,686 [140671473911616] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-06 17:39:47,157 [140671473911616] ERROR: [31m[ERROR] - Can analysis offline[0m
