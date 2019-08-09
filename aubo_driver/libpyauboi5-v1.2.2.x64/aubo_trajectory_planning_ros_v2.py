@@ -140,6 +140,7 @@ class AuboTrajectory():
             startpoint=ik_result
             Planning_path.update({i:ik_result})
             print Position,rpy2qutaneion,ik_result
+        print Planning_path
         return Planning_path
     def Aubo_trajectory_init(self,robot,maxacctuple,maxvelctuple):
         joint_status = robot.get_joint_status()
@@ -281,7 +282,7 @@ def main():
     except:
         print "Aubo error---"
     Aub.Aubo_forward_kinematics(Robot,StartPoint)
-    Aub.Cacula_Aubo_MovePlan_From_Rectangle_Planning(0,0,Aub.deg_to_rad(StartPoint))
+    print Aub.Cacula_Aubo_MovePlan_From_Rectangle_Planning(0,0,Aub.deg_to_rad(StartPoint))
     try:
         while not rospy.is_shutdown():
             pass
