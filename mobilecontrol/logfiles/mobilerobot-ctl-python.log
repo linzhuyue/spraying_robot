@@ -9,3 +9,1589 @@
 2019-08-06 17:39:21,334 [139958659372864] ERROR: [31m[ERROR] - Can analysis offline[0m
 2019-08-06 17:39:46,686 [140671473911616] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
 2019-08-06 17:39:47,157 [140671473911616] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-08 15:12:25,147 [140248534632256] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:12:25,537 [140248534632256] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-08 15:12:25,538 [140248534632256] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:17:07,949 [139813753857856] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:18:43,144 [140716845705024] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:18:43,529 [140716845705024] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-08 15:18:43,530 [140716845705024] ERROR: [31m[ERROR] - -1[0m
+2019-08-08 15:18:43,530 [140716845705024] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:18:58,392 [140700901263168] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:18:58,782 [140700901263168] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-08 15:18:58,783 [140700901263168] ERROR: [31m[ERROR] - -1[0m
+2019-08-08 15:18:58,783 [140700901263168] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:22:34,121 [140459097614144] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:22:34,510 [140459097614144] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:22:34,511 [140459097614144] ERROR: [31m[ERROR] - 1[0m
+2019-08-08 15:22:34,512 [140459097614144] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:25:09,282 [139877551126336] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:25:09,819 [139877551126336] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:25:09,820 [139877551126336] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:25:09,821 [139877551126336] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:25:09,821 [139877551126336] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:30:33,810 [140206221797184] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:30:33,810 [140206221797184] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:30:33,810 [140206221797184] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:30:34,595 [140206221797184] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:30:34,596 [140206221797184] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:30:34,597 [140206221797184] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:30:34,597 [140206221797184] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:35:57,064 [139701458327360] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:35:57,064 [139701458327360] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:35:57,064 [139701458327360] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:35:57,777 [139701458327360] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:35:57,778 [139701458327360] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:43:17,119 [139807991953216] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:43:17,119 [139807991953216] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:43:17,119 [139807991953216] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:43:17,711 [139807991953216] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:43:17,712 [139807991953216] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:43:17,712 [139807991953216] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:43:17,713 [139807991953216] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:45:50,128 [139940076005184] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:45:50,128 [139940076005184] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:45:50,128 [139940076005184] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:45:50,520 [139940076005184] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:45:50,520 [139940076005184] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:45:50,521 [139940076005184] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:45:50,522 [139940076005184] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:49:26,369 [139685111629632] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:49:26,370 [139685111629632] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:49:26,370 [139685111629632] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:49:26,763 [139685111629632] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:49:26,764 [139685111629632] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:49:26,764 [139685111629632] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:49:26,764 [139685111629632] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:49:26,766 [139685111629632] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 15:49:26,767 [139685111629632] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:50:26,139 [140144154859328] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:50:26,139 [140144154859328] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:50:26,139 [140144154859328] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:50:26,535 [140144154859328] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:50:26,535 [140144154859328] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:50:26,536 [140144154859328] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:50:26,537 [140144154859328] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:50:26,538 [140144154859328] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 15:50:26,538 [140144154859328] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:51:23,179 [140008558344000] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:51:23,180 [140008558344000] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:51:23,180 [140008558344000] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:51:23,571 [140008558344000] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:51:23,572 [140008558344000] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:51:23,573 [140008558344000] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:51:23,573 [140008558344000] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:51:23,576 [140008558344000] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 15:51:23,577 [140008558344000] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:52:11,746 [140037873563456] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:52:11,746 [140037873563456] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:52:11,746 [140037873563456] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:52:12,543 [140037873563456] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:52:12,544 [140037873563456] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:52:12,545 [140037873563456] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:52:12,546 [140037873563456] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:52:12,548 [140037873563456] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 15:52:12,548 [140037873563456] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:56:44,751 [140559288461120] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:56:44,751 [140559288461120] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:56:44,751 [140559288461120] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:56:45,494 [140559288461120] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:56:45,494 [140559288461120] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:56:45,495 [140559288461120] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:56:45,495 [140559288461120] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:56:45,495 [140559288461120] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 15:56:45,496 [140559288461120] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:56:45,497 [140559288461120] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 15:56:45,497 [140559288461120] INFO: [32m[INFO] - hw_Version:0[0m
+2019-08-08 15:56:45,497 [140559288461120] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:56:45,497 [140559288461120] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:56:45,498 [140559288461120] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:56:45,498 [140559288461120] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:56:45,498 [140559288461120] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:56:45,498 [140559288461120] INFO: [32m[INFO] - [0m
+2019-08-08 15:56:45,499 [140559288461120] INFO: [32m[INFO] - [0m
+2019-08-08 15:56:45,499 [140559288461120] INFO: [32m[INFO] - <__main__.c_ushort_Array_4 object at 0x7fd6802c1290>[0m
+2019-08-08 15:59:11,687 [140022406661952] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:59:11,687 [140022406661952] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:59:11,688 [140022406661952] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:59:12,078 [140022406661952] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:59:12,079 [140022406661952] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:59:12,079 [140022406661952] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:59:12,080 [140022406661952] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:59:12,083 [140022406661952] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 15:59:12,083 [140022406661952] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:59:12,083 [140022406661952] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 15:59:12,083 [140022406661952] INFO: [32m[INFO] - hw_Version:0[0m
+2019-08-08 15:59:12,083 [140022406661952] INFO: [32m[INFO] - fw_Version0[0m
+2019-08-08 15:59:12,084 [140022406661952] INFO: [32m[INFO] - dr_Version0[0m
+2019-08-08 15:59:12,084 [140022406661952] INFO: [32m[INFO] - in_Version0[0m
+2019-08-08 15:59:12,084 [140022406661952] INFO: [32m[INFO] - irq_Num0[0m
+2019-08-08 15:59:12,084 [140022406661952] INFO: [32m[INFO] - can_Num0[0m
+2019-08-08 15:59:12,084 [140022406661952] INFO: [32m[INFO] - str_Serial_Num[0m
+2019-08-08 15:59:12,085 [140022406661952] INFO: [32m[INFO] - str_hw_Type[0m
+2019-08-08 15:59:12,085 [140022406661952] INFO: [32m[INFO] - Reserved<__main__.c_ushort_Array_4 object at 0x7f597f85f290>[0m
+2019-08-08 15:59:50,086 [139996228605760] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 15:59:50,086 [139996228605760] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 15:59:50,086 [139996228605760] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:59:50,613 [139996228605760] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 15:59:50,613 [139996228605760] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:59:50,613 [139996228605760] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 15:59:50,614 [139996228605760] INFO: [32m[INFO] - 0[0m
+2019-08-08 15:59:50,614 [139996228605760] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 15:59:50,615 [139996228605760] INFO: [32m[INFO] - 1[0m
+2019-08-08 15:59:50,615 [139996228605760] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 15:59:50,615 [139996228605760] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 15:59:50,615 [139996228605760] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 15:59:50,615 [139996228605760] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 15:59:50,617 [139996228605760] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 15:59:50,617 [139996228605760] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 15:59:50,618 [139996228605760] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 15:59:50,618 [139996228605760] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 15:59:50,618 [139996228605760] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 15:59:50,618 [139996228605760] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f5367309290>[0m
+2019-08-08 16:19:52,313 [139972185401152] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:19:52,313 [139972185401152] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:19:52,313 [139972185401152] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:19:52,703 [139972185401152] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:19:52,704 [139972185401152] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:19:52,704 [139972185401152] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 16:19:52,704 [139972185401152] INFO: [32m[INFO] - 0[0m
+2019-08-08 16:19:52,705 [139972185401152] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:19:52,706 [139972185401152] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:19:52,706 [139972185401152] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:19:52,707 [139972185401152] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:19:52,707 [139972185401152] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:19:52,707 [139972185401152] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:19:52,708 [139972185401152] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:19:52,708 [139972185401152] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:19:52,708 [139972185401152] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:19:52,709 [139972185401152] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:19:52,709 [139972185401152] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:19:52,709 [139972185401152] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f4dce1a6290>[0m
+2019-08-08 16:24:58,302 [139649262610240] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:24:58,302 [139649262610240] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:24:58,302 [139649262610240] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:24:58,689 [139649262610240] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-08 16:24:58,690 [139649262610240] INFO: [32m[INFO] - -1[0m
+2019-08-08 16:24:58,690 [139649262610240] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 16:24:58,691 [139649262610240] INFO: [32m[INFO] - 0[0m
+2019-08-08 16:24:58,691 [139649262610240] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:24:58,692 [139649262610240] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:24:58,692 [139649262610240] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:24:58,692 [139649262610240] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:24:58,693 [139649262610240] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:24:58,693 [139649262610240] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:24:58,694 [139649262610240] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:24:58,694 [139649262610240] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:24:58,694 [139649262610240] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:24:58,695 [139649262610240] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:24:58,695 [139649262610240] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:24:58,695 [139649262610240] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f029e67a290>[0m
+2019-08-08 16:26:04,097 [140443192756032] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:26:04,097 [140443192756032] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:26:04,097 [140443192756032] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:26:04,900 [140443192756032] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:26:04,900 [140443192756032] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:26:04,901 [140443192756032] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 16:26:04,901 [140443192756032] INFO: [32m[INFO] - 0[0m
+2019-08-08 16:26:04,902 [140443192756032] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:26:04,902 [140443192756032] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:26:04,903 [140443192756032] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:26:04,903 [140443192756032] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:26:04,903 [140443192756032] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:26:04,904 [140443192756032] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:26:04,904 [140443192756032] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:26:04,904 [140443192756032] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:26:04,905 [140443192756032] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:26:04,905 [140443192756032] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:26:04,905 [140443192756032] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:26:04,905 [140443192756032] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fbb78544290>[0m
+2019-08-08 16:27:33,256 [140445939971904] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:27:33,256 [140445939971904] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:27:33,256 [140445939971904] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:27:34,055 [140445939971904] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:27:34,056 [140445939971904] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:27:34,057 [140445939971904] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 16:27:34,057 [140445939971904] INFO: [32m[INFO] - 0[0m
+2019-08-08 16:27:34,058 [140445939971904] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:27:34,058 [140445939971904] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:27:34,058 [140445939971904] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:27:34,058 [140445939971904] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:27:34,059 [140445939971904] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:27:34,059 [140445939971904] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:27:34,059 [140445939971904] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:27:34,059 [140445939971904] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:27:34,059 [140445939971904] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:27:34,059 [140445939971904] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:27:34,060 [140445939971904] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:27:34,060 [140445939971904] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fbc1c137290>[0m
+2019-08-08 16:32:55,415 [140695263102784] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:32:55,415 [140695263102784] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:32:55,415 [140695263102784] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:32:55,801 [140695263102784] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:32:55,802 [140695263102784] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:32:55,802 [140695263102784] ERROR: [31m[ERROR] - Init Can analysis device error![0m
+2019-08-08 16:32:55,803 [140695263102784] INFO: [32m[INFO] - 0[0m
+2019-08-08 16:32:55,804 [140695263102784] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:32:55,805 [140695263102784] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:32:55,805 [140695263102784] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:32:55,806 [140695263102784] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:32:55,806 [140695263102784] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:32:55,806 [140695263102784] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:32:55,806 [140695263102784] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:32:55,807 [140695263102784] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:32:55,807 [140695263102784] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:32:55,807 [140695263102784] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:32:55,807 [140695263102784] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:32:55,807 [140695263102784] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7ff628e48290>[0m
+2019-08-08 16:33:13,983 [140109694850880] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:33:13,984 [140109694850880] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:33:13,984 [140109694850880] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:33:14,378 [140109694850880] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:33:14,379 [140109694850880] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:33:14,380 [140109694850880] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:33:14,381 [140109694850880] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:33:14,382 [140109694850880] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:33:14,383 [140109694850880] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:33:14,384 [140109694850880] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:33:14,384 [140109694850880] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:33:14,384 [140109694850880] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f6dd24e1290>[0m
+2019-08-08 16:35:15,045 [140121126532928] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:35:15,046 [140121126532928] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:35:15,046 [140121126532928] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:35:15,435 [140121126532928] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:35:15,436 [140121126532928] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:35:15,437 [140121126532928] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:35:15,437 [140121126532928] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:35:15,437 [140121126532928] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:35:15,437 [140121126532928] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:35:15,438 [140121126532928] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:35:15,439 [140121126532928] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f707bafb290>[0m
+2019-08-08 16:36:00,335 [140162112816960] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:36:00,335 [140162112816960] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:36:00,335 [140162112816960] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:36:00,725 [140162112816960] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:36:00,726 [140162112816960] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:36:00,727 [140162112816960] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:36:00,727 [140162112816960] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:36:00,727 [140162112816960] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:36:00,727 [140162112816960] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:36:00,728 [140162112816960] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:36:00,728 [140162112816960] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:36:00,728 [140162112816960] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:36:00,728 [140162112816960] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:36:00,728 [140162112816960] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:36:00,728 [140162112816960] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:36:00,728 [140162112816960] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:36:00,729 [140162112816960] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:36:00,729 [140162112816960] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:36:00,729 [140162112816960] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f7a06a8c290>[0m
+2019-08-08 16:37:15,126 [140568860321600] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:37:15,126 [140568860321600] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:37:15,126 [140568860321600] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:37:15,723 [140568860321600] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:37:15,723 [140568860321600] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:37:15,724 [140568860321600] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:37:15,725 [140568860321600] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:37:15,725 [140568860321600] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:37:15,726 [140568860321600] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:37:15,727 [140568860321600] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:37:15,727 [140568860321600] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:37:15,728 [140568860321600] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:37:15,728 [140568860321600] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:37:15,728 [140568860321600] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:37:15,728 [140568860321600] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:37:15,728 [140568860321600] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:37:15,728 [140568860321600] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:37:15,728 [140568860321600] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:37:15,729 [140568860321600] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:37:15,729 [140568860321600] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:37:15,729 [140568860321600] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fd8bab32290>[0m
+2019-08-08 16:45:09,483 [139780078409536] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:45:09,483 [139780078409536] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:45:09,483 [139780078409536] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:45:10,235 [139780078409536] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:45:10,235 [139780078409536] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:45:10,236 [139780078409536] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:45:10,237 [139780078409536] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:45:10,237 [139780078409536] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:45:10,238 [139780078409536] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:45:10,239 [139780078409536] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:45:10,240 [139780078409536] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:45:10,240 [139780078409536] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:45:10,240 [139780078409536] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:45:10,240 [139780078409536] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:45:10,240 [139780078409536] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:45:10,241 [139780078409536] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:45:10,241 [139780078409536] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:45:10,241 [139780078409536] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:45:10,241 [139780078409536] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:45:10,241 [139780078409536] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:45:10,241 [139780078409536] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f2113a163b0>[0m
+2019-08-08 16:46:48,813 [139640935454528] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:46:48,813 [139640935454528] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:46:48,813 [139640935454528] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:46:49,207 [139640935454528] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:46:49,207 [139640935454528] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:46:49,208 [139640935454528] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:46:49,209 [139640935454528] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:46:49,209 [139640935454528] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:46:49,210 [139640935454528] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:46:49,211 [139640935454528] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:46:49,212 [139640935454528] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:46:49,212 [139640935454528] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:46:49,212 [139640935454528] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:46:49,212 [139640935454528] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:46:49,212 [139640935454528] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:46:49,213 [139640935454528] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:46:49,213 [139640935454528] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:46:49,213 [139640935454528] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:46:49,213 [139640935454528] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:46:49,213 [139640935454528] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:46:49,213 [139640935454528] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f00ae1063b0>[0m
+2019-08-08 16:47:10,380 [140451689125696] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:47:10,380 [140451689125696] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:47:10,381 [140451689125696] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:47:10,771 [140451689125696] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:47:10,771 [140451689125696] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:47:10,773 [140451689125696] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:47:10,773 [140451689125696] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:47:10,774 [140451689125696] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:47:10,774 [140451689125696] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:47:10,775 [140451689125696] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:47:10,776 [140451689125696] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:47:10,776 [140451689125696] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:47:10,776 [140451689125696] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:47:10,776 [140451689125696] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:47:10,777 [140451689125696] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:47:10,777 [140451689125696] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:47:10,777 [140451689125696] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:47:10,777 [140451689125696] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:47:10,777 [140451689125696] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:47:10,777 [140451689125696] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:47:10,777 [140451689125696] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fbd72bfa3b0>[0m
+2019-08-08 16:48:59,340 [139967506278208] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:48:59,340 [139967506278208] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:48:59,340 [139967506278208] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:48:59,733 [139967506278208] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:48:59,734 [139967506278208] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:48:59,735 [139967506278208] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:48:59,735 [139967506278208] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:48:59,736 [139967506278208] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:48:59,736 [139967506278208] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:48:59,738 [139967506278208] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:48:59,739 [139967506278208] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:48:59,739 [139967506278208] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:48:59,739 [139967506278208] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:48:59,740 [139967506278208] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:48:59,740 [139967506278208] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:48:59,740 [139967506278208] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:48:59,740 [139967506278208] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:48:59,741 [139967506278208] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:48:59,741 [139967506278208] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:48:59,741 [139967506278208] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:48:59,741 [139967506278208] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f4cb7342320>[0m
+2019-08-08 16:49:32,232 [140186468562752] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:49:32,232 [140186468562752] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:49:32,232 [140186468562752] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:49:32,621 [140186468562752] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:49:32,622 [140186468562752] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:49:32,623 [140186468562752] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:49:32,623 [140186468562752] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:49:32,624 [140186468562752] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:49:32,625 [140186468562752] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:49:32,627 [140186468562752] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:49:32,627 [140186468562752] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:49:32,627 [140186468562752] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:49:32,628 [140186468562752] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:49:32,628 [140186468562752] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:49:32,628 [140186468562752] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:49:32,628 [140186468562752] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:49:32,628 [140186468562752] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:49:32,628 [140186468562752] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:49:32,629 [140186468562752] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:49:32,629 [140186468562752] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:49:32,629 [140186468562752] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f7fb25f7320>[0m
+2019-08-08 16:50:37,561 [140626356713280] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:50:37,562 [140626356713280] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:50:37,562 [140626356713280] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:50:37,951 [140626356713280] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:50:37,951 [140626356713280] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:50:37,952 [140626356713280] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:50:37,953 [140626356713280] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:50:37,954 [140626356713280] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:50:37,954 [140626356713280] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:50:37,955 [140626356713280] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:50:37,955 [140626356713280] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:50:37,955 [140626356713280] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:50:37,955 [140626356713280] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:50:37,955 [140626356713280] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:50:37,956 [140626356713280] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:50:37,956 [140626356713280] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:50:37,956 [140626356713280] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:50:37,956 [140626356713280] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:50:37,956 [140626356713280] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:50:37,956 [140626356713280] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:50:37,956 [140626356713280] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fe61dbff320>[0m
+2019-08-08 16:52:21,312 [139679787059008] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:52:21,313 [139679787059008] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:52:21,313 [139679787059008] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:22,054 [139679787059008] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:52:22,055 [139679787059008] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:22,057 [139679787059008] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:52:22,057 [139679787059008] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:22,058 [139679787059008] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:52:22,058 [139679787059008] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:22,060 [139679787059008] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:52:22,060 [139679787059008] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:52:22,061 [139679787059008] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:52:22,062 [139679787059008] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:52:22,062 [139679787059008] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f09b9cd4320>[0m
+2019-08-08 16:52:54,142 [140701015004992] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:52:54,143 [140701015004992] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:52:54,143 [140701015004992] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:54,876 [140701015004992] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:52:54,876 [140701015004992] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:54,877 [140701015004992] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:52:54,878 [140701015004992] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:54,878 [140701015004992] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:52:54,879 [140701015004992] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:54,881 [140701015004992] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:52:54,881 [140701015004992] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:52:54,881 [140701015004992] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:52:54,881 [140701015004992] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:52:54,882 [140701015004992] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:52:54,882 [140701015004992] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:52:54,882 [140701015004992] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:52:54,882 [140701015004992] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:52:54,882 [140701015004992] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:52:54,882 [140701015004992] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:52:54,882 [140701015004992] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:52:54,883 [140701015004992] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7ff77fbb1320>[0m
+2019-08-08 16:53:40,737 [140687467161408] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:53:40,737 [140687467161408] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:53:40,737 [140687467161408] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:41,125 [140687467161408] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:53:41,126 [140687467161408] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:41,127 [140687467161408] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:53:41,127 [140687467161408] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:41,128 [140687467161408] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:53:41,128 [140687467161408] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:41,130 [140687467161408] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:53:41,130 [140687467161408] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:41,130 [140687467161408] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:53:41,130 [140687467161408] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:53:41,130 [140687467161408] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:53:41,131 [140687467161408] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:53:41,131 [140687467161408] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:53:41,131 [140687467161408] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:53:41,131 [140687467161408] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:53:41,131 [140687467161408] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:53:41,132 [140687467161408] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:53:41,132 [140687467161408] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7ff458376320>[0m
+2019-08-08 16:53:56,903 [140530570303296] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:53:56,903 [140530570303296] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:53:56,903 [140530570303296] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:57,294 [140530570303296] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:53:57,294 [140530570303296] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:57,295 [140530570303296] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:53:57,296 [140530570303296] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:57,297 [140530570303296] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:53:57,297 [140530570303296] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:57,298 [140530570303296] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:53:57,299 [140530570303296] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:53:57,299 [140530570303296] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:53:57,300 [140530570303296] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:53:57,300 [140530570303296] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:53:57,300 [140530570303296] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:53:57,300 [140530570303296] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:53:57,300 [140530570303296] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:53:57,300 [140530570303296] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:53:57,300 [140530570303296] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:53:57,301 [140530570303296] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:53:57,301 [140530570303296] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fcfd06ee3b0>[0m
+2019-08-08 16:55:58,333 [140687512463168] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:55:58,333 [140687512463168] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:55:58,333 [140687512463168] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:55:58,835 [140687512463168] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:55:58,836 [140687512463168] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:55:58,837 [140687512463168] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:55:58,837 [140687512463168] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:55:58,838 [140687512463168] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:55:58,838 [140687512463168] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:55:58,839 [140687512463168] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:55:58,839 [140687512463168] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:55:58,839 [140687512463168] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:55:58,839 [140687512463168] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:55:58,840 [140687512463168] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:55:58,840 [140687512463168] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:55:58,840 [140687512463168] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:55:58,840 [140687512463168] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:55:58,841 [140687512463168] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:55:58,841 [140687512463168] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:55:58,841 [140687512463168] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:55:58,841 [140687512463168] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7ff45aea33b0>[0m
+2019-08-08 16:55:58,841 [140687512463168] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:55:58,842 [140687512463168] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:57:36,221 [139700659758912] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:57:36,221 [139700659758912] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:57:36,221 [139700659758912] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:57:36,610 [139700659758912] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:57:36,610 [139700659758912] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:57:36,611 [139700659758912] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:57:36,612 [139700659758912] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:57:36,613 [139700659758912] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:57:36,613 [139700659758912] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:57:36,615 [139700659758912] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:57:36,615 [139700659758912] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:57:36,616 [139700659758912] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:57:36,616 [139700659758912] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:57:36,616 [139700659758912] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:57:36,616 [139700659758912] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:57:36,616 [139700659758912] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:57:36,616 [139700659758912] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:57:36,617 [139700659758912] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:57:36,617 [139700659758912] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:57:36,617 [139700659758912] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:57:36,617 [139700659758912] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f0e95e96320>[0m
+2019-08-08 16:57:36,617 [139700659758912] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:57:36,618 [139700659758912] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:57:36,618 [139700659758912] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:57:36,618 [139700659758912] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:57:36,618 [139700659758912] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:57:36,618 [139700659758912] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:57:36,619 [139700659758912] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:57:36,619 [139700659758912] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:58:08,206 [140261740664640] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 16:58:08,206 [140261740664640] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 16:58:08,207 [140261740664640] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:58:08,595 [140261740664640] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 16:58:08,595 [140261740664640] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:58:08,596 [140261740664640] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 16:58:08,597 [140261740664640] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:58:08,598 [140261740664640] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 16:58:08,598 [140261740664640] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:58:08,599 [140261740664640] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 16:58:08,599 [140261740664640] INFO: [32m[INFO] - 1[0m
+2019-08-08 16:58:08,601 [140261740664640] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f9138f09320>[0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:58:08,602 [140261740664640] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:58:08,603 [140261740664640] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:58:08,603 [140261740664640] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:58:08,603 [140261740664640] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:58:08,603 [140261740664640] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 16:58:08,603 [140261740664640] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 16:58:08,603 [140261740664640] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:01:19,228 [139815089772352] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:01:19,229 [139815089772352] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:01:19,229 [139815089772352] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:01:19,779 [139815089772352] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:01:19,780 [139815089772352] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:01:19,781 [139815089772352] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:01:19,782 [139815089772352] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:01:19,782 [139815089772352] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:01:19,783 [139815089772352] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:01:19,786 [139815089772352] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:01:19,786 [139815089772352] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:01:19,786 [139815089772352] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:01:19,786 [139815089772352] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:01:19,786 [139815089772352] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:01:19,787 [139815089772352] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:01:19,787 [139815089772352] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:01:19,787 [139815089772352] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:01:19,787 [139815089772352] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:01:19,787 [139815089772352] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:01:19,788 [139815089772352] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:01:19,788 [139815089772352] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f293a78d320>[0m
+2019-08-08 17:01:19,788 [139815089772352] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:01:19,788 [139815089772352] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:01:19,788 [139815089772352] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:01:19,789 [139815089772352] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:01:19,789 [139815089772352] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:01:19,789 [139815089772352] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:01:19,789 [139815089772352] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:01:19,789 [139815089772352] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:04:07,547 [140496283469632] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:04:07,548 [140496283469632] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:04:07,548 [140496283469632] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:04:07,939 [140496283469632] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:04:07,939 [140496283469632] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:04:07,940 [140496283469632] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:04:07,941 [140496283469632] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:04:07,942 [140496283469632] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:04:07,942 [140496283469632] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:04:07,944 [140496283469632] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:04:07,944 [140496283469632] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:04:07,945 [140496283469632] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:04:07,945 [140496283469632] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:04:07,945 [140496283469632] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:04:07,945 [140496283469632] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:04:07,946 [140496283469632] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:04:07,946 [140496283469632] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:04:07,946 [140496283469632] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:04:07,947 [140496283469632] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:04:07,947 [140496283469632] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:04:07,947 [140496283469632] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fc7d4c7c320>[0m
+2019-08-08 17:04:07,947 [140496283469632] INFO: [32m[INFO] - [0, 0, 0, 0, 4, 1, 1, 0][0m
+2019-08-08 17:04:07,948 [140496283469632] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:04:07,948 [140496283469632] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:04:07,948 [140496283469632] INFO: [32m[INFO] - [4, 2, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:04:07,948 [140496283469632] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:04:07,948 [140496283469632] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:04:07,948 [140496283469632] INFO: [32m[INFO] - [4, 3, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:04:07,949 [140496283469632] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:04:07,949 [140496283469632] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:04:07,949 [140496283469632] INFO: [32m[INFO] - [4, 4, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:04:07,949 [140496283469632] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:04:07,949 [140496283469632] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:06:19,282 [139842834773824] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:06:19,282 [139842834773824] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:06:19,282 [139842834773824] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:06:19,670 [139842834773824] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:06:19,670 [139842834773824] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:06:19,670 [139842834773824] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:06:19,671 [139842834773824] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:06:19,671 [139842834773824] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:06:19,671 [139842834773824] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:06:19,672 [139842834773824] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:06:19,672 [139842834773824] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:06:19,672 [139842834773824] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:06:19,673 [139842834773824] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:06:19,673 [139842834773824] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:06:19,673 [139842834773824] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:06:19,673 [139842834773824] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:06:19,673 [139842834773824] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:06:19,673 [139842834773824] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:06:19,675 [139842834773824] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:06:19,675 [139842834773824] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:06:19,675 [139842834773824] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f2fb033f320>[0m
+2019-08-08 17:07:50,777 [139737679841088] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:07:50,778 [139737679841088] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:07:50,778 [139737679841088] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:07:51,166 [139737679841088] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:07:51,166 [139737679841088] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:07:51,167 [139737679841088] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:07:51,168 [139737679841088] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:07:51,169 [139737679841088] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:07:51,169 [139737679841088] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:07:51,170 [139737679841088] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:07:51,171 [139737679841088] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:07:51,171 [139737679841088] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:07:51,171 [139737679841088] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:07:51,171 [139737679841088] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:07:51,171 [139737679841088] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:07:51,171 [139737679841088] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:07:51,172 [139737679841088] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:07:51,172 [139737679841088] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:07:51,172 [139737679841088] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:07:51,172 [139737679841088] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:07:51,172 [139737679841088] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f17347b0320>[0m
+2019-08-08 17:07:51,173 [139737679841088] INFO: [32m[INFO] - [4, 1, 1, 0][0m
+2019-08-08 17:07:51,173 [139737679841088] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:07:51,173 [139737679841088] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:08:36,044 [140688196290368] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:08:36,044 [140688196290368] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:08:36,044 [140688196290368] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:08:36,778 [140688196290368] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:08:36,778 [140688196290368] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:08:36,779 [140688196290368] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:08:36,780 [140688196290368] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:08:36,780 [140688196290368] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:08:36,781 [140688196290368] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:08:36,783 [140688196290368] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:08:36,783 [140688196290368] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:08:36,783 [140688196290368] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:08:36,783 [140688196290368] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:08:36,783 [140688196290368] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:08:36,783 [140688196290368] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:08:36,783 [140688196290368] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:08:36,784 [140688196290368] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:08:36,784 [140688196290368] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:08:36,784 [140688196290368] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:08:36,784 [140688196290368] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:08:36,784 [140688196290368] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7ff483ac93b0>[0m
+2019-08-08 17:08:36,784 [140688196290368] INFO: [32m[INFO] - [4, 1, 1, 0][0m
+2019-08-08 17:08:36,784 [140688196290368] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:08:36,785 [140688196290368] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:10:44,032 [140030390822720] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:10:44,032 [140030390822720] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:10:44,032 [140030390822720] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:10:44,423 [140030390822720] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:10:44,424 [140030390822720] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:10:44,425 [140030390822720] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:10:44,425 [140030390822720] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:10:44,426 [140030390822720] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:10:44,426 [140030390822720] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:10:44,428 [140030390822720] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:10:44,428 [140030390822720] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:10:44,429 [140030390822720] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:10:44,430 [140030390822720] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f5b5b6ad290>[0m
+2019-08-08 17:11:10,816 [140647754708800] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:11:10,816 [140647754708800] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:11:10,816 [140647754708800] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:11:11,209 [140647754708800] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:11:11,210 [140647754708800] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:11:11,211 [140647754708800] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:11:11,211 [140647754708800] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:11:11,212 [140647754708800] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:11:11,212 [140647754708800] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:11:11,214 [140647754708800] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:11:11,215 [140647754708800] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:11:11,215 [140647754708800] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:11:11,215 [140647754708800] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:11:11,215 [140647754708800] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:11:11,215 [140647754708800] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:11:11,216 [140647754708800] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:11:11,216 [140647754708800] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:11:11,216 [140647754708800] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:11:11,216 [140647754708800] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:11:11,216 [140647754708800] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:11:11,216 [140647754708800] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7feb192c2290>[0m
+2019-08-08 17:11:11,217 [140647754708800] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:11:11,217 [140647754708800] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:11:11,217 [140647754708800] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:11:11,217 [140647754708800] INFO: [32m[INFO] - [4, 2, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:11:11,217 [140647754708800] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:11:11,217 [140647754708800] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:11:11,217 [140647754708800] INFO: [32m[INFO] - [4, 3, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:11:11,218 [140647754708800] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:11:11,218 [140647754708800] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:11:11,218 [140647754708800] INFO: [32m[INFO] - [4, 4, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:11:11,218 [140647754708800] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:11:11,218 [140647754708800] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:14:49,919 [140617909491520] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:14:49,919 [140617909491520] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:14:49,919 [140617909491520] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:14:50,311 [140617909491520] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:14:50,311 [140617909491520] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:14:50,312 [140617909491520] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:14:50,313 [140617909491520] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:14:50,313 [140617909491520] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:14:50,314 [140617909491520] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:14:50,315 [140617909491520] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:14:50,315 [140617909491520] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:14:50,315 [140617909491520] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:14:50,316 [140617909491520] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:14:50,316 [140617909491520] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:14:50,317 [140617909491520] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:14:50,317 [140617909491520] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fe426424290>[0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:14:50,318 [140617909491520] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:14:50,319 [140617909491520] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - [4, 2, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - [4, 3, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - [4, 4, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:14:50,319 [140617909491520] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:14:50,320 [140617909491520] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:14,413 [140266259777344] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:17:14,413 [140266259777344] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:17:14,413 [140266259777344] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:14,810 [140266259777344] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:17:14,810 [140266259777344] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:14,811 [140266259777344] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:17:14,812 [140266259777344] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:14,813 [140266259777344] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:17:14,814 [140266259777344] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:14,815 [140266259777344] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:17:14,815 [140266259777344] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f92464d7290>[0m
+2019-08-08 17:17:14,816 [140266259777344] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:14,817 [140266259777344] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:14,817 [140266259777344] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:14,817 [140266259777344] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:17:14,817 [140266259777344] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:17:14,817 [140266259777344] INFO: [32m[INFO] - [4, 2, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:14,817 [140266259777344] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:14,817 [140266259777344] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:14,817 [140266259777344] INFO: [32m[INFO] - [4, 3, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:14,818 [140266259777344] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:14,818 [140266259777344] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:14,818 [140266259777344] INFO: [32m[INFO] - [4, 4, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:14,818 [140266259777344] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:14,818 [140266259777344] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:37,945 [140623142188864] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:17:37,945 [140623142188864] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:17:37,945 [140623142188864] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:38,342 [140623142188864] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:17:38,342 [140623142188864] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:38,343 [140623142188864] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:17:38,343 [140623142188864] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:38,344 [140623142188864] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:17:38,344 [140623142188864] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:38,346 [140623142188864] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:17:38,346 [140623142188864] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:17:38,346 [140623142188864] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:17:38,346 [140623142188864] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:17:38,347 [140623142188864] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:17:38,347 [140623142188864] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:17:38,347 [140623142188864] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:17:38,347 [140623142188864] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:17:38,347 [140623142188864] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:17:38,347 [140623142188864] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:17:38,347 [140623142188864] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:17:38,348 [140623142188864] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fe55e26e290>[0m
+2019-08-08 17:17:38,348 [140623142188864] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:38,348 [140623142188864] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:38,348 [140623142188864] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:38,349 [140623142188864] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:17:38,349 [140623142188864] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:17:38,349 [140623142188864] INFO: [32m[INFO] - [4, 2, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:38,349 [140623142188864] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:38,349 [140623142188864] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:38,350 [140623142188864] INFO: [32m[INFO] - [4, 3, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:38,350 [140623142188864] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:38,350 [140623142188864] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:17:38,350 [140623142188864] INFO: [32m[INFO] - [4, 4, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:17:38,350 [140623142188864] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:17:38,350 [140623142188864] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:18:53,800 [139649534895936] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:18:53,800 [139649534895936] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:18:53,800 [139649534895936] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:18:54,191 [139649534895936] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:18:54,192 [139649534895936] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:18:54,193 [139649534895936] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:18:54,193 [139649534895936] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:18:54,194 [139649534895936] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:18:54,194 [139649534895936] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:18:54,196 [139649534895936] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:18:54,196 [139649534895936] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:18:54,196 [139649534895936] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:18:54,197 [139649534895936] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:18:54,198 [139649534895936] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f02aea29290>[0m
+2019-08-08 17:18:54,198 [139649534895936] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:18:54,198 [139649534895936] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:18:54,198 [139649534895936] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:18:54,198 [139649534895936] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:18:54,198 [139649534895936] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - [4, 2, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - [4, 3, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - [4, 4, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:18:54,199 [139649534895936] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:28:31,202 [140628914943808] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:28:31,202 [140628914943808] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:28:31,202 [140628914943808] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:28:31,995 [140628914943808] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:28:31,996 [140628914943808] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:28:31,997 [140628914943808] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:28:31,997 [140628914943808] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:28:31,998 [140628914943808] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:28:31,998 [140628914943808] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:28:32,000 [140628914943808] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:28:32,001 [140628914943808] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:28:32,001 [140628914943808] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:28:32,001 [140628914943808] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:28:32,001 [140628914943808] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:28:32,001 [140628914943808] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:28:32,001 [140628914943808] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:28:32,001 [140628914943808] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:28:32,002 [140628914943808] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:28:32,002 [140628914943808] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:28:32,002 [140628914943808] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:28:32,002 [140628914943808] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fe6b63be290>[0m
+2019-08-08 17:28:32,002 [140628914943808] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:28:32,002 [140628914943808] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:30:23,262 [139965844789056] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:30:23,262 [139965844789056] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:30:23,263 [139965844789056] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:23,797 [139965844789056] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:30:23,798 [139965844789056] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:23,799 [139965844789056] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:30:23,799 [139965844789056] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:23,800 [139965844789056] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:30:23,801 [139965844789056] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:23,801 [139965844789056] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:30:23,802 [139965844789056] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:23,850 [139965844789056] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:30:23,851 [139965844789056] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:23,851 [139965844789056] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:30:23,852 [139965844789056] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:30:23,852 [139965844789056] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:30:23,852 [139965844789056] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:30:23,853 [139965844789056] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:30:23,853 [139965844789056] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:30:23,854 [139965844789056] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:30:23,855 [139965844789056] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:30:23,855 [139965844789056] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:30:23,857 [139965844789056] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f4c542ba320>[0m
+2019-08-08 17:30:23,857 [139965844789056] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:30:23,858 [139965844789056] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:30:55,332 [140300535174976] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:30:55,332 [140300535174976] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:30:55,332 [140300535174976] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:55,726 [140300535174976] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:30:55,727 [140300535174976] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:55,728 [140300535174976] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:30:55,728 [140300535174976] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:55,729 [140300535174976] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:30:55,729 [140300535174976] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:55,730 [140300535174976] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:30:55,730 [140300535174976] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:55,776 [140300535174976] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:30:55,777 [140300535174976] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:30:55,777 [140300535174976] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:30:55,777 [140300535174976] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:30:55,778 [140300535174976] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:30:55,778 [140300535174976] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:30:55,778 [140300535174976] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:30:55,778 [140300535174976] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:30:55,778 [140300535174976] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:30:55,779 [140300535174976] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:30:55,779 [140300535174976] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:30:55,779 [140300535174976] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f9a41468290>[0m
+2019-08-08 17:30:55,779 [140300535174976] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:30:55,780 [140300535174976] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:30:55,780 [140300535174976] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:30:55,780 [140300535174976] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:30:55,780 [140300535174976] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:35:43,546 [140353977206592] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:35:43,546 [140353977206592] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:35:43,546 [140353977206592] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:35:43,929 [140353977206592] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-08 17:35:43,929 [140353977206592] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:35:43,930 [140353977206592] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:35:43,930 [140353977206592] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:35:43,931 [140353977206592] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:35:43,931 [140353977206592] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:35:43,931 [140353977206592] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:35:43,932 [140353977206592] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:35:43,932 [140353977206592] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:35:43,932 [140353977206592] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:35:43,933 [140353977206592] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:35:43,933 [140353977206592] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:35:43,933 [140353977206592] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:35:43,933 [140353977206592] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:35:43,934 [140353977206592] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:35:43,934 [140353977206592] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:35:43,934 [140353977206592] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:35:43,934 [140353977206592] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:35:43,935 [140353977206592] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:35:43,935 [140353977206592] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fa6b2ab3290>[0m
+2019-08-08 17:35:43,936 [140353977206592] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:35:43,936 [140353977206592] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:35:43,936 [140353977206592] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:35:43,937 [140353977206592] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:35:43,937 [140353977206592] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:36:23,289 [139712713905984] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:36:23,289 [139712713905984] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:36:23,290 [139712713905984] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:36:23,817 [139712713905984] ERROR: [31m[ERROR] - Can analysis offline[0m
+2019-08-08 17:36:23,817 [139712713905984] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:36:23,818 [139712713905984] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:36:23,819 [139712713905984] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:36:23,819 [139712713905984] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:36:23,820 [139712713905984] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:36:23,820 [139712713905984] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:36:23,820 [139712713905984] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:36:23,821 [139712713905984] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:36:23,821 [139712713905984] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:36:23,821 [139712713905984] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:36:23,822 [139712713905984] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:36:23,822 [139712713905984] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:36:23,822 [139712713905984] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:36:23,822 [139712713905984] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:36:23,823 [139712713905984] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:36:23,823 [139712713905984] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:36:23,823 [139712713905984] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:36:23,824 [139712713905984] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:36:23,824 [139712713905984] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f116465c290>[0m
+2019-08-08 17:36:23,824 [139712713905984] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:36:23,825 [139712713905984] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:36:23,825 [139712713905984] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:36:23,825 [139712713905984] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:36:23,826 [139712713905984] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:36:23,826 [139712713905984] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 17:36:23,827 [139712713905984] INFO: [32m[INFO] - 0[0m
+2019-08-08 17:38:31,149 [140648331523904] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:38:31,149 [140648331523904] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:38:31,150 [140648331523904] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:38:31,543 [140648331523904] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:38:31,543 [140648331523904] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:38:31,544 [140648331523904] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:38:31,545 [140648331523904] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:38:31,545 [140648331523904] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:38:31,546 [140648331523904] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:38:31,546 [140648331523904] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:38:31,546 [140648331523904] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:38:31,591 [140648331523904] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:38:31,592 [140648331523904] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:38:31,592 [140648331523904] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:38:31,592 [140648331523904] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:38:31,592 [140648331523904] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:38:31,593 [140648331523904] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:38:31,593 [140648331523904] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:38:31,593 [140648331523904] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:38:31,593 [140648331523904] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:38:31,593 [140648331523904] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:38:31,594 [140648331523904] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:38:31,594 [140648331523904] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7feb3b8da290>[0m
+2019-08-08 17:38:31,594 [140648331523904] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:38:31,594 [140648331523904] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:38:31,595 [140648331523904] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:38:31,595 [140648331523904] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:38:31,595 [140648331523904] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:38:31,595 [140648331523904] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 17:38:31,597 [140648331523904] INFO: [32m[INFO] - 0[0m
+2019-08-08 17:41:54,528 [140186667583296] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:41:54,529 [140186667583296] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:41:54,529 [140186667583296] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:41:54,918 [140186667583296] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:41:54,919 [140186667583296] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:41:54,919 [140186667583296] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:41:54,920 [140186667583296] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:41:54,920 [140186667583296] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:41:54,920 [140186667583296] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:41:54,921 [140186667583296] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:41:54,921 [140186667583296] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:41:54,967 [140186667583296] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:41:54,967 [140186667583296] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:41:54,968 [140186667583296] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:41:54,968 [140186667583296] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:41:54,968 [140186667583296] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:41:54,969 [140186667583296] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:41:54,969 [140186667583296] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:41:54,969 [140186667583296] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:41:54,970 [140186667583296] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:41:54,970 [140186667583296] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:41:54,970 [140186667583296] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:41:54,970 [140186667583296] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f7fbe3cf290>[0m
+2019-08-08 17:41:54,971 [140186667583296] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:41:54,971 [140186667583296] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:41:54,972 [140186667583296] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:41:54,972 [140186667583296] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:41:54,972 [140186667583296] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:41:54,972 [140186667583296] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 17:41:54,972 [140186667583296] INFO: [32m[INFO] - 0[0m
+2019-08-08 17:42:18,047 [139746016880448] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:42:18,047 [139746016880448] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:42:18,047 [139746016880448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:42:18,811 [139746016880448] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:42:18,811 [139746016880448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:42:18,813 [139746016880448] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:42:18,813 [139746016880448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:42:18,814 [139746016880448] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:42:18,814 [139746016880448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:42:18,814 [139746016880448] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:42:18,815 [139746016880448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:42:18,860 [139746016880448] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:42:18,861 [139746016880448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:42:18,861 [139746016880448] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:42:18,861 [139746016880448] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:42:18,861 [139746016880448] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:42:18,861 [139746016880448] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:42:18,861 [139746016880448] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:42:18,862 [139746016880448] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:42:18,862 [139746016880448] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:42:18,862 [139746016880448] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:42:18,862 [139746016880448] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:42:18,862 [139746016880448] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f192541e200>[0m
+2019-08-08 17:43:14,444 [140648523892544] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:43:14,444 [140648523892544] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:43:14,444 [140648523892544] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:14,834 [140648523892544] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:43:14,835 [140648523892544] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:14,836 [140648523892544] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:43:14,836 [140648523892544] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:14,837 [140648523892544] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:43:14,837 [140648523892544] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:14,838 [140648523892544] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:43:14,839 [140648523892544] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:14,884 [140648523892544] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:43:14,884 [140648523892544] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:14,885 [140648523892544] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:43:14,885 [140648523892544] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:43:14,885 [140648523892544] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:43:14,885 [140648523892544] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:43:14,886 [140648523892544] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:43:14,886 [140648523892544] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:43:14,886 [140648523892544] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:43:14,886 [140648523892544] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:43:14,887 [140648523892544] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:43:14,887 [140648523892544] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7feb46de0200>[0m
+2019-08-08 17:43:29,001 [140226853267264] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:43:29,001 [140226853267264] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:43:29,001 [140226853267264] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:29,392 [140226853267264] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:43:29,393 [140226853267264] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:29,393 [140226853267264] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:43:29,394 [140226853267264] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:29,394 [140226853267264] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:43:29,395 [140226853267264] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:29,395 [140226853267264] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:43:29,395 [140226853267264] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:29,443 [140226853267264] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:43:29,444 [140226853267264] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:43:29,444 [140226853267264] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:43:29,444 [140226853267264] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:43:29,444 [140226853267264] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:43:29,445 [140226853267264] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:43:29,445 [140226853267264] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:43:29,445 [140226853267264] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:43:29,445 [140226853267264] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:43:29,446 [140226853267264] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:43:29,446 [140226853267264] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:43:29,446 [140226853267264] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f891956e200>[0m
+2019-08-08 17:50:17,624 [139989077219136] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:50:17,625 [139989077219136] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:50:17,625 [139989077219136] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:18,019 [139989077219136] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:50:18,019 [139989077219136] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:18,020 [139989077219136] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:50:18,020 [139989077219136] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:18,020 [139989077219136] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:50:18,021 [139989077219136] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:18,021 [139989077219136] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:50:18,021 [139989077219136] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:18,067 [139989077219136] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:50:18,067 [139989077219136] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:18,067 [139989077219136] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:50:18,068 [139989077219136] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:50:18,068 [139989077219136] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:50:18,068 [139989077219136] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:50:18,068 [139989077219136] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:50:18,069 [139989077219136] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:50:18,069 [139989077219136] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:50:18,069 [139989077219136] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:50:18,069 [139989077219136] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:50:18,070 [139989077219136] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f51bcef4290>[0m
+2019-08-08 17:50:33,419 [140484239198016] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:50:33,419 [140484239198016] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:50:33,420 [140484239198016] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:33,809 [140484239198016] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:50:33,810 [140484239198016] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:33,811 [140484239198016] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:50:33,811 [140484239198016] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:33,812 [140484239198016] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:50:33,813 [140484239198016] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:33,813 [140484239198016] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:50:33,814 [140484239198016] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:33,863 [140484239198016] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:50:33,863 [140484239198016] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:33,863 [140484239198016] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:50:33,863 [140484239198016] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:50:33,864 [140484239198016] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:50:33,864 [140484239198016] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:50:33,864 [140484239198016] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:50:33,864 [140484239198016] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:50:33,865 [140484239198016] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:50:33,865 [140484239198016] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:50:33,865 [140484239198016] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:50:33,865 [140484239198016] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fc506e37290>[0m
+2019-08-08 17:50:54,979 [139942217840448] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:50:54,980 [139942217840448] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:50:54,980 [139942217840448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:55,383 [139942217840448] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:50:55,384 [139942217840448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:55,384 [139942217840448] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:50:55,385 [139942217840448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:55,386 [139942217840448] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:50:55,386 [139942217840448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:55,387 [139942217840448] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:50:55,387 [139942217840448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:55,433 [139942217840448] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:50:55,433 [139942217840448] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:50:55,433 [139942217840448] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:50:55,434 [139942217840448] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:50:55,434 [139942217840448] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:50:55,434 [139942217840448] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:50:55,435 [139942217840448] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:50:55,435 [139942217840448] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:50:55,435 [139942217840448] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:50:55,436 [139942217840448] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:50:55,436 [139942217840448] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:50:55,436 [139942217840448] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f46d3e5e290>[0m
+2019-08-08 17:54:09,840 [140630440949568] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:54:09,840 [140630440949568] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:54:09,841 [140630440949568] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:10,591 [140630440949568] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:54:10,592 [140630440949568] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:10,593 [140630440949568] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:54:10,594 [140630440949568] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:10,595 [140630440949568] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:54:10,595 [140630440949568] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:10,596 [140630440949568] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:54:10,597 [140630440949568] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:10,642 [140630440949568] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:54:10,642 [140630440949568] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:10,643 [140630440949568] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:54:10,643 [140630440949568] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:54:10,643 [140630440949568] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:54:10,643 [140630440949568] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:54:10,644 [140630440949568] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:54:10,644 [140630440949568] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:54:10,644 [140630440949568] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:54:10,644 [140630440949568] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:54:10,645 [140630440949568] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:54:10,645 [140630440949568] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fe711312290>[0m
+2019-08-08 17:54:58,317 [139730165479232] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:54:58,317 [139730165479232] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:54:58,317 [139730165479232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:58,874 [139730165479232] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:54:58,874 [139730165479232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:58,875 [139730165479232] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:54:58,876 [139730165479232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:58,878 [139730165479232] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:54:58,878 [139730165479232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:58,879 [139730165479232] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:54:58,879 [139730165479232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:58,925 [139730165479232] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:54:58,925 [139730165479232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:54:58,925 [139730165479232] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:54:58,926 [139730165479232] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:54:58,926 [139730165479232] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:54:58,926 [139730165479232] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:54:58,926 [139730165479232] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:54:58,926 [139730165479232] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:54:58,927 [139730165479232] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:54:58,927 [139730165479232] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:54:58,927 [139730165479232] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:54:58,927 [139730165479232] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f157497a290>[0m
+2019-08-08 17:54:58,927 [139730165479232] INFO: [32m[INFO] -      [0m
+2019-08-08 17:54:58,928 [139730165479232] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:54:58,928 [139730165479232] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:54:58,928 [139730165479232] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:54:58,929 [139730165479232] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:54:58,929 [139730165479232] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 17:54:58,929 [139730165479232] INFO: [32m[INFO] - 0[0m
+2019-08-08 17:55:30,004 [140532914919232] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:55:30,005 [140532914919232] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:55:30,005 [140532914919232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:55:30,395 [140532914919232] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:55:30,395 [140532914919232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:55:30,396 [140532914919232] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:55:30,396 [140532914919232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:55:30,397 [140532914919232] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:55:30,397 [140532914919232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:55:30,397 [140532914919232] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:55:30,397 [140532914919232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:55:30,445 [140532914919232] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:55:30,445 [140532914919232] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:55:30,446 [140532914919232] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:55:30,446 [140532914919232] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:55:30,446 [140532914919232] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:55:30,446 [140532914919232] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:55:30,446 [140532914919232] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:55:30,447 [140532914919232] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:55:30,447 [140532914919232] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:55:30,447 [140532914919232] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:55:30,447 [140532914919232] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:55:30,447 [140532914919232] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fd05c300290>[0m
+2019-08-08 17:55:30,448 [140532914919232] INFO: [32m[INFO] -      [0m
+2019-08-08 17:55:30,448 [140532914919232] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:55:30,448 [140532914919232] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:55:30,449 [140532914919232] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:55:30,449 [140532914919232] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:55:30,449 [140532914919232] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 17:55:30,449 [140532914919232] INFO: [32m[INFO] - 0[0m
+2019-08-08 17:56:49,961 [140062561265472] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:56:49,961 [140062561265472] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:56:49,961 [140062561265472] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:56:50,351 [140062561265472] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:56:50,351 [140062561265472] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:56:50,352 [140062561265472] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:56:50,353 [140062561265472] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:56:50,353 [140062561265472] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:56:50,353 [140062561265472] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:56:50,354 [140062561265472] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:56:50,354 [140062561265472] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:56:50,400 [140062561265472] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:56:50,400 [140062561265472] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:56:50,400 [140062561265472] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:56:50,400 [140062561265472] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:56:50,401 [140062561265472] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:56:50,401 [140062561265472] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:56:50,401 [140062561265472] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:56:50,401 [140062561265472] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:56:50,401 [140062561265472] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:56:50,401 [140062561265472] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:56:50,401 [140062561265472] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:56:50,402 [140062561265472] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f62d8ecd290>[0m
+2019-08-08 17:56:50,402 [140062561265472] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 17:56:50,402 [140062561265472] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 17:56:50,403 [140062561265472] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 17:56:50,403 [140062561265472] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 17:56:50,403 [140062561265472] INFO: [32m[INFO] - -1[0m
+2019-08-08 17:56:50,403 [140062561265472] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 17:56:50,404 [140062561265472] INFO: [32m[INFO] - 0[0m
+2019-08-08 17:58:27,661 [140347808732992] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 17:58:27,661 [140347808732992] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 17:58:27,661 [140347808732992] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:58:28,058 [140347808732992] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 17:58:28,058 [140347808732992] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:58:28,059 [140347808732992] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 17:58:28,060 [140347808732992] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:58:28,060 [140347808732992] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 17:58:28,061 [140347808732992] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:58:28,061 [140347808732992] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 17:58:28,061 [140347808732992] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:58:28,107 [140347808732992] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 17:58:28,108 [140347808732992] INFO: [32m[INFO] - 1[0m
+2019-08-08 17:58:28,108 [140347808732992] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 17:58:28,108 [140347808732992] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 17:58:28,109 [140347808732992] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 17:58:28,109 [140347808732992] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 17:58:28,109 [140347808732992] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 17:58:28,109 [140347808732992] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 17:58:28,110 [140347808732992] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 17:58:28,110 [140347808732992] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 17:58:28,110 [140347808732992] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 17:58:28,111 [140347808732992] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fa542ffc290>[0m
+2019-08-08 18:00:23,373 [139636874078016] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 18:00:23,373 [139636874078016] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 18:00:23,373 [139636874078016] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:00:23,762 [139636874078016] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 18:00:23,763 [139636874078016] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:00:23,763 [139636874078016] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 18:00:23,763 [139636874078016] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:00:23,764 [139636874078016] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 18:00:23,764 [139636874078016] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:00:23,765 [139636874078016] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 18:00:23,765 [139636874078016] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:00:23,810 [139636874078016] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 18:00:23,810 [139636874078016] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:00:23,811 [139636874078016] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 18:00:23,811 [139636874078016] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 18:00:23,811 [139636874078016] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 18:00:23,811 [139636874078016] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 18:00:23,812 [139636874078016] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 18:00:23,812 [139636874078016] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 18:00:23,812 [139636874078016] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 18:00:23,813 [139636874078016] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 18:00:23,813 [139636874078016] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 18:00:23,813 [139636874078016] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7effbbfdd290>[0m
+2019-08-08 18:00:23,815 [139636874078016] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 18:00:23,815 [139636874078016] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 18:00:23,815 [139636874078016] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 18:00:23,815 [139636874078016] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 18:00:23,816 [139636874078016] INFO: [32m[INFO] - -1[0m
+2019-08-08 18:00:23,816 [139636874078016] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 18:00:23,816 [139636874078016] INFO: [32m[INFO] - 0[0m
+2019-08-08 18:03:48,991 [140120067897152] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 18:03:48,991 [140120067897152] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 18:03:48,991 [140120067897152] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:03:49,385 [140120067897152] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 18:03:49,386 [140120067897152] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:03:49,387 [140120067897152] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 18:03:49,387 [140120067897152] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:03:49,387 [140120067897152] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 18:03:49,388 [140120067897152] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:03:49,388 [140120067897152] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 18:03:49,389 [140120067897152] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:03:49,434 [140120067897152] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 18:03:49,435 [140120067897152] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:03:49,435 [140120067897152] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 18:03:49,435 [140120067897152] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 18:03:49,435 [140120067897152] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 18:03:49,436 [140120067897152] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 18:03:49,436 [140120067897152] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 18:03:49,437 [140120067897152] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 18:03:49,437 [140120067897152] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 18:03:49,437 [140120067897152] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 18:03:49,437 [140120067897152] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 18:03:49,438 [140120067897152] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f703c6f6200>[0m
+2019-08-08 18:04:13,991 [140576748586816] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 18:04:13,991 [140576748586816] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 18:04:13,991 [140576748586816] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:14,392 [140576748586816] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 18:04:14,393 [140576748586816] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:14,394 [140576748586816] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 18:04:14,394 [140576748586816] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:14,395 [140576748586816] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 18:04:14,395 [140576748586816] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:14,396 [140576748586816] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 18:04:14,397 [140576748586816] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:14,442 [140576748586816] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 18:04:14,442 [140576748586816] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:14,443 [140576748586816] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 18:04:14,443 [140576748586816] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 18:04:14,443 [140576748586816] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 18:04:14,443 [140576748586816] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 18:04:14,444 [140576748586816] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 18:04:14,444 [140576748586816] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 18:04:14,444 [140576748586816] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 18:04:14,445 [140576748586816] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 18:04:14,445 [140576748586816] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 18:04:14,445 [140576748586816] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7fda90b9b200>[0m
+2019-08-08 18:04:32,026 [139782726530880] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 18:04:32,026 [139782726530880] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 18:04:32,026 [139782726530880] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:32,414 [139782726530880] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 18:04:32,414 [139782726530880] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:32,415 [139782726530880] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 18:04:32,416 [139782726530880] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:32,417 [139782726530880] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 18:04:32,417 [139782726530880] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:32,418 [139782726530880] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 18:04:32,419 [139782726530880] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:32,464 [139782726530880] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 18:04:32,465 [139782726530880] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:04:32,465 [139782726530880] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 18:04:32,465 [139782726530880] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 18:04:32,466 [139782726530880] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 18:04:32,466 [139782726530880] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 18:04:32,466 [139782726530880] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 18:04:32,466 [139782726530880] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 18:04:32,467 [139782726530880] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 18:04:32,467 [139782726530880] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 18:04:32,467 [139782726530880] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 18:04:32,467 [139782726530880] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f21b152a200>[0m
+2019-08-08 18:08:31,649 [139634544232256] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 18:08:31,649 [139634544232256] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 18:08:31,649 [139634544232256] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:08:32,038 [139634544232256] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 18:08:32,039 [139634544232256] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:08:32,040 [139634544232256] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 18:08:32,041 [139634544232256] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:08:32,042 [139634544232256] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 18:08:32,042 [139634544232256] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:08:32,043 [139634544232256] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 18:08:32,044 [139634544232256] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:08:32,089 [139634544232256] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 18:08:32,089 [139634544232256] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:08:32,090 [139634544232256] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 18:08:32,090 [139634544232256] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 18:08:32,090 [139634544232256] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 18:08:32,091 [139634544232256] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 18:08:32,091 [139634544232256] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 18:08:32,091 [139634544232256] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 18:08:32,092 [139634544232256] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 18:08:32,092 [139634544232256] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 18:08:32,093 [139634544232256] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 18:08:32,093 [139634544232256] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7eff311f3290>[0m
+2019-08-08 18:08:32,093 [139634544232256] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 18:08:32,094 [139634544232256] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 18:08:32,094 [139634544232256] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 18:08:32,094 [139634544232256] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 18:08:32,094 [139634544232256] INFO: [32m[INFO] - -1[0m
+2019-08-08 18:08:32,094 [139634544232256] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 18:08:32,094 [139634544232256] INFO: [32m[INFO] - 0[0m
+2019-08-08 18:21:35,464 [140170690307904] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 18:21:35,465 [140170690307904] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 18:21:35,465 [140170690307904] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:21:36,251 [140170690307904] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 18:21:36,252 [140170690307904] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:21:36,253 [140170690307904] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 18:21:36,254 [140170690307904] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:21:36,254 [140170690307904] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 18:21:36,254 [140170690307904] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:21:36,255 [140170690307904] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 18:21:36,255 [140170690307904] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:21:36,301 [140170690307904] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 18:21:36,302 [140170690307904] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:21:36,302 [140170690307904] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 18:21:36,303 [140170690307904] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 18:21:36,303 [140170690307904] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 18:21:36,303 [140170690307904] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 18:21:36,304 [140170690307904] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 18:21:36,304 [140170690307904] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 18:21:36,305 [140170690307904] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 18:21:36,305 [140170690307904] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 18:21:36,305 [140170690307904] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 18:21:36,306 [140170690307904] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f7c05c41200>[0m
+2019-08-08 18:21:36,307 [140170690307904] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 18:21:36,307 [140170690307904] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 18:21:36,308 [140170690307904] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 18:21:36,308 [140170690307904] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 18:21:36,309 [140170690307904] INFO: [32m[INFO] - -1[0m
+2019-08-08 18:21:36,309 [140170690307904] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 18:21:36,310 [140170690307904] INFO: [32m[INFO] - 0[0m
+2019-08-08 18:32:36,690 [139861403748160] INFO: [32m[INFO] - {'walking_channel': {'chn2': 2, 'chn1': 1}, 'nDeviceType': 4, 'steering_channel': {'chn2': 4, 'chn1': 3}, 'steering_mode': 0, 'walking_mode': 1, 'nDeviceInd': 0}[0m
+2019-08-08 18:32:36,690 [139861403748160] INFO: [32m[INFO] - Can Analysis Close Success!![0m
+2019-08-08 18:32:36,690 [139861403748160] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:32:37,082 [139861403748160] INFO: [32m[INFO] - Can Analysis Open Success![0m
+2019-08-08 18:32:37,083 [139861403748160] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:32:37,084 [139861403748160] INFO: [32m[INFO] - Can Analysis Init Success!![0m
+2019-08-08 18:32:37,084 [139861403748160] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:32:37,085 [139861403748160] INFO: [32m[INFO] - Can Analysis Start Success!![0m
+2019-08-08 18:32:37,086 [139861403748160] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:32:37,086 [139861403748160] INFO: [32m[INFO] - Can Analysis Reset Success!![0m
+2019-08-08 18:32:37,087 [139861403748160] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:32:37,132 [139861403748160] INFO: [32m[INFO] - Can Analysis Read Board Info Success!![0m
+2019-08-08 18:32:37,133 [139861403748160] INFO: [32m[INFO] - 1[0m
+2019-08-08 18:32:37,133 [139861403748160] INFO: [32m[INFO] - Can Analysis Board Info like:[0m
+2019-08-08 18:32:37,133 [139861403748160] INFO: [32m[INFO] - hw_Version: 0[0m
+2019-08-08 18:32:37,133 [139861403748160] INFO: [32m[INFO] - fw_Version: 0[0m
+2019-08-08 18:32:37,133 [139861403748160] INFO: [32m[INFO] - dr_Version: 0[0m
+2019-08-08 18:32:37,133 [139861403748160] INFO: [32m[INFO] - in_Version: 0[0m
+2019-08-08 18:32:37,133 [139861403748160] INFO: [32m[INFO] - irq_Num: 0[0m
+2019-08-08 18:32:37,134 [139861403748160] INFO: [32m[INFO] - can_Num: 0[0m
+2019-08-08 18:32:37,134 [139861403748160] INFO: [32m[INFO] - str_Serial_Num: [0m
+2019-08-08 18:32:37,134 [139861403748160] INFO: [32m[INFO] - str_hw_Type: [0m
+2019-08-08 18:32:37,134 [139861403748160] INFO: [32m[INFO] - Reserved: <__main__.c_ushort_Array_4 object at 0x7f340300b290>[0m
+2019-08-08 18:32:37,134 [139861403748160] INFO: [32m[INFO] - [4, 1, 1, 0, 0, 0, 0, 0][0m
+2019-08-08 18:32:37,134 [139861403748160] INFO: [32m[INFO] - Can Analysis Data Transmit Success!![0m
+2019-08-08 18:32:37,134 [139861403748160] INFO: [32m[INFO] - 4294967295[0m
+2019-08-08 18:32:37,135 [139861403748160] ERROR: [31m[ERROR] - Can analysis offline![0m
+2019-08-08 18:32:37,135 [139861403748160] INFO: [32m[INFO] - -1[0m
+2019-08-08 18:32:37,135 [139861403748160] INFO: [32m[INFO] - Can Analysis Receive Success!![0m
+2019-08-08 18:32:37,135 [139861403748160] INFO: [32m[INFO] - 0[0m

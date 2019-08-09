@@ -24,6 +24,7 @@ class VCI_BOARD_INFO(Structure):
 class VCI_CAN_OBJ(Structure):
     _fields_ = [('ID',c_uint),
                 ('TimeStamp',c_uint),
+                ('TimeFlag',c_byte),
                 ('SendType',c_byte),
                 ('RemoteFlag',c_byte),
                 ('ExternFlag',c_byte),
@@ -108,19 +109,25 @@ class MoblieDriver:
         Canstatus=self.OpreateCanAnalysis.VCI_OpenDevice(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],0)
         if Canstatus==0:
             self.loggererror("Open Can Analysis device error")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Open Success!")
+            self.loggerinfo(Canstatus)
             return True
     def Can_VCICloseDevice(self,):
         Canstatus=self.OpreateCanAnalysis.VCI_CloseDevice(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'])
         if Canstatus==0:
             self.loggererror("Close can analysis device error!")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Close Success!!")
+            self.loggerinfo(Canstatus)
             return True  
     def Can_VCIInitCan_PyInit(self,CanInd,VCI_INIT_CONFIG_STRUC):
         
@@ -130,19 +137,23 @@ class MoblieDriver:
         return CanFuncStruc(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,byref(VCI_INIT_CONFIG_STRUC))
     def Can_VCIInitCan(self,CanInd):
         config=VCI_INIT_CONFIG()
-        config.AccCode = 0x00000000;
-        config.AccMask = 0xFFFFFFFF;
-        config.Filter = 0;
-        config.Mode = 0;
-        config.Timing0 = 0x00;
-        config.Timing1 = 0x1c;
+        config.AccCode = 0x00000000
+        config.AccMask = 0xFFFFFFFF
+        config.Filter = 0
+        config.Mode = 0
+        config.Timing0 = 0x00
+        config.Timing1 = 0x1c
+        #print(config)
         Canstatus=self.Can_VCIInitCan_PyInit(CanInd,config)
         if Canstatus==0:
             self.loggererror("Init Can analysis device error!")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Init Success!!")
+            self.loggerinfo(Canstatus)
             return True   
     def Can_ReadBoardInfo_PyInit(self,VCI_BOARD_INFO_STRUC):
         CanFuncStruc=self.OpreateCanAnalysis.VCI_CloseDevice#(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,)
@@ -152,72 +163,106 @@ class MoblieDriver:
     def Can_ReadBoardInfo(self):
         config=VCI_BOARD_INFO()
         Canstatus=self.Can_ReadBoardInfo_PyInit(config)
+
+        print(config.can_Num)
         if Canstatus==0:
             self.loggererror("Read Board Info Can analysis device error!")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Read Board Info Success!!")
-            return True 
+            self.loggerinfo(Canstatus)
+            self.loggerinfo("Can Analysis Board Info like:")
+            self.loggerinfo("hw_Version: "+str(config.hw_Version))
+            self.loggerinfo("fw_Version: "+str(config.fw_Version))
+            self.loggerinfo("dr_Version: "+str(config.dr_Version))
+            self.loggerinfo("in_Version: "+str(config.in_Version))
+            self.loggerinfo("irq_Num: "+str(config.irq_Num))
+            self.loggerinfo("can_Num: "+str(config.can_Num))
+            self.loggerinfo("str_Serial_Num: "+str(config.str_Serial_Num))
+            self.loggerinfo("str_hw_Type: "+str(config.str_hw_Type))
+            self.loggerinfo("Reserved: "+str(config.Reserved))
+
+            return Canstatus 
     def Can_GetReceiveNum(self,CanInd):
         Canstatus=self.OpreateCanAnalysis.VCI_GetReceiveNum(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,)
         if Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Get Receive Num Success!!")
+            self.loggerinfo(Canstatus)
             return Canstatus  
     def Can_ClearBuffer(self,CanInd):
         Canstatus=self.OpreateCanAnalysis.VCI_ClearBuffer(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,)
         if Canstatus==0:
             self.loggererror("Clear Buffer Can analysis device error!")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Clear Buffer Success!!")
+            self.loggerinfo(Canstatus)
             return True  
     def Can_StartCAN(self,CanInd):
         Canstatus=self.OpreateCanAnalysis.VCI_StartCAN(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,)
         if Canstatus==0:
             self.loggererror("Start Can analysis device error!")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Start Success!!")
+            self.loggerinfo(Canstatus)
             return True  
     def Can_ResetCAN(self,CanInd):
         Canstatus=self.OpreateCanAnalysis.VCI_ResetCAN(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,)
         if Canstatus==0:
             self.loggererror("Reset Can analysis device error!")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Reset Success!!")
+            self.loggerinfo(Canstatus)
             return True  
     def Can_Transmit_PyInit(self,CanInd,Length,VCI_CAN_OBJ_STRUC):
         CanFuncStruc=self.OpreateCanAnalysis.VCI_Transmit#(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,)
         CanFuncStruc.restype = c_uint
         CanFuncStruc.argtypes=[c_uint,c_uint,c_uint,POINTER(VCI_CAN_OBJ),c_uint]
-        return CanFuncStruc(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,byref(VCI_CAN_OBJ_STRUC),)
-    def Can_Transmit(self,CanInd,Length,SenData):
+        return CanFuncStruc(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,byref(VCI_CAN_OBJ_STRUC),Length)
+    def Can_Transmit(self,CanInd,Length,IDD,Datalen,SenData,):
         #for i in range(Length):
-        configarr=Length*VCI_CAN_OBJ()
-        len=1
-        for config in configarr:
-            config.ID=len
-            config.RemoteFlag=0
-            config.ExternFlag =0
-            config.DataLen = 8
-            config.Data=c_byte*8()
-            for i in range(len(config.Data))
-                config.Data[i]=SenData[i]
+        config=VCI_CAN_OBJ()
+        #len=1
+        datatemp=c_byte*Datalen
+        #for config in configarr:
+        config.ID=IDD
+        config.RemoteFlag=0
+        config.ExternFlag =0
+        config.SendType = 0
+        config.DataLen = Datalen
+        config.Data=(4,1,1,0,0,0,0,0)
+        # print(SenData)
+        # for i in range(0,Datalen):
+        #     # print(type(SenData[i]))
+        #     config.Data[i]=SenData[i]
             
-            len+=1
+        self.loggerinfo(SenData)
+        #len+=1
 
-        Canstatus=self.Can_Transmit_PyInit(CanInd,Length,configarr)
+        Canstatus=self.Can_Transmit_PyInit(CanInd,Length,config)
         if Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Data Transmit Success!!")
+            self.loggerinfo(Canstatus)
             return Canstatus  
     def Can_Receive_PyInit(self,CanInd,Len,WaitTime,VCI_CAN_OBJ_STRUC):
         CanFuncStruc=self.OpreateCanAnalysis.VCI_Receive#(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],CanInd,)
@@ -227,28 +272,46 @@ class MoblieDriver:
 
  
     def Can_Receive(self,CanInd,Len):
-        configarr=Len*VCI_CAN_OBJ()
+        config=VCI_CAN_OBJ()
 
-        Canstatus=self.Can_Receive_PyInit(CanInd,Len,0,configarr)
+        Canstatus=self.Can_Receive_PyInit(CanInd,Len,0,config)
         if Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Receive Success!!")
+            self.loggerinfo(Canstatus)
             return Canstatus
     def Can_VCI_UsbDeviceReset(self):
         Canstatus=self.OpreateCanAnalysis.VCI_UsbDeviceReset(self.yamlDic['nDeviceType'],self.yamlDic['nDeviceInd'],0)
         if Canstatus==0:
             self.loggererror("Reset USB Can analysis device error!")
+            self.loggerinfo(Canstatus)
         elif Canstatus== -1:
             self.loggererror("Can analysis offline!")
+            self.loggerinfo(Canstatus)
         else:
             self.loggerinfo("Can Analysis Reset USB Success!!")
+            self.loggerinfo(Canstatus)
             return True  
 def main():
     configname="mobileparameter.yaml"
     md=MoblieDriver(configname)
     # md.Opreating_Yaml()
     md.loggerinfo(md.yamlDic)
+    md.Can_VCICloseDevice()
     md.Can_VCIOpenDevice()
+    md.Can_VCIInitCan(0)
+    md.Can_StartCAN(0)
+    md.Can_ResetCAN(0)
+    md.Can_ReadBoardInfo()
+    comd=MobileDriverCommands()
+    #print(comd.REQUEST_ENCODER_1)
+    md.Can_Transmit(0,1,1,8,comd.REQUEST_ENCODER_1)
+    md.Can_GetReceiveNum(0)
+    md.Can_Receive(0,0)
+    #md.Can_Transmit(0,1,2,8,comd.REQUEST_ENCODER_2)
+    #md.Can_Transmit(0,1,3,8,comd.REQUEST_ENCODER_3)
+    #md.Can_Transmit(0,1,4,8,comd.REQUEST_ENCODER_4)
 if __name__=="__main__":
     main()
