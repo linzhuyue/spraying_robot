@@ -257,7 +257,8 @@ class AuboTrajectory():
 def main():
     ratet=1
     IP='192.168.1.11'
-    StartPoint=(-3.3364,12.406,-81.09,-91.207,-86.08,0.164)
+    # StartPoint=(-3.3364,12.406,-81.09,-91.207,-86.08,0.164)
+    StartPoint=(126.13568752299975, 34.42216810152519, -94.76093808269022, -129.18310193717386, -36.135685018521656,0)
     Sector_Length=0.8 #m
     Sector_Width=0.2 #m
     Sector_Nums=4
@@ -285,7 +286,7 @@ def main():
     print Aub.Cacula_Aubo_MovePlan_From_Rectangle_Planning(0,0,Aub.deg_to_rad(StartPoint))
     try:
         while not rospy.is_shutdown():
-            pass
+            print("hahaha")
             rate.sleep()
     except:
         pass

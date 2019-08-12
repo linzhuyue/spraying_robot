@@ -40,9 +40,9 @@ vco.ID = 0x00000001
 vco.SendType = 0
 vco.RemoteFlag = 0
 vco.ExternFlag = 0
-vco.DataLen = 4
-vco.Data = (0x04,0x01,0x01,0x00)
-#vco.Data = (4,1,1,0,0,0,0,0)
+vco.DataLen = 8
+# vco.Data = (0x04,0x01,0x01,0x00)
+vco.Data = (4,1,1,0,0,0,0,0)
 
 vco2 = _VCI_CAN_OBJ()
 
@@ -58,9 +58,9 @@ vco2 = _VCI_CAN_OBJ()
 ret = dll.VCI_OpenDevice(nDeviceType, nDeviceInd, nReserved)
 print("opendevice:",ret)
 time.sleep(1)
-ret = dll.VCI_SetReference(nDeviceType, nDeviceInd, 0, 0, pointer(c_int(0x060007)))
-print("setrefernce1:",ret)
-time.sleep(1)
+# ret = dll.VCI_SetReference(nDeviceType, nDeviceInd, 0, 0, pointer(c_int(0x060007)))
+# print("setrefernce1:",ret)
+# time.sleep(1)
 # ret = dll.VCI_SetReference(nDeviceType, nDeviceInd, 0, 0, byref(c_int(0x060003)))
 # print("setrefernce0:",ret)  #注意，SetRefernce必须在InitCan之前
 ret = dll.VCI_InitCAN(nDeviceType, nDeviceInd, nCANInd, byref(vic))

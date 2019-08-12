@@ -22,6 +22,11 @@ def deg_to_rad(tuplelist):
     for i in tuplelist:
         dd.append(i * math.pi / 180)
     return tuple(dd)
+def rad_to_deg(Llist):
+    dd = []
+    for i in Llist:
+        dd.append(i * 180/math.pi )
+    return tuple(dd)
 def main_1(test_count):
     # 初始化logger
     #logger_init()
@@ -114,6 +119,7 @@ def main_1(test_count):
                 # 获取机械臂末端最大线加速度(m/s)
                 # robot.set_end_max_line_velc(0.2)
                 robot.set_end_max_line_velc(0.5)
+                #2.201483051543076, 0.6007801690465803, -1.6538903718214268, -2.254670466743149, -0.6306866810367909, -5.986492283682916e-08
                 joint_radian = deg_to_rad((10.3,3.6,-89.9,-91.2,-86.04,0.15))#((0,0,0,0,0,0))
                 #logger.info("move joint to {0}".format(joint_radian))
                 robot.move_joint(joint_radian)
@@ -148,4 +154,5 @@ def main():
 
 if __name__=="__main__":
     main()
+    # print rad_to_deg([2.201483051543076, 0.6007801690465803, -1.6538903718214268, -2.254670466743149, -0.6306866810367909, -5.986492283682916e-08])
     # print deg_to_rad((-3.3364,12.406,-81.09,-91.207,-86.08,0.164))
