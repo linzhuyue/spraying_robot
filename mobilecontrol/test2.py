@@ -41,8 +41,8 @@ vco.SendType = 0
 vco.RemoteFlag = 0
 vco.ExternFlag = 0
 vco.DataLen = 8
-# vco.Data = (0x04,0x01,0x01,0x00)
-vco.Data = (4,1,1,0,0,0,0,0)
+vco.Data = (0x04,0x01,0x01,0x00)
+# vco.Data = (4,1,1,0,0,0,0,0)
 
 vco2 = _VCI_CAN_OBJ()
 
