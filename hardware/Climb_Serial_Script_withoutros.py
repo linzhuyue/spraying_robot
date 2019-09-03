@@ -22,7 +22,7 @@ class ClimbRobot:
         self.Baudrate=Baudrate
         self.Climbcrc=ClimbRobotCRC()
         try:
-            self.ser = serial.Serial(port=self.PORT, baudrate=self.Baudrate, bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE, stopbits=1,timeout=0.3, xonxoff=0,rtscts=False,dsrdtr=False)
+            self.ser = serial.Serial(port=self.PORT, baudrate=self.Baudrate, bytesize=serial.EIGHTBITS, parity=serial.PARITY_NONE, stopbits=1,timeout=0.3, xonxoff=0,rtscts=True,dsrdtr=True)
         except:
             print("Please check Usb port----")
     def get_serial_port(self):
@@ -125,9 +125,10 @@ class ClimbRobot:
 
 def main():
     PORT = "/dev/ttyUSB0"
-    baudrate=9600
+    baudrate=115200
     climb_robot=ClimbRobot(PORT,baudrate)
-    print climb_robot.Send_message_to_port('FE0200000006EC07')
+    # print climb_robot.Send_message_to_port('FE0200000006EC07')
+    print climb_robot.Send_message_to_port('0403000b0001f59d')
     # climb_robot.get_serial_port()
     # climb_robot.Disable_Modbus_serial()
     #

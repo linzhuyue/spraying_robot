@@ -39,6 +39,7 @@ def test_pid(P = 0.2,  I = 0.0, D= 0.0, L=100):
     for i in range(1, END):
         pid.update(feedback)
         output = pid.output
+        print output
         if pid.SetPoint > 0:
             feedback +=output# (output - (1/i))控制系统的函数
         if i>9:
